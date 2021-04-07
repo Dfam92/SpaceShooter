@@ -787,3 +787,35 @@ System memory in use after: 88.0 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2321.
 Total: 2.343100 ms (FindLiveObjects: 0.246200 ms CreateObjectMapping: 0.165600 ms MarkObjects: 1.761700 ms  DeleteObjects: 0.150400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001352 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.172 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.1 MB.
+System memory in use after: 88.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 2.443500 ms (FindLiveObjects: 0.195700 ms CreateObjectMapping: 0.075800 ms MarkObjects: 2.050500 ms  DeleteObjects: 0.120100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1465.797669 seconds.
+  path: Assets/Script/PlayerControl.cs
+  artifactKey: Guid(c7a35db97ce025e48867ec75c79d65eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/PlayerControl.cs using Guid(c7a35db97ce025e48867ec75c79d65eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd9d1e5ad76aba0e2150e14422350500') in 0.005100 seconds
+  Import took 0.009681 seconds .
+
