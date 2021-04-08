@@ -31,6 +31,7 @@ public class EnemyBullet : MonoBehaviour
         {
             Destroy(player.gameObject);
             Destroy(this.gameObject);
+            GameManager.gameOver = true;
         }
     }
 }

@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         PlayerMovement();
         
     }
@@ -45,6 +46,7 @@ public class PlayerControl : MonoBehaviour
         if(collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
+            GameManager.gameOver = true;
         }
        
     }

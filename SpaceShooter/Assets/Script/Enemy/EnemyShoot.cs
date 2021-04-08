@@ -17,11 +17,14 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(GameManager.gameOver == true)
+        {
+            CancelInvoke("EnemyFire");
+        }
     }
 
     private void EnemyFire()
     {
-        Instantiate(enemyBullet, transform.position, transform.rotation);
+       Instantiate(enemyBullet, transform.position, transform.rotation);
     }
 }
