@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyControl : MonoBehaviour
 {
     public Rigidbody2D enemyRb;
+    [SerializeField] private float speed;
     
 
     // Start is called before the first frame update
@@ -18,9 +19,10 @@ public class EnemyControl : MonoBehaviour
     {
         EnemyMovement();
     }
-    private void EnemyMovement()
+    public void EnemyMovement()
     {
-        enemyRb.AddRelativeForce(Vector2.down, ForceMode2D.Force);
+        enemyRb.AddRelativeForce(Vector2.down*speed);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
