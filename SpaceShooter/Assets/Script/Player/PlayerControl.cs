@@ -42,7 +42,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy") || collision.CompareTag("EnemyBullet"))
+        if(collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }

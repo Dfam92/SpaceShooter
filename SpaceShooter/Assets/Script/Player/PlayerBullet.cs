@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public Rigidbody2D bulletRb;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,6 @@ public class PlayerBullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
             Destroy(this.gameObject);
         }
     }
