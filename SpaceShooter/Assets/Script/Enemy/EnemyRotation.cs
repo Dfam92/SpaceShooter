@@ -11,7 +11,7 @@ public class EnemyRotation : MonoBehaviour
     
     private bool isTurning;
     private float count;
-    private float angle;
+    
 
     private EnemyControl enemyControl;
     // Start is called before the first frame update

@@ -35,9 +35,10 @@ public class PlayerControl : MonoBehaviour
     }
     private void PlayerShoot()
     {
+        Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bulletPlayer, transform.position, transform.rotation);
+            Instantiate(bulletPlayer, bulletPos, transform.rotation);
         }
     }
 
