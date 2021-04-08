@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3219844715206695749}
   m_Layer: 0
   m_Name: Bulletmainship
-  m_TagString: BulletPlayer
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &3219844715206695749
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -39,4 +39,13 @@ public class PlayerControl : MonoBehaviour
             Instantiate(bulletPlayer, transform.position, transform.rotation);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy") || collision.CompareTag("EnemyBullet"))
+        {
+            Destroy(gameObject);
+        }
+       
+    }
 }
