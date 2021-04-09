@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour
     {
 
         PlayerMovement();
-        
+        PlayerOutBounds();
     }
 
     private void PlayerMovement()
@@ -32,6 +32,31 @@ public class PlayerControl : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         playerRb.AddForce(Vector2.right * speed * horizontalInput);
         playerRb.AddForce(Vector2.up * speed * verticalInput);
+    }
+
+    private void PlayerOutBounds()
+    {
+        Vector2 topPos = new Vector2(transform.position.x, Bounds.yPlayerBound);
+        Vector2 rightPos = new Vector2(Bounds.xBound, transform.position.y);
+        Vector2 leftPos = new Vector2(-Bounds.xBound, transform.position.y);
+        Vector2 botPos = new Vector2(transform.position.x, -Bounds.yPlayerBound);
+        if(transform.position.x > Bounds.xBound)
+        {
+            transform.position = leftPos;
+        }
+        else if(transform.position.x < -Bounds.xBound)
+        {
+            transform.position = rightPos;
+        }
+        else if(transform.position.y > Bounds.yPlayerBound)
+        {
+            transform.position = botPos;
+        }
+        else if(transform.position.y < -Bounds.yPlayerBound)
+        {
+            transform.position = topPos;
+        }
+        
     }
     private void PlayerShoot()
     {
@@ -44,6 +69,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if(collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
