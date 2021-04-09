@@ -37,14 +37,14 @@ public class PlayerControl : MonoBehaviour
     private void PlayerOutBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, Bounds.yPlayerBound);
-        Vector2 rightPos = new Vector2(Bounds.xBound, transform.position.y);
-        Vector2 leftPos = new Vector2(-Bounds.xBound, transform.position.y);
+        Vector2 rightPos = new Vector2(Bounds.xPlayerBound, transform.position.y);
+        Vector2 leftPos = new Vector2(-Bounds.xPlayerBound, transform.position.y);
         Vector2 botPos = new Vector2(transform.position.x, -Bounds.yPlayerBound);
-        if(transform.position.x > Bounds.xBound)
+        if(transform.position.x > Bounds.xPlayerBound)
         {
             transform.position = leftPos;
         }
-        else if(transform.position.x < -Bounds.xBound)
+        else if(transform.position.x < -Bounds.xPlayerBound)
         {
             transform.position = rightPos;
         }

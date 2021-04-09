@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyRotation : MonoBehaviour
 {
     [SerializeField] private float turnForce;
-    [SerializeField] private int timeToTurn;
+    [SerializeField] private float timeToTurn;
     [SerializeField] private float timeToStopTurn;
     [SerializeField] private float turnAngle;
     

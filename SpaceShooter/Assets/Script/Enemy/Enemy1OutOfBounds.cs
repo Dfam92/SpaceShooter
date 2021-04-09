@@ -7,8 +7,8 @@ public class Enemy1OutOfBounds : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector2 topPos = new Vector2(transform.position.x, Bounds.yEnemyBound);
-        Vector2 rightPos = new Vector2(Bounds.xBound,transform.position.y);
-        Vector2 leftPos = new Vector2(-Bounds.xBound, transform.position.y);
+        Vector2 rightPos = new Vector2(Bounds.xEnemyBound,transform.position.y);
+        Vector2 leftPos = new Vector2(-Bounds.xEnemyBound, transform.position.y);
         Vector2 botPos = new Vector2(transform.position.x, -Bounds.yEnemyBound);
 
         if (collision.CompareTag("BotBound"))
