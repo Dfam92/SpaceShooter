@@ -10,12 +10,18 @@ public class PlayerControl : MonoBehaviour
     public GameObject bulletPlayer;
     public AudioClip bulletSound;
     private AudioSource playerAudioSource;
+    private Animator animPlayer;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         playerAudioSource = GetComponent<AudioSource>();
+        animPlayer = GetComponent<Animator>();
     }
+
+
     private void Update()
     {
         PlayerShoot();
@@ -35,6 +41,18 @@ public class PlayerControl : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         playerRb.AddForce(Vector2.right * speed * horizontalInput);
         playerRb.AddForce(Vector2.up * speed * verticalInput);
+        
+        if (verticalInput > 0 || horizontalInput > 0 || horizontalInput <0)
+        {
+            animPlayer.SetFloat("Move", 1f);
+            //AudioClips.isMoving = true;
+        }
+        else
+        {
+            animPlayer.SetFloat("Move", -1f);
+            //AudioClips.isMoving = false;
+
+        }
     }
 
     private void PlayerOutBounds()
