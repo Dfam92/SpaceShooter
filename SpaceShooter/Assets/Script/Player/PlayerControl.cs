@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float speed;
+
     public Rigidbody2D playerRb;
     public GameObject bulletPlayer;
+    public AudioClip bulletSound;
+    private AudioSource playerAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -64,6 +67,7 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
+            playerAudioSource.PlayOneShot(bulletSound, 1.0f);
         }
     }
 
@@ -72,6 +76,7 @@ public class PlayerControl : MonoBehaviour
 
         if(collision.CompareTag("Enemy"))
         {
+            AudioClips.playerIsDestroyed = true;
             Destroy(gameObject);
             GameManager.gameOver = true;
         }

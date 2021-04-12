@@ -29,6 +29,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            AudioClips.playerIsDestroyed = true;
             Destroy(player.gameObject);
             Destroy(this.gameObject);
             GameManager.gameOver = true;

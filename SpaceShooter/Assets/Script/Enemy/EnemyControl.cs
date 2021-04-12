@@ -29,7 +29,10 @@ public class EnemyControl : MonoBehaviour
         
         if(collision.CompareTag("PlayerBullet"))
         {
+
+            AudioClips.enemyIsDestroyed = true;
             Destroy(this.gameObject);
+           
         }
         
     }
