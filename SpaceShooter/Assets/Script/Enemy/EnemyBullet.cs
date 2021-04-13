@@ -6,18 +6,14 @@ public class EnemyBullet : MonoBehaviour
 {
     public Rigidbody2D enemyBulletRb;
     private PlayerControl player;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<PlayerControl>();
         BulletDirection();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void BulletDirection()
@@ -32,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
             AudioClips.playerIsDestroyed = true;
             Destroy(player.gameObject);
             Destroy(this.gameObject);
-            GameManager.gameOver = true;
+            gameManager.GameOver();
         }
     }
 }

@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
+    public AudioClip firsHit;
     public Rigidbody2D enemyRb;
-    [SerializeField] private float speed;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    private GameManager gameManager;
+    private AudioSource audioSource;
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private float speed;
+    [SerializeField] private int enemyHealth;
+    [SerializeField] private int enemyPoint;
+    
+    
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-        EnemyMovement();
+        if (GameManager.isActive == true)
+        {
+            EnemyMovement();
+        }
+        
     }
     public void EnemyMovement()
     {
@@ -29,11 +42,27 @@ public class EnemyControl : MonoBehaviour
         
         if(collision.CompareTag("PlayerBullet"))
         {
-
-            AudioClips.enemyIsDestroyed = true;
-            Destroy(this.gameObject);
-           
+            TakeHit();
+            if(enemyHealth > 0)
+            {
+                audioSource.PlayOneShot(firsHit, 0.5f);
+                spriteRenderer.color = Color.red;
+                speed += 5;
+            }
+            
+            
+            if(enemyHealth < 1)
+            {
+                AudioClips.enemyIsDestroyed = true;
+                Destroy(this.gameObject);
+                gameManager.UpdateScore(enemyPoint);
+                
+            }
         }
         
+    }
+    private void TakeHit()
+    {
+        enemyHealth -= 1;
     }
 }

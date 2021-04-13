@@ -12,19 +12,27 @@ public class EnemyShoot : MonoBehaviour
     void Start()
     {
         InvokeRepeating("EnemyFire", fireStart, fireRate);
+        
+    }
+    private void Awake()
+    {
+        StopEnemyFire();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EnemyFire()
     {
-        if(GameManager.gameOver == true)
+        if(GameManager.isActive == true)
+        {
+            Instantiate(enemyBullet, transform.position, transform.rotation);
+        }
+    }
+
+    private void StopEnemyFire()
+    {
+        if (GameManager.isActive == false)
         {
             CancelInvoke("EnemyFire");
         }
     }
 
-    private void EnemyFire()
-    {
-       Instantiate(enemyBullet, transform.position, transform.rotation);
-    }
 }

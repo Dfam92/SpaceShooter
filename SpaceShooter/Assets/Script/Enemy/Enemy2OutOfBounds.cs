@@ -8,8 +8,8 @@ public class Enemy2OutOfBounds : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vector2 leftPos = new Vector2(-Bounds.xEnemyBound, yPos);
-        Vector2 topPos = new Vector2(-Bounds.xEnemyBound, Bounds.yEnemyBound);
+        Vector2 leftPos = new Vector2(-ScreenBounds.xEnemyBound, yPos);
+        Vector2 topPos = new Vector2(-ScreenBounds.xEnemyBound, ScreenBounds.yEnemyBound);
         if (collision.CompareTag("RightBound"))
         {
             gameObject.transform.position = leftPos;
@@ -18,7 +18,7 @@ public class Enemy2OutOfBounds : MonoBehaviour
         else if (collision.CompareTag("BotBound"))
         {
             gameObject.transform.position = topPos;
-            yPos = Bounds.yEnemyBound;
+            yPos = ScreenBounds.yEnemyBound;
         }
     }
 }

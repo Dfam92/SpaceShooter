@@ -6,10 +6,10 @@ public class Enemy1OutOfBounds : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vector2 topPos = new Vector2(transform.position.x, Bounds.yEnemyBound);
-        Vector2 rightPos = new Vector2(Bounds.xEnemyBound,transform.position.y);
-        Vector2 leftPos = new Vector2(-Bounds.xEnemyBound, transform.position.y);
-        Vector2 botPos = new Vector2(transform.position.x, -Bounds.yEnemyBound);
+        Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yEnemyBound);
+        Vector2 rightPos = new Vector2(ScreenBounds.xEnemyBound,transform.position.y);
+        Vector2 leftPos = new Vector2(-ScreenBounds.xEnemyBound, transform.position.y);
+        Vector2 botPos = new Vector2(transform.position.x, -ScreenBounds.yEnemyBound);
 
         if (collision.CompareTag("BotBound"))
         {

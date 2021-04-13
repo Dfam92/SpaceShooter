@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
     public AudioClip bulletSound;
     private AudioSource playerAudioSource;
     private Animator animPlayer;
+    private GameManager gameManager;
 
     
 
@@ -19,20 +20,27 @@ public class PlayerControl : MonoBehaviour
     {
         playerAudioSource = GetComponent<AudioSource>();
         animPlayer = GetComponent<Animator>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
 
     private void Update()
-    {
-        PlayerShoot();
+    {if(GameManager.isActive == true)
+        {
+            PlayerShoot();
+        }
+       
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        PlayerMovement();
-        PlayerOutBounds();
+        if(GameManager.isActive == true)
+        {
+            PlayerMovement();
+            PlayerOutBounds();
+        }
+        
     }
 
     private void PlayerMovement()
@@ -57,23 +65,23 @@ public class PlayerControl : MonoBehaviour
 
     private void PlayerOutBounds()
     {
-        Vector2 topPos = new Vector2(transform.position.x, Bounds.yPlayerBound);
-        Vector2 rightPos = new Vector2(Bounds.xPlayerBound, transform.position.y);
-        Vector2 leftPos = new Vector2(-Bounds.xPlayerBound, transform.position.y);
-        Vector2 botPos = new Vector2(transform.position.x, -Bounds.yPlayerBound);
-        if(transform.position.x > Bounds.xPlayerBound)
+        Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yPlayerBound);
+        Vector2 rightPos = new Vector2(ScreenBounds.xPlayerBound, transform.position.y);
+        Vector2 leftPos = new Vector2(-ScreenBounds.xPlayerBound, transform.position.y);
+        Vector2 botPos = new Vector2(transform.position.x, -ScreenBounds.yPlayerBound);
+        if(transform.position.x > ScreenBounds.xPlayerBound)
         {
             transform.position = leftPos;
         }
-        else if(transform.position.x < -Bounds.xPlayerBound)
+        else if(transform.position.x < -ScreenBounds.xPlayerBound)
         {
             transform.position = rightPos;
         }
-        else if(transform.position.y > Bounds.yPlayerBound)
+        else if(transform.position.y > ScreenBounds.yPlayerBound)
         {
             transform.position = botPos;
         }
-        else if(transform.position.y < -Bounds.yPlayerBound)
+        else if(transform.position.y < -ScreenBounds.yPlayerBound)
         {
             transform.position = topPos;
         }
@@ -96,7 +104,8 @@ public class PlayerControl : MonoBehaviour
         {
             AudioClips.playerIsDestroyed = true;
             Destroy(gameObject);
-            GameManager.gameOver = true;
+            gameManager.GameOver();
+
         }
        
     }

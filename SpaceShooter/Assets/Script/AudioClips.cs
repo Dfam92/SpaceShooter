@@ -7,7 +7,7 @@ public class AudioClips : MonoBehaviour
     private AudioSource audioPlayer;
     public AudioClip explosionEnemy;
     public AudioClip explosionPlayer;
-    public AudioClip shipEngine;
+    public AudioClip gameOverClip;
     public static bool enemyIsDestroyed;
     public static bool playerIsDestroyed;
     //public static bool isMoving;
@@ -19,22 +19,23 @@ public class AudioClips : MonoBehaviour
         audioPlayer = GetComponent<AudioSource>();
         
     }
-    
-   
-
     // Update is called once per frame
     void Update()
     {
         if ( enemyIsDestroyed == true)
         {
-            audioPlayer.PlayOneShot(explosionEnemy, 1f);
+            audioPlayer.PlayOneShot(explosionEnemy, 0.5f);
             enemyIsDestroyed = false;
         }
         else if ( playerIsDestroyed == true)
         {
-            audioPlayer.PlayOneShot(explosionPlayer,2f);
+            audioPlayer.PlayOneShot(explosionPlayer,1f);
             playerIsDestroyed = false;
-
+        }
+        else if( GameManager.gameOver == true)
+        {
+            audioPlayer.PlayOneShot(gameOverClip, 0.05f);
+            
         }
        /* else if( isMoving == true)
         {

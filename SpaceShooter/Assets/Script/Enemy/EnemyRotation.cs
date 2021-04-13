@@ -21,18 +21,26 @@ public class EnemyRotation : MonoBehaviour
     }
     private void Update()
     {
-        count += Time.deltaTime;
-        if (count > timeToStopTurn)
+        if (GameManager.isActive == true)
         {
-            StopCoroutine(Turning());
-            isTurning = true;
+            count += Time.deltaTime;
+            if (count > timeToStopTurn)
+            {
+                StopCoroutine(Turning());
+                isTurning = true;
+            }
         }
+           
         
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        TurnMovement();
+        if(GameManager.isActive == true)
+        {
+            TurnMovement();
+        }
+        
         
     }
     private void TurnMovement()
