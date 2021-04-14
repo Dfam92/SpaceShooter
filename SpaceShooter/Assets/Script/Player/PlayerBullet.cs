@@ -23,5 +23,9 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else if(collision.gameObject.CompareTag("TopBound"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -30,5 +30,13 @@ public class EnemyBullet : MonoBehaviour
             Destroy(this.gameObject);
             gameManager.GameOver();
         }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("BotBound") || collision.CompareTag("LeftBound") || collision.CompareTag("RightBound"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -21,19 +21,16 @@ public class GameManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-       
+        
     }
-
     public void StartGame()
     {
         isActive = true;
         gameOver = false;
         titleScreen.SetActive(false);
-        
+        audioSource.Play();
     }
 
     public void GameOver()
@@ -48,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        gameOver = false;
+        
     }
 
     public void QuitGame()

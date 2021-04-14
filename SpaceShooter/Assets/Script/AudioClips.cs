@@ -7,7 +7,7 @@ public class AudioClips : MonoBehaviour
     private AudioSource audioPlayer;
     public AudioClip explosionEnemy;
     public AudioClip explosionPlayer;
-    public AudioClip gameOverClip;
+    
     public static bool enemyIsDestroyed;
     public static bool playerIsDestroyed;
     //public static bool isMoving;
@@ -29,14 +29,10 @@ public class AudioClips : MonoBehaviour
         }
         else if ( playerIsDestroyed == true)
         {
-            audioPlayer.PlayOneShot(explosionPlayer,1f);
+            audioPlayer.PlayOneShot(explosionPlayer,0.5f);
             playerIsDestroyed = false;
         }
-        else if( GameManager.gameOver == true)
-        {
-            audioPlayer.PlayOneShot(gameOverClip, 0.05f);
-            
-        }
+       
        /* else if( isMoving == true)
         {
             audioPlayer.PlayOneShot(shipEngine);
