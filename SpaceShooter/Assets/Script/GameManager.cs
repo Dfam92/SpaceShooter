@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private AudioSource audioSource;
     private int score;
-
+    public GameObject scoreAndButtons;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         titleScreen.SetActive(false);
         audioSource.Play();
+        scoreAndButtons.SetActive(true);
     }
 
     public void GameOver()

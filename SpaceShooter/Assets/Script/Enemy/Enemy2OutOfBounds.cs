@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy2OutOfBounds : MonoBehaviour
 {
-    private float yPos = 4;
+    private float yPos;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

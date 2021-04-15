@@ -65,10 +65,10 @@ public class PlayerControl : MonoBehaviour
 
     private void PlayerOutBounds()
     {
-        Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yPlayerBound);
+        Vector2 topPos = new Vector2(transform.position.x, -ScreenBounds.yPlayerBound);
         Vector2 rightPos = new Vector2(ScreenBounds.xPlayerBound, transform.position.y);
         Vector2 leftPos = new Vector2(-ScreenBounds.xPlayerBound, transform.position.y);
-        Vector2 botPos = new Vector2(transform.position.x, -ScreenBounds.yPlayerBound);
+        Vector2 botPos = new Vector2(transform.position.x, ScreenBounds.yPlayerBound);
         if(transform.position.x > ScreenBounds.xPlayerBound)
         {
             transform.position = leftPos;
@@ -87,7 +87,7 @@ public class PlayerControl : MonoBehaviour
         }
         
     }
-    private void PlayerShoot()
+    public void PlayerShoot()
     {
         Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
         if(Input.GetKeyDown(KeyCode.Space))
