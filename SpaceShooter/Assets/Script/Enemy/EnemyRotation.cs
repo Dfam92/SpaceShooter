@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyRotation : MonoBehaviour
 {
-    [SerializeField] private float turnForce;
     [SerializeField] private float timeToTurn;
     [SerializeField] private float timeToStopTurn;
+    [SerializeField] private float turnForce;
     [SerializeField] private float turnAngle;
     
     private bool isTurning;

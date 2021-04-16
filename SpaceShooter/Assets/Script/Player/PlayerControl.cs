@@ -42,7 +42,7 @@ public class PlayerControl : MonoBehaviour
         }
         
     }
-
+    //When Mobile, change the Inputs to Joystick.horizontal and Joystick.vertical, dont forget to instantiate the class Joystick.
     private void PlayerMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

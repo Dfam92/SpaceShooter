@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         titleScreen.SetActive(false);
         audioSource.Play();
+
+        //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 
         scoreAndButtons.SetActive(true);
     }
 
