@@ -13,7 +13,10 @@ public class PlayerControl : MonoBehaviour
     private Animator animPlayer;
     private GameManager gameManager;
 
-    
+    //For mobile active the Joystick
+    public Joystick joystick;
+    public Joystick fireButton;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +28,19 @@ public class PlayerControl : MonoBehaviour
 
 
     private void Update()
-    {if(GameManager.isActive == true)
+    // if mobile desactive this.
+    {
+        /*if (GameManager.isActive == true)
         {
             PlayerShoot();
-        }
+        }*/
        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         if(GameManager.isActive == true)
         {
             PlayerMovement();
@@ -45,12 +51,32 @@ public class PlayerControl : MonoBehaviour
     //When Mobile, change the Inputs to Joystick.horizontal and Joystick.vertical, dont forget to instantiate the class Joystick.
     private void PlayerMovement()
     {
+        //For Play in PC active this
+
+        /* float horizontalInput = Input.GetAxis("Horizontal");
+         float verticalInput = Input.GetAxis("Vertical");
+         playerRb.AddForce(Vector2.right * speed * horizontalInput);
+         playerRb.AddForce(Vector2.up * speed * verticalInput);
+
+         if (verticalInput > 0 || horizontalInput > 0 || horizontalInput <0)
+         {
+             animPlayer.SetFloat("Move", 1f);
+             //AudioClips.isMoving = true;
+         }
+         else
+         {
+             animPlayer.SetFloat("Move", -1f);
+             //AudioClips.isMoving = false;
+
+         }*/
+
+        // For play Mobile
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        playerRb.AddForce(Vector2.right * speed * horizontalInput);
-        playerRb.AddForce(Vector2.up * speed * verticalInput);
-        
-        if (verticalInput > 0 || horizontalInput > 0 || horizontalInput <0)
+        playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
+        playerRb.AddForce(Vector2.up * speed * joystick.Vertical);
+
+        if (joystick.Vertical > 0 || joystick.Horizontal > 0 || joystick.Horizontal < 0)
         {
             animPlayer.SetFloat("Move", 1f);
             //AudioClips.isMoving = true;
@@ -69,6 +95,7 @@ public class PlayerControl : MonoBehaviour
         Vector2 rightPos = new Vector2(ScreenBounds.xPlayerBound, transform.position.y);
         Vector2 leftPos = new Vector2(-ScreenBounds.xPlayerBound, transform.position.y);
         Vector2 botPos = new Vector2(transform.position.x, ScreenBounds.yPlayerBound);
+        
         if(transform.position.x > ScreenBounds.xPlayerBound)
         {
             transform.position = leftPos;
@@ -89,8 +116,18 @@ public class PlayerControl : MonoBehaviour
     }
     public void PlayerShoot()
     {
+        // For play in Pc active this
+        /*
         Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
         if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bulletPlayer, bulletPos, transform.rotation);
+            playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+        }
+        */
+
+        //for play Mobile active this
+        Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI enemiesDestroyedText;
     public List<GameObject> hordes;
     
     private AudioSource audioSource;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private float timeToSpawnHordes;
 
     private int score;
+    private int enemiesCount;
     public static bool gameOver;
     public static bool isActive;
 
@@ -44,10 +46,11 @@ public class GameManager : MonoBehaviour
        
     }
 
-    public void StartGame()
+    public void StartGame(int dificculty)
     {
         isActive = true;
         gameOver = false;
+        timeToSpawnHordes /= dificculty;
         titleScreen.SetActive(false);
         audioSource.Play();
         StartCoroutine(SpawnHordes());
@@ -81,6 +84,10 @@ public class GameManager : MonoBehaviour
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
     }
-
+    public void UpdateEnemies(int enemiesToAdd)
+    {
+        enemiesCount += enemiesToAdd;
+        enemiesDestroyedText.text = "Enemies: " + enemiesCount;
+    }
     
 }

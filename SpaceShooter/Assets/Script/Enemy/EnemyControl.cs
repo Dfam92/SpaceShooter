@@ -14,6 +14,8 @@ public class EnemyControl : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int enemyHealth;
     [SerializeField] private int enemyPoint;
+
+    private int enemyCount = 1;
     
     
     private void Start()
@@ -56,6 +58,7 @@ public class EnemyControl : MonoBehaviour
                 AudioClips.enemyIsDestroyed = true;
                 Destroy(this.gameObject);
                 gameManager.UpdateScore(enemyPoint);
+                gameManager.UpdateEnemies(enemyCount);
                 
             }
         }
