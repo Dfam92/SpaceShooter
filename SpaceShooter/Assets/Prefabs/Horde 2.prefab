@@ -162,10 +162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.2
+  timeToTurn: 7.2
   timeToStopTurn: 2
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463822602274034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,10 +391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.4
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7.4
+  timeToStopTurn: 2.6
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463822785103601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,10 +586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7
+  timeToStopTurn: 2.2
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463823001150975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,10 +781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.6
-  timeToStopTurn: 2
+  timeToTurn: 7.6
+  timeToStopTurn: 2.8
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463823110534220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,10 +976,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.4
-  timeToStopTurn: 2
+  timeToTurn: 7.4
+  timeToStopTurn: 2.6
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463823120118205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1205,10 +1205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6
-  timeToStopTurn: 2
+  timeToTurn: 7
+  timeToStopTurn: 2.4
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463823316893338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,10 +1468,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.6
-  timeToStopTurn: 2
+  timeToTurn: 7.6
+  timeToStopTurn: 2.8
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463823479204362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,10 +1663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.2
-  timeToStopTurn: 2
+  timeToTurn: 7.2
+  timeToStopTurn: 2.4
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463823479817924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,10 +1858,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6
-  timeToStopTurn: 2
+  timeToTurn: 7
+  timeToStopTurn: 2.2
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463823581860296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,10 +2053,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7
+  timeToStopTurn: 2.2
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463823691897094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2248,10 +2248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.4
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7.4
+  timeToStopTurn: 2.6
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463823801998849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,10 +2443,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.2
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7.2
+  timeToStopTurn: 2.4
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463823816477592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2672,10 +2672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.2
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7.2
+  timeToStopTurn: 2.4
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463824285433188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2867,10 +2867,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.6
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7.6
+  timeToStopTurn: 2.8
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463824354299791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3062,10 +3062,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.6
-  timeToStopTurn: 2
-  turnForce: 1
-  turnAngle: -2
+  timeToTurn: 7.6
+  timeToStopTurn: 2.8
+  turnForce: -1
+  turnAngle: -1.5
 --- !u!114 &4465463824554113399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3257,10 +3257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab7948b17d8c194084d323e57313849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTurn: 6.4
-  timeToStopTurn: 2
+  timeToTurn: 7.4
+  timeToStopTurn: 2.6
   turnForce: 1
-  turnAngle: 2
+  turnAngle: 1.5
 --- !u!114 &4465463824583503353
 MonoBehaviour:
   m_ObjectHideFlags: 0

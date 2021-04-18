@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.6
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243727657780443
 MonoBehaviour:
@@ -358,8 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243727752757528
 MonoBehaviour:
@@ -553,8 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243727887111563
 MonoBehaviour:
@@ -782,8 +782,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.4
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243728094471729
 MonoBehaviour:
@@ -1045,8 +1045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243728190056338
 MonoBehaviour:
@@ -1274,8 +1274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.6
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243728264534268
 MonoBehaviour:
@@ -1469,8 +1469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243728384510539
 MonoBehaviour:
@@ -1664,8 +1664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.2
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243728427569403
 MonoBehaviour:
@@ -1859,8 +1859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.6
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243728591734403
 MonoBehaviour:
@@ -2054,8 +2054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.2
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243728617015894
 MonoBehaviour:
@@ -2249,8 +2249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.4
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243728634694063
 MonoBehaviour:
@@ -2444,8 +2444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.4
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243728649454019
 MonoBehaviour:
@@ -2639,8 +2639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.2
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243728676312470
 MonoBehaviour:
@@ -2868,8 +2868,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.2
-  timeToStopTurn: 4
-  turnForce: 1
+  timeToStopTurn: 3.5
+  turnForce: 2
   turnAngle: 1.25
 --- !u!114 &8129243729496782819
 MonoBehaviour:
@@ -3063,8 +3063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.4
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243729636178170
 MonoBehaviour:
@@ -3258,8 +3258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 1.6
-  timeToStopTurn: 4
-  turnForce: -1
+  timeToStopTurn: 3.5
+  turnForce: -2
   turnAngle: -1.25
 --- !u!114 &8129243729637191597
 MonoBehaviour:
