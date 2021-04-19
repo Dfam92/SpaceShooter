@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class Enemy1OutOfBounds : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void LateUpdate()
+    {
+        
+       OutOfBounds();
+        
+    }
+    void OutOfBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yEnemyBound);
-        Vector2 rightPos = new Vector2(ScreenBounds.xEnemyBound,transform.position.y);
+        Vector2 rightPos = new Vector2(ScreenBounds.xEnemyBound, transform.position.y);
         Vector2 leftPos = new Vector2(-ScreenBounds.xEnemyBound, transform.position.y);
         Vector2 botPos = new Vector2(transform.position.x, -ScreenBounds.yEnemyBound);
 
-        if (collision.CompareTag("BotBound"))
+        if (transform.position.y < -ScreenBounds.yEnemyBound-0.5f)
         {
             gameObject.transform.position = topPos;
         }
-        else if(collision.CompareTag("LeftBound"))
+        if (transform.position.x < -ScreenBounds.xEnemyBound-0.5f)
         {
             gameObject.transform.position = rightPos;
         }
-        else if(collision.CompareTag("RightBound"))
+        else if (transform.position.x > ScreenBounds.xEnemyBound + 0.5f)
         {
             gameObject.transform.position = leftPos;
         }
-        else if(collision.CompareTag("TopBound"))
+        /*else if (transform.position.y > ScreenBounds.yEnemyBound + 0.5f)
         {
             gameObject.transform.position = botPos;
-        }
+        }*/
     }
+
+    
+
 }
