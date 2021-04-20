@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public Rigidbody2D bulletRb;
-  
-    // Update is called once per frame
+
+
+    private void Update()
+    {
+        bulletOutBounds();
+    }
     void FixedUpdate()
     {
         bulletMovement();
@@ -17,15 +21,21 @@ public class PlayerBullet : MonoBehaviour
         bulletRb.AddForce(Vector2.up, ForceMode2D.Impulse);
         transform.rotation = Quaternion.identity;
     }
+    private void bulletOutBounds()
+    {
+        if (transform.position.y > ScreenBounds.yEnemyBound + 1f)
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
         }
-        else if(collision.gameObject.CompareTag("TopBound"))
-        {
-            Destroy(this.gameObject);
-        }
+       
     }
 }

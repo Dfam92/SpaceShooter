@@ -24,7 +24,7 @@ public class AudioClips : MonoBehaviour
     {
         if ( enemyIsDestroyed == true)
         {
-            audioPlayer.PlayOneShot(explosionEnemy, 0.5f);
+            audioPlayer.PlayOneShot(explosionEnemy, 0.25f);
             enemyIsDestroyed = false;
         }
         else if ( playerIsDestroyed == true)

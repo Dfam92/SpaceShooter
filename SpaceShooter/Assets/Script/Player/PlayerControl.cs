@@ -117,14 +117,14 @@ public class PlayerControl : MonoBehaviour
     public void PlayerShoot()
     {
         // For play in Pc active this
-        /*
-        Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
+        
+        /*Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);
-        }
-        */
+        }*/
+        
 
         //for play Mobile active this
         Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScore;
     public TextMeshProUGUI enemiesDestroyedText;
     public List<GameObject> hordes;
     
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
        
     }
     private void FixedUpdate()
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         titleScreen.SetActive(false);
         audioSource.Play();
         StartCoroutine(SpawnHordes());
+        
 
         //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 
         scoreAndButtons.SetActive(true);
@@ -65,7 +68,8 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(true);
         isActive = false;
         audioSource.Stop();
-        
+        HighScore();
+
     }
 
     public void Restart()
@@ -88,6 +92,21 @@ public class GameManager : MonoBehaviour
     {
         enemiesCount += enemiesToAdd;
         enemiesDestroyedText.text = "Enemies: " + enemiesCount;
+    }
+
+    private void HighScore()
+    {
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
+        
+    }
+
+    public void ResetScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
+        highScore.text = "HiScore: 0";
     }
     
 }

@@ -16,10 +16,23 @@ public class EnemyBullet : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    private void Update()
+    {
+        bulletOutBounds();
+    }
+
     private void BulletDirection()
     {
         enemyBulletRb.AddForce(Vector2.down, ForceMode2D.Impulse);
         transform.rotation = Quaternion.identity;
+    }
+    private void bulletOutBounds()
+    {
+        if (transform.position.y < -ScreenBounds.yEnemyBound - 1f)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,11 +45,5 @@ public class EnemyBullet : MonoBehaviour
         }
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("BotBound") || collision.CompareTag("LeftBound") || collision.CompareTag("RightBound"))
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    
 }

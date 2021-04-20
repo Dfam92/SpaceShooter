@@ -49,7 +49,7 @@ public class EnemyControl : MonoBehaviour
             {
                 audioSource.PlayOneShot(firsHit, 0.5f);
                 spriteRenderer.color = Color.red;
-                speed += 5;
+                speed += 3;
             }
             
             
