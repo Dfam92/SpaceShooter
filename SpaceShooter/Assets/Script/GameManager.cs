@@ -14,11 +14,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI highScore;
     public TextMeshProUGUI enemiesDestroyedText;
     public List<GameObject> hordes;
+    public List<GameObject> powerUps;
     
     private AudioSource audioSource;
     
    
     [SerializeField]private float timeToSpawnHordes;
+    [SerializeField]private float timeToSpawnPowerUps;
 
     private int score;
     private int enemiesCount;
@@ -47,6 +49,16 @@ public class GameManager : MonoBehaviour
         }
        
     }
+    IEnumerator SpawnRatePowerUps()
+    {
+        while (isActive)
+        {
+            yield return new WaitForSeconds(timeToSpawnPowerUps);
+            int index = Random.Range(0, powerUps.Count);
+            Instantiate(powerUps[index]);
+        }
+       
+    }
 
     public void StartGame(int dificculty)
     {
@@ -56,6 +68,7 @@ public class GameManager : MonoBehaviour
         titleScreen.SetActive(false);
         audioSource.Play();
         StartCoroutine(SpawnHordes());
+        StartCoroutine(SpawnRatePowerUps());
         
 
         //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 

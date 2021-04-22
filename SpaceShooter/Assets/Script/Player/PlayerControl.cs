@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     //For mobile active the Joystick
     public Joystick joystick;
     public Joystick fireButton;
+    public GameObject AlienShield;
 
 
     // Start is called before the first frame update
@@ -137,13 +138,17 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(collision.CompareTag("Enemy"))
+        if(collision.CompareTag("Enemy") && !AlienShield.activeInHierarchy)
         {
             AudioClips.playerIsDestroyed = true;
             Destroy(gameObject);
             gameManager.GameOver();
 
         }
-       
+       else if(collision.CompareTag("Shield"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            
+        }
     }
 }

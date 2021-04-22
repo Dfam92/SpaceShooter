@@ -11,6 +11,8 @@ TagManager:
   - RightBound
   - TopBound
   - BotBound
+  - Shield
+  - AlienShield
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class EnemyControl : MonoBehaviour
     public Rigidbody2D enemyRb;
 
     private GameManager gameManager;
+    private PlayerControl playerControl;
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
 
@@ -61,6 +62,16 @@ public class EnemyControl : MonoBehaviour
                 gameManager.UpdateEnemies(enemyCount);
                 
             }
+        }
+        else if (collision.CompareTag("AlienShield"))
+        {
+            playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
+            {
+                playerControl.transform.GetChild(0).gameObject.SetActive(false);
+                Destroy(gameObject);
+                
+            }
+            
         }
         
     }

@@ -34,16 +34,20 @@ public class EnemyBullet : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             AudioClips.playerIsDestroyed = true;
-            Destroy(player.gameObject);
             Destroy(this.gameObject);
+            Destroy(player.gameObject);
             gameManager.GameOver();
         }
-        
+        else if (collision.gameObject.CompareTag("AlienShield"))
+        {
+            Destroy(this.gameObject);
+        }
     }
+    
     
 }
