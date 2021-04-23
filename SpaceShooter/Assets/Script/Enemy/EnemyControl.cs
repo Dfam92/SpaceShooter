@@ -24,6 +24,7 @@ public class EnemyControl : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -66,10 +67,10 @@ public class EnemyControl : MonoBehaviour
         else if (collision.CompareTag("AlienShield"))
         {
             playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
+
             {
-                playerControl.transform.GetChild(0).gameObject.SetActive(false);
-                Destroy(gameObject);
-                
+                Destroy(this.gameObject);
+                Shield.ShieldHit();
             }
             
         }

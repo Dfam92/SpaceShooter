@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     private AudioSource playerAudioSource;
     private Animator animPlayer;
     private GameManager gameManager;
+    private EnemyControl enemyControl;
 
     //For mobile active the Joystick
     public Joystick joystick;
@@ -138,7 +139,8 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(collision.CompareTag("Enemy") && !AlienShield.activeInHierarchy)
+
+        if (collision.CompareTag("Enemy") && !AlienShield.activeInHierarchy)
         {
             AudioClips.playerIsDestroyed = true;
             Destroy(gameObject);

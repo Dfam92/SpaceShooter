@@ -45,6 +45,7 @@ public class EnemyBullet : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("AlienShield"))
         {
+            Shield.ShieldHit();
             Destroy(this.gameObject);
         }
     }

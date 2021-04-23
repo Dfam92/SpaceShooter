@@ -6,25 +6,25 @@ public class SpawnPowerUps : MonoBehaviour
 {
     public GameObject powerUp;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+   
     private void Awake()
     {
-        SpawnRange();
+        SpawnRangeX();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        
+        if (transform.position.y < -ScreenBounds.yPlayerBound-0.5f)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
-    public void SpawnRange()
+    private void SpawnRangeX()
     {
-        Vector3 powerUpPos = new Vector3(Random.Range(-CameraEdgesBounds.screenBounds.x, CameraEdgesBounds.screenBounds.x), CameraEdgesBounds.screenBounds.y,gameObject.transform.position.z);
+        Vector3 powerUpPos = new Vector3(Random.Range(-CameraEdgesBounds.screenBounds.x+0.5f, CameraEdgesBounds.screenBounds.x-0.5f), CameraEdgesBounds.screenBounds.y+0.5f,gameObject.transform.position.z);
         transform.position = powerUpPos;
     }
 
