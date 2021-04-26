@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float speed;
+    private bool sideBullets;
 
     public Rigidbody2D playerRb;
     public GameObject bulletPlayer;
@@ -17,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     //For mobile active the Joystick
     public Joystick joystick;
     public Joystick fireButton;
+
     public GameObject AlienShield;
 
 
@@ -129,10 +131,20 @@ public class PlayerControl : MonoBehaviour
         
 
         //for play Mobile active this
-        Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
+        Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+        }
+
+        if (sideBullets == true)
+        {
+                
+            Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
+            Vector3 bulletPos3 = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.rotation.z);
+        
+            Instantiate(bulletPlayer, bulletPos2, transform.rotation);
+            Instantiate(bulletPlayer, bulletPos3, transform.rotation);
         }
     }
 
@@ -151,6 +163,10 @@ public class PlayerControl : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(true);
             
+        }
+        else if (collision.CompareTag("BulletCase"))
+        {
+            sideBullets = true;
         }
     }
 }

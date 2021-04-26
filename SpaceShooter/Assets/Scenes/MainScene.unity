@@ -1177,6 +1177,7 @@ MonoBehaviour:
   - {fileID: 4186847041465671125, guid: 8d22f0eadbed9344b86ddc79fb6e3f93, type: 3}
   powerUps:
   - {fileID: 1725787198961493733, guid: f84fd8da4fb4a3b44852d97bdc5043e0, type: 3}
+  - {fileID: 6407953165878910082, guid: 6dc51240f5d67bd4b82a0acae534cff0, type: 3}
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 5
 --- !u!114 &467349812
@@ -3876,7 +3877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 17
   playerRb: {fileID: 1767198475}
-  bulletPlayer: {fileID: 4665338741655374298, guid: 95392378053cb3d41b4ed4c38b962699, type: 3}
+  bulletPlayer: {fileID: 4818437649621668731, guid: 112474bd7332f2e4d99e25b67510d0c1, type: 3}
   bulletSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   joystick: {fileID: 243847606}
   fireButton: {fileID: 0}
