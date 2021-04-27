@@ -77,6 +77,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        PlayerControl.isMultiplying2x = false;
+        PlayerControl.isMultiplying4x = false;
+        PlayerControl.sideBullets = false;
         gameOver = true;
         gameOverScreen.SetActive(true);
         isActive = false;

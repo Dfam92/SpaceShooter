@@ -14,9 +14,10 @@ public class EnemyControl : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private int enemyHealth;
-    [SerializeField] private int enemyPoint;
-
+    
+    public int enemyPoint;
     private int enemyCount = 1;
+    private int enemyStartPoint;
     
     
     private void Start()
@@ -24,6 +25,7 @@ public class EnemyControl : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyStartPoint = enemyPoint;
         
     }
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class EnemyControl : MonoBehaviour
         if(collision.CompareTag("PlayerBullet"))
         {
             TakeHit();
+            
             if(enemyHealth > 0)
             {
                 audioSource.PlayOneShot(firsHit, 0.5f);
@@ -57,6 +60,7 @@ public class EnemyControl : MonoBehaviour
             
             if(enemyHealth < 1)
             {
+                MultiplyPoints();
                 AudioClips.enemyIsDestroyed = true;
                 Destroy(this.gameObject);
                 gameManager.UpdateScore(enemyPoint);
@@ -79,5 +83,17 @@ public class EnemyControl : MonoBehaviour
     private void TakeHit()
     {
         enemyHealth -= 1;
+    }
+    private void MultiplyPoints()
+    {
+        
+        if(PlayerControl.isMultiplying2x == true)
+        {
+            enemyPoint *= 2;
+        }
+        else if(PlayerControl.isMultiplying4x == true)
+        {
+            enemyPoint *= 4;
+        }
     }
 }

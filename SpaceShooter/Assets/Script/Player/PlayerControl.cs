@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private bool sideBullets;
+    
 
     public Rigidbody2D playerRb;
     public GameObject bulletPlayer;
@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     private AudioSource playerAudioSource;
     private Animator animPlayer;
     private GameManager gameManager;
-    private EnemyControl enemyControl;
+    
 
     //For mobile active the Joystick
     public Joystick joystick;
@@ -21,6 +21,11 @@ public class PlayerControl : MonoBehaviour
 
     public GameObject AlienShield;
 
+    public static bool isMultiplying2x;
+    public static bool isMultiplying4x;
+    public static bool sideBullets;
+
+    private int timeToStopPowerUp;
 
     // Start is called before the first frame update
     void Start()
@@ -28,17 +33,21 @@ public class PlayerControl : MonoBehaviour
         playerAudioSource = GetComponent<AudioSource>();
         animPlayer = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
 
     private void Update()
     // if mobile desactive this.
     {
-        /*if (GameManager.isActive == true)
+        if (GameManager.isActive == true)
         {
             PlayerShoot();
-        }*/
-       
+        }
+
+        
+
+
     }
 
     // Update is called once per frame
@@ -57,7 +66,7 @@ public class PlayerControl : MonoBehaviour
     {
         //For Play in PC active this
 
-        /* float horizontalInput = Input.GetAxis("Horizontal");
+         float horizontalInput = Input.GetAxis("Horizontal");
          float verticalInput = Input.GetAxis("Vertical");
          playerRb.AddForce(Vector2.right * speed * horizontalInput);
          playerRb.AddForce(Vector2.up * speed * verticalInput);
@@ -72,10 +81,10 @@ public class PlayerControl : MonoBehaviour
              animPlayer.SetFloat("Move", -1f);
              //AudioClips.isMoving = false;
 
-         }*/
+         }
 
         // For play Mobile
-        float horizontalInput = Input.GetAxis("Horizontal");
+        /*float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
         playerRb.AddForce(Vector2.up * speed * joystick.Vertical);
@@ -90,7 +99,7 @@ public class PlayerControl : MonoBehaviour
             animPlayer.SetFloat("Move", -1f);
             //AudioClips.isMoving = false;
 
-        }
+        }*/
     }
 
     private void PlayerOutBounds()
@@ -122,16 +131,27 @@ public class PlayerControl : MonoBehaviour
     {
         // For play in Pc active this
         
-        /*Vector2 bulletPos = new Vector2(transform.position.x, transform.position.y + 0.5f);
-        if(Input.GetKeyDown(KeyCode.Space))
+        Vector3 bulletPos = new Vector3(transform.position.x-0.05f, transform.position.y + 0.5f, transform.rotation.z);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);
-        }*/
+
+            if (sideBullets == true)
+            {
+
+                Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
+                Vector3 bulletPos3 = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.rotation.z);
+
+                Instantiate(bulletPlayer, bulletPos2, transform.rotation);
+                Instantiate(bulletPlayer, bulletPos3, transform.rotation);
+            }
+        }
+            
         
 
         //for play Mobile active this
-        Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
+        /*Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);
@@ -145,7 +165,7 @@ public class PlayerControl : MonoBehaviour
         
             Instantiate(bulletPlayer, bulletPos2, transform.rotation);
             Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -167,6 +187,41 @@ public class PlayerControl : MonoBehaviour
         else if (collision.CompareTag("BulletCase"))
         {
             sideBullets = true;
+            timeToStopPowerUp = 15;
+            StartCoroutine(StopPowerUp());
         }
+        else if(collision.CompareTag("Multiply2x"))
+        {
+            isMultiplying2x = true;
+            timeToStopPowerUp = 15;
+            StartCoroutine(StopPowerUp());
+            
+        }
+        else if (collision.CompareTag("Multiply4x"))
+        {
+            isMultiplying4x = true;
+            timeToStopPowerUp = 10;
+            StartCoroutine(StopPowerUp());
+           
+        }
+    }
+
+    IEnumerator StopPowerUp()
+    {
+        
+        yield return new WaitForSeconds(timeToStopPowerUp);
+        if( sideBullets == true)
+        {
+            sideBullets = false;
+        }
+        else if(isMultiplying2x == true)
+        {
+            isMultiplying2x = false;
+        }
+        else if (isMultiplying4x == true)
+        {
+            isMultiplying4x = false;
+        }
+
     }
 }
