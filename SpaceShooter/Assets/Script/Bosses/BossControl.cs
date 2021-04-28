@@ -5,15 +5,22 @@ using UnityEngine;
 public class BossControl : MonoBehaviour
 {
     public Rigidbody2D bossRb;
+
     private bool isTurning;
     private bool isMoving = true;
-    [SerializeField]private float speed;
-    [SerializeField]private float timeToTurn;
+
+    [SerializeField] private int healthBoss;
+    [SerializeField] private float speed;
+    [SerializeField] private float timeToTurn;
     [SerializeField] private float turnAngle;
+
+    private SpriteRenderer spriteRenderer;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         
     }
 
@@ -95,6 +102,29 @@ public class BossControl : MonoBehaviour
         else if (transform.position.y > ScreenBounds.yEnemyBound + 0.5f)
         {
             gameObject.transform.position = botPos;
+        }
+    }
+
+    private void TakeHit()
+    {
+        healthBoss -= 1;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("PlayerBullet"))
+        {
+            TakeHit();
+            
+           if(healthBoss < 15)
+            {
+                spriteRenderer.color = Color.red;
+                speed += 4;
+            }
+            if(healthBoss < 1)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 

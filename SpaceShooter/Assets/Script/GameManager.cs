@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     
     public List<GameObject> hordes;
     public List<GameObject> powerUps;
+    public GameObject boss;
     
     private AudioSource audioSource;
     
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     private int score;
     private int enemiesCount;
+
+    public static bool bossOn;
     public static bool gameOver;
     public static bool isActive;
 
@@ -38,7 +41,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        
+        SpawnBoss();
     }
     IEnumerator SpawnHordes()
     {
@@ -86,6 +89,18 @@ public class GameManager : MonoBehaviour
         isActive = false;
         audioSource.Stop();
         HighScore();
+
+    }
+
+    public void SpawnBoss()
+    {
+        if(enemiesCount == 20 && bossOn == false)
+        {
+            bossOn = true;
+            Instantiate(boss);
+            StopAllCoroutines();
+        }
+        
 
     }
 
