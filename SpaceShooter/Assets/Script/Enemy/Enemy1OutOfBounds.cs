@@ -6,10 +6,9 @@ public class Enemy1OutOfBounds : MonoBehaviour
 {
     private void LateUpdate()
     {
-        
        OutOfBounds();
-        
     }
+
     void OutOfBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yEnemyBound);
@@ -29,12 +28,11 @@ public class Enemy1OutOfBounds : MonoBehaviour
         {
             gameObject.transform.position = leftPos;
         }
+        //telepot top from bot
         /*else if (transform.position.y > ScreenBounds.yEnemyBound + 0.5f)
         {
             gameObject.transform.position = botPos;
         }*/
     }
-
-    
 
 }

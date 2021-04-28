@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public Rigidbody2D bulletRb;
-
-
     private void Update()
     {
         bulletOutBounds();

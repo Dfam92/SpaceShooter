@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public Rigidbody2D enemyBulletRb;
+
     private PlayerControl player;
     private GameManager gameManager;
 

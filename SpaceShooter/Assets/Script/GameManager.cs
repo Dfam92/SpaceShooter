@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScore;
     public TextMeshProUGUI enemiesDestroyedText;
+    
     public List<GameObject> hordes;
     public List<GameObject> powerUps;
     
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
         highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
        
     }
-    private void FixedUpdate()
+    private void Update()
     {
         
     }
@@ -91,7 +92,6 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
     }
 
     public void QuitGame()

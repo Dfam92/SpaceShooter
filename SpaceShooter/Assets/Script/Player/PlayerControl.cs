@@ -2,24 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float speed;
-    
 
-    public Rigidbody2D playerRb;
-    public GameObject bulletPlayer;
-    public AudioClip bulletSound;
+    private GameManager gameManager;
     private AudioSource playerAudioSource;
     private Animator animPlayer;
-    private GameManager gameManager;
-    
 
-    //For mobile active the Joystick
-    public Joystick joystick;
-    public Joystick fireButton;
-
+    public Rigidbody2D playerRb;
     public GameObject AlienShield;
+    public GameObject bulletPlayer;
+    public AudioClip bulletSound;
+   
 
     public static bool isMultiplying2x;
     public static bool isMultiplying4x;
@@ -27,13 +23,16 @@ public class PlayerControl : MonoBehaviour
 
     private int timeToStopPowerUp;
 
+    //For mobile active the Joystick
+    public Joystick joystick;
+    public Joystick fireButton;
+
     // Start is called before the first frame update
     void Start()
     {
         playerAudioSource = GetComponent<AudioSource>();
         animPlayer = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
     }
 
 
@@ -44,10 +43,7 @@ public class PlayerControl : MonoBehaviour
         {
             PlayerShoot();
         }
-
         
-
-
     }
 
     // Update is called once per frame
@@ -195,17 +191,15 @@ public class PlayerControl : MonoBehaviour
             isMultiplying2x = true;
             timeToStopPowerUp = 15;
             StartCoroutine(StopPowerUp());
-            
         }
         else if (collision.CompareTag("Multiply4x"))
         {
             isMultiplying4x = true;
             timeToStopPowerUp = 10;
             StartCoroutine(StopPowerUp());
-           
         }
     }
-
+  
     IEnumerator StopPowerUp()
     {
         

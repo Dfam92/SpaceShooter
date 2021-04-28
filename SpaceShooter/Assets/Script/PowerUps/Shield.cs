@@ -5,8 +5,11 @@ using UnityEngine;
 public class Shield : MonoBehaviour
 {
     [SerializeField]private static int shieldHealth = 3;
+
     private SpriteRenderer spriteRenderer;
+    
     private Color defaultColor;
+
     // Start is called before the first frame update
     void Start()
     {
