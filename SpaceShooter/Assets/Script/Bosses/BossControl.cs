@@ -5,6 +5,8 @@ using UnityEngine;
 public class BossControl : MonoBehaviour
 {
     public Rigidbody2D bossRb;
+    public GameObject bossSting;
+    public GameObject bossBubble;
 
     private bool isTurning;
     private bool isMoving = true;
@@ -13,15 +15,19 @@ public class BossControl : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float timeToTurn;
     [SerializeField] private float turnAngle;
+    [SerializeField] private float timeToShotStings;
+    [SerializeField] private float timeToShotBubbles;
 
     private SpriteRenderer spriteRenderer;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        InvokeRepeating("FireSting", 2, timeToShotStings);
+        InvokeRepeating("FireBubble", 2, timeToShotBubbles);
     }
 
     // Update is called once per frame
@@ -77,6 +83,19 @@ public class BossControl : MonoBehaviour
             isTurning = false;
         }
         
+    }
+
+    private void FireSting()
+    {
+        
+        
+        Instantiate(bossSting,transform.position,transform.rotation);
+    }
+
+    private void FireBubble()
+    {
+        
+        Instantiate(bossBubble,transform.position,transform.rotation);
     }
 
     void OutOfBounds()
