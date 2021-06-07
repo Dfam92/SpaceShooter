@@ -43,19 +43,16 @@ public class PlayerControl : MonoBehaviour
         {
             PlayerShoot();
         }
-        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
         if(GameManager.isActive == true)
         {
             PlayerMovement();
             PlayerOutBounds();
         }
-        
     }
     //When Mobile, change the Inputs to Joystick.horizontal and Joystick.vertical, dont forget to instantiate the class Joystick.
     private void PlayerMovement()
@@ -175,10 +172,16 @@ public class PlayerControl : MonoBehaviour
             gameManager.GameOver();
 
         }
-       else if(collision.CompareTag("Shield"))
+        else if (collision.CompareTag("Boss") && !AlienShield.activeInHierarchy)
         {
-            transform.GetChild(0).gameObject.SetActive(true);
-            
+            AudioClips.playerIsDestroyed = true;
+            Destroy(gameObject);
+            gameManager.GameOver();
+
+        }
+        else if(collision.CompareTag("Shield"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true); 
         }
         else if (collision.CompareTag("BulletCase"))
         {

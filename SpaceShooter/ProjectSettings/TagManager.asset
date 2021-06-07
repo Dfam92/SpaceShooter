@@ -17,6 +17,7 @@ TagManager:
   - Multiply2x
   - Multiply4x
   - Boss
+  - BossSting
   layers:
   - Default
   - TransparentFX

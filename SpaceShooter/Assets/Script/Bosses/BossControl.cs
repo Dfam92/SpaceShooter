@@ -87,14 +87,11 @@ public class BossControl : MonoBehaviour
 
     private void FireSting()
     {
-        
-        
-        Instantiate(bossSting,transform.position,transform.rotation);
+       Instantiate(bossSting,transform.position,transform.rotation);
     }
 
     private void FireBubble()
     {
-        
         Instantiate(bossBubble,transform.position,transform.rotation);
     }
 
