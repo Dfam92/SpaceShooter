@@ -7,11 +7,13 @@ public class BossControl : MonoBehaviour
     public Rigidbody2D bossRb;
     public GameObject bossSting;
     public GameObject bossBubble;
-
+    
     private bool isTurning;
     private bool isMoving = true;
 
-    [SerializeField] private int healthBoss;
+    private int healthBoss = 10 ;
+    public bool bossIsDefeated;
+
     [SerializeField] private float speed;
     [SerializeField] private float timeToTurn;
     [SerializeField] private float turnAngle;
@@ -19,17 +21,23 @@ public class BossControl : MonoBehaviour
     [SerializeField] private float timeToShotBubbles;
 
     private SpriteRenderer spriteRenderer;
-
-    
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         InvokeRepeating("FireSting", 2, timeToShotStings);
         InvokeRepeating("FireBubble", 2, timeToShotBubbles);
     }
 
+    private void Update()
+    {
+        BossDestroyed();
+        Debug.Log(healthBoss);
+        Debug.Log(bossIsDefeated);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -95,6 +103,15 @@ public class BossControl : MonoBehaviour
         Instantiate(bossBubble,transform.position,transform.rotation);
     }
 
+    public void BossDestroyed()
+    {
+        if (healthBoss < 1)
+        {
+            bossIsDefeated = true;
+            gameManager.bossDefeated = true;
+        }
+    }
+
     void OutOfBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yEnemyBound+0.5f);
@@ -126,21 +143,25 @@ public class BossControl : MonoBehaviour
         healthBoss -= 1;
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("PlayerBullet"))
         {
             TakeHit();
+
+            if (healthBoss ==  0)
+            {
+                Destroy(this.gameObject,1);
+
+            }
             
-           if(healthBoss < 15)
+            else if (healthBoss < 15)
             {
                 spriteRenderer.color = Color.red;
                 speed += 4;
             }
-            if(healthBoss < 1)
-            {
-                Destroy(this.gameObject);
-            }
+           
         }
     }
 

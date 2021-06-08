@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7593335367666389863}
   - component: {fileID: 7593335367666389860}
   m_Layer: 0
-  m_Name: Boss10
+  m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   bossRb: {fileID: 7593335367666389862}
   bossSting: {fileID: 353014115734465473, guid: b7a91625ae9d1f44891d8d886f9c7724, type: 3}
   bossBubble: {fileID: 7652751382157637591, guid: a2b1fc2c2bb7f064e99d754672d7943c, type: 3}
-  healthBoss: 20
+  healthBoss: 10
   speed: 30
   timeToTurn: 5
   turnAngle: 7

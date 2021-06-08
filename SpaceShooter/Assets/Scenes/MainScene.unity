@@ -1183,6 +1183,9 @@ MonoBehaviour:
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 20
+  bossRate: 20
+  bossDefeated: 0
+  bossOn: 0
 --- !u!114 &467349812
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject scoreAndButtons;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
+
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScore;
     public TextMeshProUGUI enemiesDestroyedText;
@@ -20,16 +21,22 @@ public class GameManager : MonoBehaviour
     
     private AudioSource audioSource;
     
-   
+    
     [SerializeField]private float timeToSpawnHordes;
     [SerializeField]private float timeToSpawnPowerUps;
+    [SerializeField]private int bossRate;
 
     private int score;
     private int enemiesCount;
+    private float bossRemainder;
 
-    public static bool bossOn;
+    public bool bossDefeated;
+    public bool bossOn = false;
     public static bool gameOver;
     public static bool isActive;
+    
+
+    
 
 
     // Start is called before the first frame update
@@ -37,15 +44,21 @@ public class GameManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
-       
+        
     }
+  
+
     private void Update()
     {
+        BossDefeated();
         SpawnBoss();
+        bossRemainder = enemiesCount % bossRate;
+        
+        
     }
     IEnumerator SpawnHordes()
     {
-        while (isActive)
+        while (isActive && bossOn == false)
         {
             yield return new WaitForSeconds(timeToSpawnHordes);
             int index = Random.Range(0, hordes.Count);
@@ -55,7 +68,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SpawnRatePowerUps()
     {
-        while (isActive)
+        while (isActive && bossOn == false)
         {
             yield return new WaitForSeconds(timeToSpawnPowerUps);
             int index = Random.Range(0, powerUps.Count);
@@ -69,6 +82,7 @@ public class GameManager : MonoBehaviour
         isActive = true;
         gameOver = false;
         timeToSpawnHordes /= dificculty;
+        
         titleScreen.SetActive(false);
         audioSource.Play();
         StartCoroutine(SpawnHordes());
@@ -94,14 +108,24 @@ public class GameManager : MonoBehaviour
 
     public void SpawnBoss()
     {
-        if(enemiesCount == 20 && bossOn == false)
+        if(enemiesCount > 2 && bossRemainder == 0 && bossOn == false)
         {
             bossOn = true;
             Instantiate(boss);
-            StopAllCoroutines();
+            
+        }
+    
+    }
+
+    public void BossDefeated()
+    {
+      if (bossDefeated == true)
+        {
+            bossOn = false;
+            bossDefeated = false;
+
         }
         
-
     }
 
     public void Restart()
