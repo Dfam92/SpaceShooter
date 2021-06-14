@@ -63,8 +63,10 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(timeToSpawnHordes);
             int index = Random.Range(0, hordes.Count);
             Instantiate(hordes[index]);
+            
         }
        
+
     }
     IEnumerator SpawnRatePowerUps()
     {
@@ -123,7 +125,6 @@ public class GameManager : MonoBehaviour
         {
             bossOn = false;
             bossDefeated = false;
-
         }
         
     }
