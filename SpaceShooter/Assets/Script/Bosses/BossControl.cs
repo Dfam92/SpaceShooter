@@ -12,7 +12,7 @@ public class BossControl : MonoBehaviour
     private bool isMoving = true;
 
     private int healthBoss = 10 ;
-    public bool bossIsDefeated;
+    
 
     [SerializeField] private float speed;
     [SerializeField] private float timeToTurn;
@@ -21,22 +21,22 @@ public class BossControl : MonoBehaviour
     [SerializeField] private float timeToShotBubbles;
 
     private SpriteRenderer spriteRenderer;
+
     private GameManager gameManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         InvokeRepeating("FireSting", 2, timeToShotStings);
         InvokeRepeating("FireBubble", 2, timeToShotBubbles);
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
     {
-        BossDestroyed();
-        Debug.Log(healthBoss);
-        Debug.Log(bossIsDefeated);
+       
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -103,15 +103,6 @@ public class BossControl : MonoBehaviour
         Instantiate(bossBubble,transform.position,transform.rotation);
     }
 
-    public void BossDestroyed()
-    {
-        if (healthBoss < 1)
-        {
-            bossIsDefeated = true;
-            gameManager.bossDefeated = true;
-        }
-    }
-
     void OutOfBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, ScreenBounds.yEnemyBound+0.5f);
@@ -136,6 +127,11 @@ public class BossControl : MonoBehaviour
         {
             gameObject.transform.position = botPos;
         }
+    }
+
+    private void OnDestroy()
+    {
+        gameManager.bossDefeated = true;
     }
 
     private void TakeHit()

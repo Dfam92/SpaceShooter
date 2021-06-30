@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,6 @@ public class GameManager : MonoBehaviour
     
     private AudioSource audioSource;
     
-    
     [SerializeField]private float timeToSpawnHordes;
     [SerializeField]private float timeToSpawnPowerUps;
     [SerializeField]private int bossRate;
@@ -34,43 +34,47 @@ public class GameManager : MonoBehaviour
     public bool bossOn = false;
     public static bool gameOver;
     public static bool isActive;
-    
 
-    
+    public UnityEvent SpawningBoss;
+    public UnityEvent DefeatedBoss;
 
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
-        
+        highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();   
     }
   
-
     private void Update()
     {
-        BossDefeated();
-        SpawnBoss();
+        Debug.Log(bossDefeated);
+        Debug.Log(bossRemainder);
         bossRemainder = enemiesCount % bossRate;
-        
-        
+        SpawnBoss();
+        BossDefeated();
     }
     IEnumerator SpawnHordes()
     {
-        while (isActive && bossOn == false)
+        while (isActive)
         {
             yield return new WaitForSeconds(timeToSpawnHordes);
             int index = Random.Range(0, hordes.Count);
             Instantiate(hordes[index]);
             
         }
-       
-
     }
+
+    private void ReSpawnHordes()
+    {
+        int index = Random.Range(0, hordes.Count);
+        Instantiate(hordes[index]);
+    }
+
+
     IEnumerator SpawnRatePowerUps()
     {
-        while (isActive && bossOn == false)
+        while (isActive)
         {
             yield return new WaitForSeconds(timeToSpawnPowerUps);
             int index = Random.Range(0, powerUps.Count);
@@ -90,7 +94,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnHordes());
         StartCoroutine(SpawnRatePowerUps());
         
-
         //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 
         scoreAndButtons.SetActive(true);
     }
@@ -112,20 +115,39 @@ public class GameManager : MonoBehaviour
     {
         if(enemiesCount > 2 && bossRemainder == 0 && bossOn == false)
         {
-            bossOn = true;
-            Instantiate(boss);
-            
+
+            SpawningBoss.Invoke();
         }
     
     }
+
+    
 
     public void BossDefeated()
     {
       if (bossDefeated == true)
         {
-            bossOn = false;
+           
+            DefeatedBoss.Invoke();
             bossDefeated = false;
+            bossOn = false;
+            enemiesCount += 1;
         }
+        
+    }
+
+    public void BossSpawned()
+    {
+        bossOn = true;
+        Instantiate(boss);
+        StopAllCoroutines();
+        Debug.Log("Activated");
+    }
+
+    public void BossDestroyed()
+    {
+        Debug.Log("Start");
+        InvokeRepeating("ReSpawnHordes", 2, timeToSpawnHordes);
         
     }
 
