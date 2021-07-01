@@ -82,6 +82,12 @@ public class GameManager : MonoBehaviour
         }
        
     }
+    private void ReSpawnRatePowerUps()
+    {
+        int index = Random.Range(0, powerUps.Count);
+        Instantiate(powerUps[index]);
+    
+    }
 
     public void StartGame(int dificculty)
     {
@@ -141,6 +147,7 @@ public class GameManager : MonoBehaviour
         bossOn = true;
         Instantiate(boss);
         StopAllCoroutines();
+        CancelInvoke();
         Debug.Log("Activated");
     }
 
@@ -148,7 +155,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Start");
         InvokeRepeating("ReSpawnHordes", 2, timeToSpawnHordes);
-        
+        InvokeRepeating("ReSpawnRatePowerUps", 2, timeToSpawnPowerUps);
+
     }
 
     public void Restart()

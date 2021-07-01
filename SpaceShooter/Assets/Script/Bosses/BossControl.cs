@@ -142,23 +142,28 @@ public class BossControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("PlayerBullet"))
+        if (collision.CompareTag("PlayerBullet"))
         {
             TakeHit();
 
-            if (healthBoss ==  0)
+            if (healthBoss == 0)
             {
-                Destroy(this.gameObject,1);
+                Destroy(this.gameObject, 1);
 
             }
-            
+
             else if (healthBoss < 15)
             {
                 spriteRenderer.color = Color.red;
                 speed += 4;
             }
-           
+
         }
-    }
+        else if (collision.gameObject.CompareTag("AlienShield"))
+        {
+            Shield.ShieldHit();
+        }
+
+        }
 
 }
