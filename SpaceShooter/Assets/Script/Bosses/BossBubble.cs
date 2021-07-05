@@ -41,6 +41,7 @@ public class BossBubble : MonoBehaviour
         {
             Shield.ShieldHit();
             Destroy(this.gameObject);
+            AudioClips.shieldWasHitted = true;
         }
 
     }

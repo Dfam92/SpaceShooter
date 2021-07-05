@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
   
     private void Update()
     {
-        Debug.Log(EnemyShoot.fireStart);
+
         bossRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
         Instantiate(boss);
         StopAllCoroutines();
         CancelInvoke();
-        Debug.Log("Activated");
+
     }
 
     public void BossDestroyed()

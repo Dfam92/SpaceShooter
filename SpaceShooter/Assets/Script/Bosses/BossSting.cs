@@ -59,6 +59,7 @@ public class BossSting : MonoBehaviour
         else if (collision.gameObject.CompareTag("AlienShield"))
         {
             Shield.ShieldHit();
+            AudioClips.shieldWasHitted = true;
             Destroy(this.gameObject);
         }
         else if(collision.gameObject.CompareTag("PlayerBullet"))

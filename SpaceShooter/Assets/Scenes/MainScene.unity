@@ -659,7 +659,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2f9b98ba32971dc47ac5d272ef2839d7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.496
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1182,10 +1182,11 @@ MonoBehaviour:
   - {fileID: 3193480885511190799, guid: 8b68ecac012f45842a59b368a7aeef74, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnPowerUps: 20
+  timeToSpawnPowerUps: 5
   bossRate: 50
   bossDefeated: 0
   bossOn: 0
+  levelSelect: 0
   SpawningBoss:
     m_PersistentCalls:
       m_Calls:
@@ -3465,6 +3466,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEnemy: {fileID: 8300000, guid: 19397eac57951a8429b00b523beec885, type: 3}
   explosionPlayer: {fileID: 8300000, guid: 6a81ca39e09d6664f98792766a5ffb74, type: 3}
+  shieldsEnabled: {fileID: 8300000, guid: d37186440edd81e41bdab41a882fb601, type: 3}
+  shieldHitted: {fileID: 8300000, guid: 5c1f7f8ddae46794e8969f956c52723e, type: 3}
 --- !u!4 &1570783870
 Transform:
   m_ObjectHideFlags: 0

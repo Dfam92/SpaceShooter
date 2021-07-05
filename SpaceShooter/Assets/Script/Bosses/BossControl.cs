@@ -162,6 +162,7 @@ public class BossControl : MonoBehaviour
         else if (collision.gameObject.CompareTag("AlienShield"))
         {
             Shield.ShieldHit();
+            AudioClips.shieldWasHitted = true;
         }
 
         }

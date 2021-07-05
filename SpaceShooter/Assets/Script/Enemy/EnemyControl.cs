@@ -72,6 +72,7 @@ public class EnemyControl : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 Shield.ShieldHit();
+                AudioClips.shieldWasHitted = true;
             }
             
         }

@@ -67,12 +67,12 @@ public class PlayerControl : MonoBehaviour
          if (verticalInput > 0 || horizontalInput > 0 || horizontalInput <0)
          {
              animPlayer.SetFloat("Move", 1f);
-             //AudioClips.isMoving = true;
+            
          }
          else
          {
              animPlayer.SetFloat("Move", -1f);
-             //AudioClips.isMoving = false;
+            
 
          }
 
@@ -181,7 +181,8 @@ public class PlayerControl : MonoBehaviour
         }
         else if(collision.CompareTag("Shield"))
         {
-            transform.GetChild(0).gameObject.SetActive(true); 
+            transform.GetChild(0).gameObject.SetActive(true);
+            AudioClips.shieldIsActivated = true;
         }
         else if (collision.CompareTag("BulletCase"))
         {
