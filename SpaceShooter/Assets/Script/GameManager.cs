@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public bool bossOn = false;
     public static bool gameOver;
     public static bool isActive;
+    public int levelSelect;
 
     public UnityEvent SpawningBoss;
     public UnityEvent DefeatedBoss;
@@ -94,7 +95,7 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         timeToSpawnHordes /= difficulty;
         EnemyShoot.fireStart /= difficulty;
-             
+        levelSelect = difficulty;
         titleScreen.SetActive(false);
         audioSource.Play();
         StartCoroutine(SpawnHordes());

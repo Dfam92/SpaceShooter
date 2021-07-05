@@ -94,7 +94,22 @@ public class EnemyControl : MonoBehaviour
     }
     private void UpdateGameManagerCalls()
     {
-        gameManager.UpdateScore(enemyPoint);
+        if(gameManager.levelSelect == 1)
+        {
+            var easyPoints = enemyPoint / 4;
+            gameManager.UpdateScore(easyPoints);
+        }
+        else if (gameManager.levelSelect == 2)
+        {
+            var normalPoints = enemyPoint / 2;
+            gameManager.UpdateScore(normalPoints);
+        }
+        else
+        {
+            gameManager.UpdateScore(enemyPoint);
+        }
+
+        
         gameManager.UpdateEnemies(enemyCount);
     }
 }

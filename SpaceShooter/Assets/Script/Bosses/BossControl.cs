@@ -11,7 +11,7 @@ public class BossControl : MonoBehaviour
     private bool isTurning;
     private bool isMoving = true;
 
-    private int healthBoss = 10 ;
+    private int healthBoss = 20 ;
     
     [SerializeField] private float speed;
     [SerializeField] private float timeToTurn;
@@ -152,7 +152,7 @@ public class BossControl : MonoBehaviour
 
             }
 
-            else if (healthBoss < 15)
+            else if (healthBoss < 10)
             {
                 spriteRenderer.color = Color.red;
                 speed += 4;
