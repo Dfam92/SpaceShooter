@@ -6,7 +6,9 @@ public class EnemyControl : MonoBehaviour
 {
     public AudioClip firsHit;
     public Rigidbody2D enemyRb;
+    public GameObject titleScreen;
 
+    
     private GameManager gameManager;
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
@@ -22,8 +24,14 @@ public class EnemyControl : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
     // Update is called once per frame
+
+    private void Update()
+    {
+       
+    }
     void FixedUpdate()
     {
         if (GameManager.isActive == true)
@@ -55,8 +63,8 @@ public class EnemyControl : MonoBehaviour
                 MultiplyPoints();
                 AudioClips.enemyIsDestroyed = true;
                 Destroy(this.gameObject);
-                gameManager.UpdateScore(enemyPoint);
-                gameManager.UpdateEnemies(enemyCount);
+                UpdateGameManagerCalls();
+               
             }
         }
         else if (collision.CompareTag("AlienShield"))
@@ -83,5 +91,10 @@ public class EnemyControl : MonoBehaviour
         {
             enemyPoint *= 4;
         }
+    }
+    private void UpdateGameManagerCalls()
+    {
+        gameManager.UpdateScore(enemyPoint);
+        gameManager.UpdateEnemies(enemyCount);
     }
 }

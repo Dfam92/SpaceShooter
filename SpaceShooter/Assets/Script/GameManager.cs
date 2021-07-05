@@ -88,14 +88,13 @@ public class GameManager : MonoBehaviour
         Instantiate(powerUps[index]);
     }
 
-    public void StartGame(int dificculty)
+    public void StartGame(int difficulty)
     {
         isActive = true;
         gameOver = false;
-        timeToSpawnHordes /= dificculty;
-        EnemyShoot.fireStart /= dificculty;
-        
-        
+        timeToSpawnHordes /= difficulty;
+        EnemyShoot.fireStart /= difficulty;
+             
         titleScreen.SetActive(false);
         audioSource.Play();
         StartCoroutine(SpawnHordes());
