@@ -13,7 +13,6 @@ public class BossControl : MonoBehaviour
 
     private int healthBoss = 10 ;
     
-
     [SerializeField] private float speed;
     [SerializeField] private float timeToTurn;
     [SerializeField] private float turnAngle;
@@ -148,6 +147,7 @@ public class BossControl : MonoBehaviour
 
             if (healthBoss == 0)
             {
+                gameManager.UpdateScore(5000);
                 Destroy(this.gameObject, 1);
 
             }

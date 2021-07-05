@@ -8,7 +8,6 @@ public class EnemyControl : MonoBehaviour
     public Rigidbody2D enemyRb;
 
     private GameManager gameManager;
-    private PlayerControl playerControl;
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
 
@@ -62,8 +61,6 @@ public class EnemyControl : MonoBehaviour
         }
         else if (collision.CompareTag("AlienShield"))
         {
-            playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
-
             {
                 Destroy(this.gameObject);
                 Shield.ShieldHit();

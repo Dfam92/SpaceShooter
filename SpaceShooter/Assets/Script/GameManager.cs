@@ -48,11 +48,11 @@ public class GameManager : MonoBehaviour
   
     private void Update()
     {
-        Debug.Log(bossDefeated);
-        Debug.Log(bossRemainder);
+        Debug.Log(EnemyShoot.fireStart);
         bossRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
+
     }
     IEnumerator SpawnHordes()
     {
@@ -86,7 +86,6 @@ public class GameManager : MonoBehaviour
     {
         int index = Random.Range(0, powerUps.Count);
         Instantiate(powerUps[index]);
-    
     }
 
     public void StartGame(int dificculty)
@@ -94,6 +93,8 @@ public class GameManager : MonoBehaviour
         isActive = true;
         gameOver = false;
         timeToSpawnHordes /= dificculty;
+        EnemyShoot.fireStart /= dificculty;
+        
         
         titleScreen.SetActive(false);
         audioSource.Play();
@@ -126,9 +127,6 @@ public class GameManager : MonoBehaviour
         }
     
     }
-
-    
-
     public void BossDefeated()
     {
       if (bossDefeated == true)
@@ -160,7 +158,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void Restart()
+
     {
+        EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

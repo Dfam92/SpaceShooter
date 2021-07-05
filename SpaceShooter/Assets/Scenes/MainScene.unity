@@ -1183,7 +1183,7 @@ MonoBehaviour:
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 20
-  bossRate: 20
+  bossRate: 50
   bossDefeated: 0
   bossOn: 0
   SpawningBoss:
@@ -3827,7 +3827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767198470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.37, y: -1.25, z: 0}
+  m_LocalPosition: {x: 0.05, y: -2.79, z: 0}
   m_LocalScale: {x: 0.15208305, y: 0.15208305, z: 0.15208305}
   m_Children:
   - {fileID: 2099813975}

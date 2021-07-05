@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648737411501288
 MonoBehaviour:
@@ -163,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTurn: 7
-  timeToStopTurn: 2
+  timeToStopTurn: 2.2
   turnForce: 1
   turnAngle: 1.5
 --- !u!114 &6182648737411501291
@@ -377,7 +376,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648737702594437
 MonoBehaviour:
@@ -572,7 +570,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648737706514074
 MonoBehaviour:
@@ -787,7 +784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648737720436294
 MonoBehaviour:
@@ -1116,7 +1112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648738055252388
 MonoBehaviour:
@@ -1253,7 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6182648738193510412}
   m_Layer: 0
-  m_Name: Horde 2 (1)
+  m_Name: Horde 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1424,7 +1419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648738216983571
 MonoBehaviour:
@@ -1619,7 +1613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648738310393224
 MonoBehaviour:
@@ -1814,7 +1807,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648738321919338
 MonoBehaviour:
@@ -2029,7 +2021,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648738352503752
 MonoBehaviour:
@@ -2358,7 +2349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648739194447729
 MonoBehaviour:
@@ -2633,7 +2623,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648739326357791
 MonoBehaviour:
@@ -2828,7 +2817,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
-  fireStart: 1
   fireRate: 10
 --- !u!114 &6182648739360042608
 MonoBehaviour:
