@@ -67,7 +67,10 @@ public class PlayerControl : MonoBehaviour
 
          if (verticalInput > 0 || horizontalInput > 0 || horizontalInput <0)
          {
-             animPlayer.SetFloat("Move", 1f);
+            if(playerRb.mass < 100)
+            {
+                animPlayer.SetFloat("Move", 1f);
+            }
             
          }
          else
@@ -174,9 +177,10 @@ public class PlayerControl : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             AudioClips.shieldIsActivated = true;
         }
-        else if (collision.CompareTag("BossSting"))
+        else if (collision.CompareTag("BossSting") && !alienShield.activeInHierarchy)
         {
             playerRb.mass = 100;
+            BossAudioClips.enemyIsShocked = true;
             StartCoroutine(StopParalysis());
         }
         else if (collision.CompareTag("BulletCase"))

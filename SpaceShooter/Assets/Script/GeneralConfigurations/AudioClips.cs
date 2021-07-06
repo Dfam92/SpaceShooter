@@ -46,7 +46,7 @@ public class AudioClips : MonoBehaviour
         {
             if(!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(shieldsEnabled, 0.5f);
+                audioPlayer.PlayOneShot(shieldsEnabled, 0.3f);
                 shieldIsActivated = false;
             }
         }
@@ -62,7 +62,7 @@ public class AudioClips : MonoBehaviour
         {
             if (!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(bulletsEnabled, 0.5f);
+                audioPlayer.PlayOneShot(bulletsEnabled, 0.3f);
                 extraBulletsOn = false;
             }
         }
@@ -70,7 +70,7 @@ public class AudioClips : MonoBehaviour
         {
             if (!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(powerUp2x, 0.5f);
+                audioPlayer.PlayOneShot(powerUp2x, 0.2f);
                 is2xOn = false;
             }
         }
@@ -78,7 +78,7 @@ public class AudioClips : MonoBehaviour
         {
             if (!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(powerUp4x, 0.5f);
+                audioPlayer.PlayOneShot(powerUp4x, 0.2f);
                 is4xOn = false;
             }
         }

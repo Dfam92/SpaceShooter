@@ -8,8 +8,6 @@ public class BossSting : MonoBehaviour
     private PlayerControl player;
     
     [SerializeField]private float speed;
-    private float paralyzeTime = 3;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +30,8 @@ public class BossSting : MonoBehaviour
     }
     private void bulletOutBounds()
     {
-        if (transform.position.y < -ScreenBounds.yEnemyBound - 1f || transform.position.y > ScreenBounds.yEnemyBound + 1f || transform.position.x < -ScreenBounds.xEnemyBound - 1f || transform.position.x > ScreenBounds.xEnemyBound + 1f)
+        if (transform.position.y < -ScreenBounds.yEnemyBound - 1f || transform.position.y > ScreenBounds.yEnemyBound + 1f
+            || transform.position.x < -ScreenBounds.xEnemyBound - 1f || transform.position.x > ScreenBounds.xEnemyBound + 1f)
         {
             Destroy(this.gameObject);
         }
@@ -65,6 +64,7 @@ public class BossSting : MonoBehaviour
         else if(collision.gameObject.CompareTag("PlayerBullet"))
         {
             Destroy(this.gameObject);
+            BossAudioClips.stingDestroyed = true;
         }
     }
     
