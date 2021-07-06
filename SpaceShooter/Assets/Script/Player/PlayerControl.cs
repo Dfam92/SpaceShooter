@@ -12,7 +12,7 @@ public class PlayerControl : MonoBehaviour
     private Animator animPlayer;
 
     public Rigidbody2D playerRb;
-    public GameObject AlienShield;
+    public GameObject alienShield;
     public GameObject bulletPlayer;
     public AudioClip bulletSound;
    
@@ -22,6 +22,7 @@ public class PlayerControl : MonoBehaviour
     public static bool sideBullets;
 
     private int timeToStopPowerUp;
+    private float paralyzeTime = 3;
 
     //For mobile active the Joystick
     public Joystick joystick;
@@ -72,8 +73,6 @@ public class PlayerControl : MonoBehaviour
          else
          {
              animPlayer.SetFloat("Move", -1f);
-            
-
          }
 
         // For play Mobile
@@ -85,13 +84,11 @@ public class PlayerControl : MonoBehaviour
         if (joystick.Vertical > 0 || joystick.Horizontal > 0 || joystick.Horizontal < 0)
         {
             animPlayer.SetFloat("Move", 1f);
-            //AudioClips.isMoving = true;
         }
         else
         {
             animPlayer.SetFloat("Move", -1f);
-            //AudioClips.isMoving = false;
-
+  
         }*/
     }
 
@@ -165,14 +162,7 @@ public class PlayerControl : MonoBehaviour
     {
 
 
-        if (collision.CompareTag("Enemy") && !AlienShield.activeInHierarchy)
-        {
-            AudioClips.playerIsDestroyed = true;
-            Destroy(gameObject);
-            gameManager.GameOver();
-
-        }
-        else if (collision.CompareTag("Boss") && !AlienShield.activeInHierarchy)
+        if (collision.CompareTag("Enemy") && !alienShield.activeInHierarchy || collision.CompareTag("Boss") && !alienShield.activeInHierarchy)
         {
             AudioClips.playerIsDestroyed = true;
             Destroy(gameObject);
@@ -184,22 +174,30 @@ public class PlayerControl : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             AudioClips.shieldIsActivated = true;
         }
+        else if (collision.CompareTag("BossSting"))
+        {
+            playerRb.mass = 100;
+            StartCoroutine(StopParalysis());
+        }
         else if (collision.CompareTag("BulletCase"))
         {
             sideBullets = true;
             timeToStopPowerUp = 15;
+            AudioClips.extraBulletsOn = true;
             StartCoroutine(StopPowerUp());
         }
         else if(collision.CompareTag("Multiply2x"))
         {
             isMultiplying2x = true;
             timeToStopPowerUp = 15;
+            AudioClips.is2xOn = true;
             StartCoroutine(StopPowerUp());
         }
         else if (collision.CompareTag("Multiply4x"))
         {
             isMultiplying4x = true;
             timeToStopPowerUp = 10;
+            AudioClips.is4xOn = true;
             StartCoroutine(StopPowerUp());
         }
     }
@@ -220,6 +218,12 @@ public class PlayerControl : MonoBehaviour
         {
             isMultiplying4x = false;
         }
+
+    }
+    IEnumerator StopParalysis()
+    {
+        yield return new WaitForSeconds(paralyzeTime);
+        playerRb.mass = 1;
 
     }
 }

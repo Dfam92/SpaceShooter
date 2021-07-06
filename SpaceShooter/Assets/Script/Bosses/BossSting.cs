@@ -6,18 +6,19 @@ public class BossSting : MonoBehaviour
 {
     public Rigidbody2D stingRb;
     private PlayerControl player;
-    private GameManager gameManager;
-
+    
     [SerializeField]private float speed;
+    private float paralyzeTime = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+       
     }
     private void Update()
     {
         bulletOutBounds();
+       
     }
 
     // Update is called once per frame
@@ -51,10 +52,9 @@ public class BossSting : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(player.gameObject);
+           
             Destroy(this.gameObject);
-            gameManager.GameOver();
-            AudioClips.playerIsDestroyed = true;
+            
         }
         else if (collision.gameObject.CompareTag("AlienShield"))
         {
@@ -67,4 +67,5 @@ public class BossSting : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
 }

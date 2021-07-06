@@ -1182,8 +1182,8 @@ MonoBehaviour:
   - {fileID: 3193480885511190799, guid: 8b68ecac012f45842a59b368a7aeef74, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnPowerUps: 5
-  bossRate: 50
+  timeToSpawnPowerUps: 20
+  bossRate: 10
   bossDefeated: 0
   bossOn: 0
   levelSelect: 0
@@ -3468,6 +3468,9 @@ MonoBehaviour:
   explosionPlayer: {fileID: 8300000, guid: 6a81ca39e09d6664f98792766a5ffb74, type: 3}
   shieldsEnabled: {fileID: 8300000, guid: d37186440edd81e41bdab41a882fb601, type: 3}
   shieldHitted: {fileID: 8300000, guid: 5c1f7f8ddae46794e8969f956c52723e, type: 3}
+  bulletsEnabled: {fileID: 8300000, guid: 3e4105e559c58d041b7abaf81d6710a1, type: 3}
+  powerUp2x: {fileID: 8300000, guid: 95e5b062bcdec0242a7295f09a489b5f, type: 3}
+  powerUp4x: {fileID: 8300000, guid: 0afc6d360c62aba489be399c9fc62594, type: 3}
 --- !u!4 &1570783870
 Transform:
   m_ObjectHideFlags: 0
@@ -3917,7 +3920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 17
   playerRb: {fileID: 1767198475}
-  AlienShield: {fileID: 2099813974}
+  alienShield: {fileID: 2099813974}
   bulletPlayer: {fileID: 4818437649621668731, guid: 112474bd7332f2e4d99e25b67510d0c1, type: 3}
   bulletSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   joystick: {fileID: 243847606}

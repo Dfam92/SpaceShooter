@@ -9,11 +9,17 @@ public class AudioClips : MonoBehaviour
     public AudioClip explosionPlayer;
     public AudioClip shieldsEnabled;
     public AudioClip shieldHitted;
+    public AudioClip bulletsEnabled;
+    public AudioClip powerUp2x;
+    public AudioClip powerUp4x;
     
     public static bool enemyIsDestroyed;
     public static bool playerIsDestroyed;
     public static bool shieldIsActivated;
     public static bool shieldWasHitted;
+    public static bool extraBulletsOn;
+    public static bool is2xOn;
+    public static bool is4xOn;
     
     
 
@@ -48,8 +54,32 @@ public class AudioClips : MonoBehaviour
         {
             if (!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(shieldHitted, 0.5f);
+                audioPlayer.PlayOneShot(shieldHitted, 1f);
                 shieldWasHitted = false;
+            }
+        }
+        else if (extraBulletsOn == true)
+        {
+            if (!audioPlayer.isPlaying)
+            {
+                audioPlayer.PlayOneShot(bulletsEnabled, 0.5f);
+                extraBulletsOn = false;
+            }
+        }
+        else if (is2xOn == true)
+        {
+            if (!audioPlayer.isPlaying)
+            {
+                audioPlayer.PlayOneShot(powerUp2x, 0.5f);
+                is2xOn = false;
+            }
+        }
+        else if (is4xOn == true)
+        {
+            if (!audioPlayer.isPlaying)
+            {
+                audioPlayer.PlayOneShot(powerUp4x, 0.5f);
+                is4xOn = false;
             }
         }
 
