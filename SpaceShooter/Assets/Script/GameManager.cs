@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
 
     public void BossDestroyed()
     {
-        Debug.Log("Start");
+        
         InvokeRepeating("ReSpawnHordes", 2, timeToSpawnHordes);
         InvokeRepeating("ReSpawnRatePowerUps", 2, timeToSpawnPowerUps);
 

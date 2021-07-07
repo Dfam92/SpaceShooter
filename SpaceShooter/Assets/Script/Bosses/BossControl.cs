@@ -100,6 +100,7 @@ public class BossControl : MonoBehaviour
     private void FireBubble()
     {
         Instantiate(bossBubble,transform.position,transform.rotation);
+        BossAudioClips.bubbleFired = true;
     }
 
     void OutOfBounds()
@@ -156,6 +157,7 @@ public class BossControl : MonoBehaviour
             {
                 spriteRenderer.color = Color.red;
                 speed += 4;
+                timeToShotBubbles = 1;
             }
 
         }

@@ -3251,6 +3251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   electricShock: {fileID: 8300000, guid: 15fd4d14da330c346a9f0b3b20383152, type: 3}
   stingDestroy: {fileID: 8300000, guid: 4fa62673bf4f546489f52b034e9f8db0, type: 3}
+  bubbleFire: {fileID: 8300000, guid: d5babc085e2f8e143825dc29ce6d3c15, type: 3}
 --- !u!82 &1502096819
 AudioSource:
   m_ObjectHideFlags: 0
