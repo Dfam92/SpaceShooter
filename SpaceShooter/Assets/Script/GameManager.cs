@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     
     private AudioSource audioSource;
     
+    
     [SerializeField]private float timeToSpawnHordes;
     [SerializeField]private float timeToSpawnPowerUps;
     [SerializeField]private int bossRate;
@@ -146,7 +147,8 @@ public class GameManager : MonoBehaviour
         Instantiate(boss);
         StopAllCoroutines();
         CancelInvoke();
-
+        StartCoroutine(FadeAudioSource.StartFade(audioSource, 3, 0));
+        
     }
 
     public void BossDestroyed()
@@ -154,6 +156,7 @@ public class GameManager : MonoBehaviour
         
         InvokeRepeating("ReSpawnHordes", 2, timeToSpawnHordes);
         InvokeRepeating("ReSpawnRatePowerUps", 2, timeToSpawnPowerUps);
+        StartCoroutine(FadeAudioSource.StartFade(audioSource,10, 0.5f));
 
     }
 
@@ -195,4 +198,5 @@ public class GameManager : MonoBehaviour
         highScore.text = "HiScore: 0";
     }
     
+   
 }

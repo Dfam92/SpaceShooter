@@ -23,16 +23,20 @@ public class BossControl : MonoBehaviour
 
     private GameManager gameManager;
 
+    private AudioSource bossAudioSource;
+
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        bossAudioSource = GetComponent<AudioSource>();
         InvokeRepeating("FireSting", 2, timeToShotStings);
         InvokeRepeating("FireBubble", 2, timeToShotBubbles);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        StartCoroutine(FadeAudioSource.StartFade(bossAudioSource, 10, 0.3f));
     }
-
+   
     private void Update()
     {
        
@@ -128,18 +132,14 @@ public class BossControl : MonoBehaviour
             gameObject.transform.position = botPos;
         }
     }
-
     private void OnDestroy()
     {
         gameManager.bossDefeated = true;
     }
-
     private void TakeHit()
     {
         healthBoss -= 1;
     }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerBullet"))
@@ -168,5 +168,6 @@ public class BossControl : MonoBehaviour
         }
 
         }
-
+    
+    
 }
