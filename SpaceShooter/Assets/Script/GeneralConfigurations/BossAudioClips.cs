@@ -26,7 +26,7 @@ public class BossAudioClips : MonoBehaviour
         {
             if (!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(electricShock, 0.3f);
+                audioPlayer.PlayOneShot(electricShock, 0.2f);
                 enemyIsShocked = false;
             }
         }

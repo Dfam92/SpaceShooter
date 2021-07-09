@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
         EnemyShoot.fireStart /= difficulty;
         levelSelect = difficulty;
         titleScreen.SetActive(false);
+        StartCoroutine(FadeAudioSource.StartFade(audioSource, 10, 0.25f));
         audioSource.Play();
         StartCoroutine(SpawnHordes());
         StartCoroutine(SpawnRatePowerUps());
@@ -154,9 +155,9 @@ public class GameManager : MonoBehaviour
     public void BossDestroyed()
     {
         
-        InvokeRepeating("ReSpawnHordes", 2, timeToSpawnHordes);
-        InvokeRepeating("ReSpawnRatePowerUps", 2, timeToSpawnPowerUps);
-        StartCoroutine(FadeAudioSource.StartFade(audioSource,10, 0.5f));
+        InvokeRepeating("ReSpawnHordes", 5, timeToSpawnHordes);
+        InvokeRepeating("ReSpawnRatePowerUps", 3, timeToSpawnPowerUps);
+        StartCoroutine(FadeAudioSource.StartFade(audioSource,20, 0.25f));
 
     }
 

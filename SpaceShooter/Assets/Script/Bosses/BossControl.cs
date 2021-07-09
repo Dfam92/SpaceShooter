@@ -34,12 +34,16 @@ public class BossControl : MonoBehaviour
         InvokeRepeating("FireSting", 2, timeToShotStings);
         InvokeRepeating("FireBubble", 2, timeToShotBubbles);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        StartCoroutine(FadeAudioSource.StartFade(bossAudioSource, 10, 0.3f));
+        StartCoroutine(FadeAudioSource.StartFade(bossAudioSource, 10, 0.25f));
     }
    
     private void Update()
     {
-       
+       if(GameManager.gameOver == true)
+        {
+            bossAudioSource.Stop();
+            CancelInvoke();
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -148,7 +152,7 @@ public class BossControl : MonoBehaviour
 
             if (healthBoss == 0)
             {
-                gameManager.UpdateScore(5000);
+                gameManager.UpdateScore(10000);
                 Destroy(this.gameObject, 1);
 
             }

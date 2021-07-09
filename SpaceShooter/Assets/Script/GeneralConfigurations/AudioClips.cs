@@ -39,7 +39,7 @@ public class AudioClips : MonoBehaviour
         }
         else if ( playerIsDestroyed == true)
         {
-            audioPlayer.PlayOneShot(explosionPlayer,0.5f);
+            audioPlayer.PlayOneShot(explosionPlayer,0.35f);
             playerIsDestroyed = false;
         }
         else if ( shieldIsActivated == true)
@@ -62,7 +62,7 @@ public class AudioClips : MonoBehaviour
         {
             if (!audioPlayer.isPlaying)
             {
-                audioPlayer.PlayOneShot(bulletsEnabled, 0.3f);
+                audioPlayer.PlayOneShot(bulletsEnabled, 0.2f);
                 extraBulletsOn = false;
             }
         }
