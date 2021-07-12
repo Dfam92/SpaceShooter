@@ -52,7 +52,7 @@ public class BossControl : MonoBehaviour
     }
     private void LateUpdate()
     {
-        OutOfBounds();
+        StartCoroutine(BossLimitBounds());
     }
 
     private void BossMovimentation()
@@ -172,6 +172,10 @@ public class BossControl : MonoBehaviour
         }
 
         }
-    
-    
+
+    IEnumerator BossLimitBounds()
+    {
+        yield return new WaitForSeconds(5);
+        OutOfBounds();
+    }
 }

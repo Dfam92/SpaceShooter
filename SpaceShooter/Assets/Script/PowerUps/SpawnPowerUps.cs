@@ -36,7 +36,6 @@ public class SpawnPowerUps : MonoBehaviour
             Destroy(this.gameObject);
         }
         
-
     }
 
 }

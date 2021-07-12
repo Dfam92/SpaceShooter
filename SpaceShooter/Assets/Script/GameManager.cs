@@ -144,8 +144,9 @@ public class GameManager : MonoBehaviour
 
     public void BossSpawned()
     {
+        var bossPos = new Vector3(boss.transform.position.x, Random.Range(-ScreenBounds.yPlayerBound, ScreenBounds.yPlayerBound), boss.transform.position.z);
         bossOn = true;
-        Instantiate(boss);
+        Instantiate(boss,bossPos,boss.transform.rotation);
         StopAllCoroutines();
         CancelInvoke();
         StartCoroutine(FadeAudioSource.StartFade(audioSource, 3, 0));
