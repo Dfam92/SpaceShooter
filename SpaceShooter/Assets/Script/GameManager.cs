@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
     {
         
         InvokeRepeating("ReSpawnHordes", 5, timeToSpawnHordes);
-        InvokeRepeating("ReSpawnRatePowerUps", 3, timeToSpawnPowerUps);
+        InvokeRepeating("ReSpawnRatePowerUps", 1, timeToSpawnPowerUps);
         StartCoroutine(FadeAudioSource.StartFade(audioSource,20, 0.25f));
 
     }

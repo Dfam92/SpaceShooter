@@ -11,7 +11,7 @@ public class RepeatBackGround : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider2D>().size.y / 2;
+        repeatWidth = GetComponent<BoxCollider2D>().size.y /2f;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
     }

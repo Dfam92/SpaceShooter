@@ -15,7 +15,19 @@ public class BackGroundRoll : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
+    {if(GameManager.isActive)
+        {
+            backRb.AddForce(Vector2.down * rollSpeed);
+        }
+       
+    }
+
+    public void StopBackGround()
     {
-        backRb.AddForce(Vector2.down * rollSpeed);
+        rollSpeed = 0;
+    }
+    public void ContinueBackGround()
+    {
+        rollSpeed = 0.3f;
     }
 }

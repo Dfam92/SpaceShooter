@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
     private void Update()
     // if mobile desactive this.
     {
-        if (GameManager.isActive == true)
+        if (GameManager.isActive)
         {
             PlayerShoot();
         }
@@ -50,7 +50,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(GameManager.isActive == true)
+        if(GameManager.isActive)
         {
             PlayerMovement();
             PlayerOutBounds();
