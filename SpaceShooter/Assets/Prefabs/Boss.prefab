@@ -173,6 +173,7 @@ MonoBehaviour:
   turnAngle: 7
   timeToShotStings: 5
   timeToShotBubbles: 2
+  bossDefeated: {fileID: 8300000, guid: 649b98e22af7dce4ca1abd717bcbd274, type: 3}
 --- !u!82 &8756296893798455945
 AudioSource:
   m_ObjectHideFlags: 0

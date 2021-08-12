@@ -21,6 +21,8 @@ public class BossControl : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public AudioClip bossDefeated;
+
     private GameManager gameManager;
 
     private AudioSource bossAudioSource;
@@ -152,8 +154,11 @@ public class BossControl : MonoBehaviour
 
             if (healthBoss == 0)
             {
+                speed = 15;
                 gameManager.UpdateScore(10000);
-                Destroy(this.gameObject, 1);
+                CancelInvoke();
+                bossAudioSource.PlayOneShot(bossDefeated,1.5f);
+                Destroy(this.gameObject, 1.5f);
 
             }
 

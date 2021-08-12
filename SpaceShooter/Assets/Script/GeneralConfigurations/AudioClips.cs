@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioClips : MonoBehaviour
 {
+    private GameManager gameManager;
     private AudioSource audioPlayer;
     public AudioClip explosionEnemy;
     public AudioClip explosionPlayer;
@@ -12,6 +13,7 @@ public class AudioClips : MonoBehaviour
     public AudioClip bulletsEnabled;
     public AudioClip powerUp2x;
     public AudioClip powerUp4x;
+    
     
     public static bool enemyIsDestroyed;
     public static bool playerIsDestroyed;
@@ -27,7 +29,7 @@ public class AudioClips : MonoBehaviour
     void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
-        
+       
     }
     // Update is called once per frame
     void Update()
@@ -82,10 +84,7 @@ public class AudioClips : MonoBehaviour
                 is4xOn = false;
             }
         }
-
-
-
-
+       
     }
 
 }
