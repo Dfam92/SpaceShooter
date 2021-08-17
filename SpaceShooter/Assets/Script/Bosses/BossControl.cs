@@ -26,6 +26,8 @@ public class BossControl : MonoBehaviour
     private GameManager gameManager;
 
     private AudioSource bossAudioSource;
+   
+    private bool bossDestroyed;
 
 
     // Start is called before the first frame update
@@ -65,13 +67,13 @@ public class BossControl : MonoBehaviour
             bossRb.AddRelativeForce(Vector2.up*speed);
         }
 
-        if(transform.position.x > ScreenBounds.xEnemyBound / 4  )
+        if(transform.position.x > ScreenBounds.xEnemyBound / 4 && !bossDestroyed)
 
         {
             StartCoroutine(TurnRight());
             isTurning = true;
         }
-        else if (transform.position.x > -ScreenBounds.xEnemyBound / 2)
+        else if (transform.position.x > -ScreenBounds.xEnemyBound / 2 && !bossDestroyed)
 
         {
             StartCoroutine(TurnLeft());
@@ -81,7 +83,7 @@ public class BossControl : MonoBehaviour
     IEnumerator TurnRight()
 
     {
-        if(isTurning == true)
+        if(isTurning == true )
         {
             yield return new WaitForSeconds(timeToTurn);
             bossRb.AddTorque(-turnAngle);
@@ -154,12 +156,7 @@ public class BossControl : MonoBehaviour
 
             if (healthBoss == 0)
             {
-                speed = 15;
-                gameManager.UpdateScore(10000);
-                CancelInvoke();
-                bossAudioSource.PlayOneShot(bossDefeated,1.5f);
-                Destroy(this.gameObject, 1.5f);
-
+                BossDestroyed();
             }
 
             else if (healthBoss < 10)
@@ -182,5 +179,17 @@ public class BossControl : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         OutOfBounds();
+    }
+
+    private void BossDestroyed()
+    {
+        speed = 15;
+        bossRb.gravityScale = 5;
+        gameManager.UpdateScore(10000);
+        CancelInvoke();
+        bossAudioSource.PlayOneShot(bossDefeated, 1.5f);
+        bossDestroyed = true;
+        StopAllCoroutines();
+        Destroy(this.gameObject, 5f);
     }
 }

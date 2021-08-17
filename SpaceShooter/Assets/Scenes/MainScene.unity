@@ -1680,7 +1680,7 @@ MonoBehaviour:
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 16
-  bossRate: 20
+  bossRate: 30
   bossDefeated: 0
   bossOn: 0
   levelSelect: 0
@@ -5068,7 +5068,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 23a6dc3766edf75408ab7269c04e8b84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
