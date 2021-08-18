@@ -1680,7 +1680,7 @@ MonoBehaviour:
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 16
-  bossRate: 30
+  bossRate: 50
   bossDefeated: 0
   bossOn: 0
   levelSelect: 0

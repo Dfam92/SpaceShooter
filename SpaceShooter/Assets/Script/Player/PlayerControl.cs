@@ -41,10 +41,10 @@ public class PlayerControl : MonoBehaviour
     private void Update()
     // if mobile desactive this.
     {
-        if (GameManager.isActive)
+        /*if (GameManager.isActive)
         {
             PlayerShoot();
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -61,7 +61,7 @@ public class PlayerControl : MonoBehaviour
     {
         //For Play in PC active this
 
-         float horizontalInput = Input.GetAxis("Horizontal");
+         /*float horizontalInput = Input.GetAxis("Horizontal");
          float verticalInput = Input.GetAxis("Vertical");
          playerRb.AddForce(Vector2.right * speed * horizontalInput);
          playerRb.AddForce(Vector2.up * speed * verticalInput);
@@ -77,10 +77,10 @@ public class PlayerControl : MonoBehaviour
          else
          {
              animPlayer.SetFloat("Move", -1f);
-         }
+         }*/
 
         // For play Mobile
-        /*
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
@@ -94,7 +94,7 @@ public class PlayerControl : MonoBehaviour
         {
             animPlayer.SetFloat("Move", -1f);
   
-        }*/
+        }
     }
 
     private void PlayerOutBounds()
@@ -126,7 +126,7 @@ public class PlayerControl : MonoBehaviour
     {
         // For play in Pc active this
         
-        Vector3 bulletPos = new Vector3(transform.position.x-0.05f, transform.position.y + 0.5f, transform.rotation.z);
+        /*Vector3 bulletPos = new Vector3(transform.position.x-0.05f, transform.position.y + 0.5f, transform.rotation.z);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
@@ -141,12 +141,12 @@ public class PlayerControl : MonoBehaviour
                 Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                 Instantiate(bulletPlayer, bulletPos3, transform.rotation);
             }
-        }
+        }*/
             
         
 
         //for play Mobile active this
-        /*Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
+        Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);
@@ -160,7 +160,7 @@ public class PlayerControl : MonoBehaviour
         
             Instantiate(bulletPlayer, bulletPos2, transform.rotation);
             Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-        }*/
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

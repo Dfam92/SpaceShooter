@@ -21,6 +21,8 @@ public class BossControl : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private Animator bossAnim;
+
     public AudioClip bossDefeated;
 
     private GameManager gameManager;
@@ -35,6 +37,7 @@ public class BossControl : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         bossAudioSource = GetComponent<AudioSource>();
+        bossAnim = GetComponent<Animator>();
         InvokeRepeating("FireSting", 2, timeToShotStings);
         InvokeRepeating("FireBubble", 2, timeToShotBubbles);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -181,15 +184,23 @@ public class BossControl : MonoBehaviour
         OutOfBounds();
     }
 
+    IEnumerator BossFinished()
+    {
+        yield return new WaitForSeconds(2.5f);
+        bossAnim.SetBool("isFinish", true);
+    }
+
     private void BossDestroyed()
     {
-        speed = 15;
-        bossRb.gravityScale = 5;
+        speed = 10;
+        bossRb.gravityScale = 3;
         gameManager.UpdateScore(10000);
         CancelInvoke();
         bossAudioSource.PlayOneShot(bossDefeated, 1.5f);
         bossDestroyed = true;
         StopAllCoroutines();
+        StartCoroutine(BossFinished());
+        bossAnim.SetBool("isDead", true);
         Destroy(this.gameObject, 5f);
     }
 }
