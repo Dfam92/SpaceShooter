@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject scoreAndButtons;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
+    public GameObject pauseButton;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScore;
@@ -117,6 +118,7 @@ public class GameManager : MonoBehaviour
         isActive = false;
         audioSource.Stop();
         HighScore();
+        pauseButton.SetActive(false);
 
     }
 
