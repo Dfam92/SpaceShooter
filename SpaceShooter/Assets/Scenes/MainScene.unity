@@ -1823,9 +1823,11 @@ MonoBehaviour:
   titleScreen: {fileID: 1052487226}
   gameOverScreen: {fileID: 386045820}
   pauseButton: {fileID: 92858374}
+  player: {fileID: 1767198470}
   scoreText: {fileID: 414333407}
   highScore: {fileID: 1633939453}
   enemiesDestroyedText: {fileID: 399526051}
+  lifeScoreText: {fileID: 0}
   hordes:
   - {fileID: 7285884220949948553, guid: 8d36bb92d6142374ab369e42a2012dd6, type: 3}
   - {fileID: 6182648738193510415, guid: a21a26035166c0e4286f4bad3ffa096a, type: 3}
@@ -1842,6 +1844,7 @@ MonoBehaviour:
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 16
   bossRate: 50
+  lifeScore: 2
   bossDefeated: 0
   bossOn: 0
   levelSelect: 0
@@ -6519,103 +6522,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139574690}
   m_CullTransparentMesh: 1
---- !u!1001 &2176152546305059989
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2176152546477738129, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_Name
-      value: ExplosionParticle
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.642
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 89.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5244205
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5244205
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.47432384
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47432384
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -174.257
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738130, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: stopAction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.type
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.arc.mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.arc.value
-      value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.arc.spread
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.donutRadius
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176152546477738131, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2406fb4860b548642b0ff9535442844e, type: 3}
 --- !u!1001 &6317628001629180485
 PrefabInstance:
   m_ObjectHideFlags: 0

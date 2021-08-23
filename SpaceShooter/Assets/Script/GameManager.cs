@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject pauseButton;
+    public GameObject player;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScore;
     public TextMeshProUGUI enemiesDestroyedText;
+    public TextMeshProUGUI lifeScoreText;
     
     public List<GameObject> hordes;
     public List<GameObject> powerUps;
@@ -30,7 +32,9 @@ public class GameManager : MonoBehaviour
 
     private int score;
     private int enemiesCount;
+    public int lifeScore = 2;
     private float bossRemainder;
+    
 
     public bool bossDefeated;
     public bool bossOn = false;
@@ -51,10 +55,11 @@ public class GameManager : MonoBehaviour
   
     private void Update()
     {
-
+        Debug.Log(lifeScore);
         bossRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
+        CheckLife();
 
     }
     IEnumerator SpawnHordes()
@@ -73,8 +78,6 @@ public class GameManager : MonoBehaviour
         int index = Random.Range(0, hordes.Count);
         Instantiate(hordes[index]);
     }
-
-
     IEnumerator SpawnRatePowerUps()
     {
         while (isActive)
@@ -201,6 +204,19 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteKey("HighScore");
         highScore.text = "HiScore: 0";
     }
-    
-   
+
+   public void UpdateLife(int lifeToAdd)
+    {
+        lifeScore += lifeToAdd;
+        
+    }
+    private void CheckLife()
+    {
+        if(!player.activeInHierarchy && !gameOver)
+        {
+            player.SetActive(true);
+            var newPos = new Vector3(0, -4, 0);
+            player.transform.position = newPos;
+        }
+    }
 }

@@ -22,8 +22,10 @@ public class PlayerControl : MonoBehaviour
     public static bool isMultiplying4x;
     public static bool sideBullets;
 
+
     private int timeToStopPowerUp;
     private float paralyzeTime = 3;
+    private Vector3 playerPos;
 
     //For mobile active the Joystick
     public Joystick joystick;
@@ -35,16 +37,17 @@ public class PlayerControl : MonoBehaviour
         playerAudioSource = GetComponent<AudioSource>();
         animPlayer = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerPos = this.transform.position;
     }
 
 
     private void Update()
-    // if mobile desactive this.
+     //if mobile desactive this.
     {
-        /*if (GameManager.isActive)
+        if (GameManager.isActive)
         {
             PlayerShoot();
-        }*/
+        }
     }
 
     // Update is called once per frame
@@ -61,7 +64,7 @@ public class PlayerControl : MonoBehaviour
     {
         //For Play in PC active this
 
-         /*float horizontalInput = Input.GetAxis("Horizontal");
+         float horizontalInput = Input.GetAxis("Horizontal");
          float verticalInput = Input.GetAxis("Vertical");
          playerRb.AddForce(Vector2.right * speed * horizontalInput);
          playerRb.AddForce(Vector2.up * speed * verticalInput);
@@ -77,11 +80,11 @@ public class PlayerControl : MonoBehaviour
          else
          {
              animPlayer.SetFloat("Move", -1f);
-         }*/
+         }
 
         // For play Mobile
         
-        float horizontalInput = Input.GetAxis("Horizontal");
+        /*float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
         playerRb.AddForce(Vector2.up * speed * joystick.Vertical);
@@ -94,7 +97,7 @@ public class PlayerControl : MonoBehaviour
         {
             animPlayer.SetFloat("Move", -1f);
   
-        }
+        }*/
     }
 
     private void PlayerOutBounds()
@@ -124,9 +127,9 @@ public class PlayerControl : MonoBehaviour
     }
     public void PlayerShoot()
     {
-        // For play in Pc active this
+        //For play in Pc active this
         
-        /*Vector3 bulletPos = new Vector3(transform.position.x-0.05f, transform.position.y + 0.5f, transform.rotation.z);
+        Vector3 bulletPos = new Vector3(transform.position.x-0.05f, transform.position.y + 0.5f, transform.rotation.z);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
@@ -141,12 +144,12 @@ public class PlayerControl : MonoBehaviour
                 Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                 Instantiate(bulletPlayer, bulletPos3, transform.rotation);
             }
-        }*/
+        }
             
         
 
         //for play Mobile active this
-        Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
+        /*Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
         {
             Instantiate(bulletPlayer, bulletPos, transform.rotation);
             playerAudioSource.PlayOneShot(bulletSound, 1.0f);
@@ -160,18 +163,25 @@ public class PlayerControl : MonoBehaviour
         
             Instantiate(bulletPlayer, bulletPos2, transform.rotation);
             Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
 
-        if (collision.CompareTag("Enemy") && !alienShield.activeInHierarchy || collision.CompareTag("Boss") && !alienShield.activeInHierarchy)
+        if (collision.CompareTag("Enemy") && !alienShield.activeInHierarchy || collision.CompareTag("Boss") && !alienShield.activeInHierarchy
+            || collision.CompareTag("EnemyBullet") && !alienShield.activeInHierarchy)
         {
             AudioClips.playerIsDestroyed = true;
-            Destroy(gameObject);
-            gameManager.GameOver();
+            gameManager.UpdateLife(-1);
+            this.gameObject.SetActive(false);
+            if (gameManager.lifeScore < 0)
+            {
+                gameManager.GameOver();
+            }
+          
+            
 
         }
         else if(collision.CompareTag("Shield"))
