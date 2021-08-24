@@ -18,6 +18,7 @@ TagManager:
   - Multiply4x
   - Boss
   - BossSting
+  - ExtraLife
   layers:
   - Default
   - TransparentFX

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SpawnPowerUps : MonoBehaviour
 {
-    public GameObject powerUp;
-    
+        
     // Start is called before the first frame update
    
     private void Awake()

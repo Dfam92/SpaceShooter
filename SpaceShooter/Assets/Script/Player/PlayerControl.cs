@@ -175,14 +175,12 @@ public class PlayerControl : MonoBehaviour
         {
             AudioClips.playerIsDestroyed = true;
             gameManager.UpdateLife(-1);
+            animPlayer.Rebind();
             this.gameObject.SetActive(false);
             if (gameManager.lifeScore < 0)
             {
                 gameManager.GameOver();
             }
-          
-            
-
         }
         else if(collision.CompareTag("Shield"))
         {
@@ -215,6 +213,10 @@ public class PlayerControl : MonoBehaviour
             timeToStopPowerUp = 10;
             AudioClips.is4xOn = true;
             StartCoroutine(StopPowerUp());
+        }
+        else if (collision.CompareTag("ExtraLife"))
+        {
+            gameManager.UpdateLife(1);
         }
     }
   

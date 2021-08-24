@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
   
     private void Update()
     {
-        Debug.Log(lifeScore);
         bossRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
@@ -208,11 +207,21 @@ public class GameManager : MonoBehaviour
    public void UpdateLife(int lifeToAdd)
     {
         lifeScore += lifeToAdd;
+       
         
     }
     private void CheckLife()
     {
-        if(!player.activeInHierarchy && !gameOver)
+        if (lifeScore > -1)
+        {
+            lifeScoreText.text = " x " + lifeScore;
+        }
+        else
+        {
+            lifeScoreText.text = " x " + 0;
+        }
+
+        if (!player.activeInHierarchy && !gameOver)
         {
             player.SetActive(true);
             var newPos = new Vector3(0, -4, 0);
