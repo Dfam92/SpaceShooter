@@ -15,7 +15,7 @@ public class SpawnPowerUps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -ScreenBounds.yPlayerBound-0.5f)
+        if (transform.position.y < -ScreenBounds.yPlayerBound-1f)
         {
             Destroy(this.gameObject);
         }

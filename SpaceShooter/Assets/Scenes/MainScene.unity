@@ -1845,7 +1845,10 @@ MonoBehaviour:
   timeToSpawnHordes: 30
   timeToSpawnPowerUps: 5
   bossRate: 50
+  timeToRespawnPlayer: 1.5
   lifeScore: 2
+  isReborned: 0
+  isFreezed: 0
   bossDefeated: 0
   bossOn: 0
   levelSelect: 0
@@ -5586,6 +5589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  timeToStopInvulnerabilty: 3
+  timeToStopFreeze: 0.1
   playerRb: {fileID: 1767198475}
   alienShield: {fileID: 2099813974}
   bulletPlayer: {fileID: 4818437649621668731, guid: 112474bd7332f2e4d99e25b67510d0c1, type: 3}

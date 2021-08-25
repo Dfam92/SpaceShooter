@@ -7,10 +7,13 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float timeToStopInvulnerabilty;
+    [SerializeField] private float timeToStopFreeze;
 
     private GameManager gameManager;
     private AudioSource playerAudioSource;
     private Animator animPlayer;
+    private BoxCollider2D boxCollider;
 
     public Rigidbody2D playerRb;
     public GameObject alienShield;
@@ -30,6 +33,8 @@ public class PlayerControl : MonoBehaviour
     //For mobile active the Joystick
     public Joystick joystick;
     public Joystick fireButton;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +43,7 @@ public class PlayerControl : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerPos = this.transform.position;
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
 
@@ -47,6 +53,7 @@ public class PlayerControl : MonoBehaviour
         if (GameManager.isActive)
         {
             PlayerShoot();
+            Invulnerability();
         }
     }
 
@@ -63,41 +70,54 @@ public class PlayerControl : MonoBehaviour
     private void PlayerMovement()
     {
         //For Play in PC active this
+        if(!gameManager.isFreezed)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            playerRb.AddForce(Vector2.right * speed * horizontalInput);
+            playerRb.AddForce(Vector2.up * speed * verticalInput);
 
-         float horizontalInput = Input.GetAxis("Horizontal");
-         float verticalInput = Input.GetAxis("Vertical");
-         playerRb.AddForce(Vector2.right * speed * horizontalInput);
-         playerRb.AddForce(Vector2.up * speed * verticalInput);
-
-         if (verticalInput > 0 || horizontalInput > 0 || horizontalInput <0)
-         {
-            if(playerRb.mass < 100)
+            if (verticalInput > 0 || horizontalInput > 0 || horizontalInput < 0)
             {
-                animPlayer.SetFloat("Move", 1f);
+                if (playerRb.mass < 100)
+                {
+                    animPlayer.SetFloat("Move", 1f);
+                }
+
             }
-            
-         }
-         else
-         {
-             animPlayer.SetFloat("Move", -1f);
-         }
+            else
+            {
+                animPlayer.SetFloat("Move", -1f);
+            }
+        }
+
 
         // For play Mobile
-        
-        /*float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
-        playerRb.AddForce(Vector2.up * speed * joystick.Vertical);
 
-        if (joystick.Vertical > 0 || joystick.Horizontal > 0 || joystick.Horizontal < 0)
+        /*if(!gameManager.isFreezed)
         {
-            animPlayer.SetFloat("Move", 1f);
-        }
-        else
-        {
-            animPlayer.SetFloat("Move", -1f);
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
+            playerRb.AddForce(Vector2.up * speed * joystick.Vertical);
+
+            if (joystick.Vertical > 0 || joystick.Horizontal > 0 || joystick.Horizontal < 0)
+            {
+                if (playerRb.mass < 100)
+                {
+
+                }
+                    
+            }
+            else
+            {
+                animPlayer.SetFloat("Move", -1f);
   
-        }*/
+            }
+        }
+        */
+
+
     }
 
     private void PlayerOutBounds()
@@ -166,6 +186,23 @@ public class PlayerControl : MonoBehaviour
         }*/
     }
 
+    private void Invulnerability()
+    {
+        if(gameManager.isReborned)
+        {
+            animPlayer.SetBool("IsReborned", true);
+            boxCollider.enabled = false;
+            StartCoroutine(StopInvulnerability());
+            //must be lower than Stop Invulnerability
+            StartCoroutine(StopFreeze());
+        }
+        else
+        {
+            boxCollider.enabled = true;
+        }
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -190,7 +227,7 @@ public class PlayerControl : MonoBehaviour
         else if (collision.CompareTag("BossSting") && !alienShield.activeInHierarchy)
         {
             playerRb.mass = 100;
-            BossAudioClips.enemyIsShocked = true;
+            BossAudioClips.playerIsEletrified = true;
             StartCoroutine(StopParalysis());
         }
         else if (collision.CompareTag("BulletCase"))
@@ -243,5 +280,17 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(paralyzeTime);
         playerRb.mass = 1;
 
+    }
+    IEnumerator StopInvulnerability()
+    {
+        yield return new WaitForSeconds(timeToStopInvulnerabilty);
+        gameManager.isReborned = false;
+        animPlayer.SetBool("IsReborned", false);
+
+    }
+    IEnumerator StopFreeze()
+    {
+        yield return new WaitForSeconds(timeToStopFreeze);
+        gameManager.isFreezed = false;
     }
 }

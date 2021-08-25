@@ -9,7 +9,7 @@ public class BossAudioClips : MonoBehaviour
     public AudioClip stingDestroy;
     public AudioClip bubbleFire;
 
-    public static bool enemyIsShocked;
+    public static bool playerIsEletrified;
     public static bool stingDestroyed;
     public static bool bubbleFired;
 
@@ -22,12 +22,12 @@ public class BossAudioClips : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyIsShocked == true)
+        if (playerIsEletrified == true)
         {
             if (!audioPlayer.isPlaying)
             {
                 audioPlayer.PlayOneShot(electricShock, 0.2f);
-                enemyIsShocked = false;
+                playerIsEletrified = false;
             }
         }
         else if (stingDestroyed == true)

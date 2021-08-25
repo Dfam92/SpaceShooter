@@ -29,13 +29,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]private float timeToSpawnHordes;
     [SerializeField]private float timeToSpawnPowerUps;
     [SerializeField]private int bossRate;
+    [SerializeField] private float timeToRespawnPlayer;
 
     private int score;
     private int enemiesCount;
     public int lifeScore = 2;
     private float bossRemainder;
-    
 
+    public bool isReborned;
+    public bool isFreezed;
     public bool bossDefeated;
     public bool bossOn = false;
     public static bool gameOver;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent SpawningBoss;
     public UnityEvent DefeatedBoss;
+    
 
 
     // Start is called before the first frame update
@@ -59,8 +62,8 @@ public class GameManager : MonoBehaviour
         SpawnBoss();
         BossDefeated();
         CheckLife();
-
     }
+   
     IEnumerator SpawnHordes()
     {
         while (isActive)
@@ -167,7 +170,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void Restart()
-
     {
         EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -207,8 +209,6 @@ public class GameManager : MonoBehaviour
    public void UpdateLife(int lifeToAdd)
     {
         lifeScore += lifeToAdd;
-       
-        
     }
     private void CheckLife()
     {
@@ -223,9 +223,17 @@ public class GameManager : MonoBehaviour
 
         if (!player.activeInHierarchy && !gameOver)
         {
-            player.SetActive(true);
-            var newPos = new Vector3(0, -4, 0);
-            player.transform.position = newPos;
+            StartCoroutine(RespawnPlayer());
         }
+    }
+
+    IEnumerator RespawnPlayer()
+    {
+        yield return new WaitForSeconds(timeToRespawnPlayer);
+        var newPos = new Vector3(0, -4, 0);
+        player.transform.position = newPos;
+        player.SetActive(true);
+        isReborned = true;
+        isFreezed = true;
     }
 }

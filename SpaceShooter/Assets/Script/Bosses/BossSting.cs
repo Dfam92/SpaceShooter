@@ -11,7 +11,7 @@ public class BossSting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        player = GameObject.Find("Player").GetComponent<PlayerControl>();
     }
     private void Update()
     {
@@ -40,8 +40,6 @@ public class BossSting : MonoBehaviour
 
     private void StingDirection()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerControl>();
-
         if (player != null)
         {
             stingRb.AddForce((player.transform.position-transform.position)*speed);
