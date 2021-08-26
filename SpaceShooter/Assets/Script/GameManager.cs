@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject boss;
     
     private AudioSource audioSource;
-    
+    private PlayerControl playerControl;
     
     [SerializeField]private float timeToSpawnHordes;
     [SerializeField]private float timeToSpawnPowerUps;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private int score;
     private int enemiesCount;
     public int lifeScore = 2;
-    private float bossRemainder;
+    private float bossCountRemainder;
 
     public bool isReborned;
     public bool isFreezed;
@@ -53,17 +53,26 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();   
+        highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
+        playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
     }
   
     private void Update()
     {
-        bossRemainder = enemiesCount % bossRate;
+        bossCountRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
         CheckLife();
     }
-   
+
+    IEnumerator RespawnPlayer()
+    {
+        yield return new WaitForSeconds(timeToRespawnPlayer);
+        var newPos = new Vector3(0, -4, 0);
+        player.transform.position = newPos;
+        isReborned = true;
+        isFreezed = true;
+    }
     IEnumerator SpawnHordes()
     {
         while (isActive)
@@ -73,12 +82,6 @@ public class GameManager : MonoBehaviour
             Instantiate(hordes[index]);
             
         }
-    }
-
-    private void ReSpawnHordes()
-    {
-        int index = Random.Range(0, hordes.Count);
-        Instantiate(hordes[index]);
     }
     IEnumerator SpawnRatePowerUps()
     {
@@ -90,12 +93,16 @@ public class GameManager : MonoBehaviour
         }
        
     }
+    private void ReSpawnHordes()
+    {
+        int index = Random.Range(0, hordes.Count);
+        Instantiate(hordes[index]);
+    }
     private void ReSpawnRatePowerUps()
     {
         int index = Random.Range(0, powerUps.Count);
         Instantiate(powerUps[index]);
     }
-
     public void StartGame(int difficulty)
     {
         isActive = true;
@@ -112,7 +119,6 @@ public class GameManager : MonoBehaviour
         //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 
         scoreAndButtons.SetActive(true);
     }
-
     public void GameOver()
     {
         PlayerControl.isMultiplying2x = false;
@@ -126,10 +132,9 @@ public class GameManager : MonoBehaviour
         pauseButton.SetActive(false);
 
     }
-
     public void SpawnBoss()
     {
-        if(enemiesCount > 2 && bossRemainder == 0 && bossOn == false)
+        if(enemiesCount > 2 && bossCountRemainder == 0 && bossOn == false)
         {
 
             SpawningBoss.Invoke();
@@ -148,7 +153,6 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
     public void BossSpawned()
     {
         var bossPos = new Vector3(boss.transform.position.x, Random.Range(-ScreenBounds.yPlayerBound, ScreenBounds.yPlayerBound), boss.transform.position.z);
@@ -159,7 +163,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(FadeAudioSource.StartFade(audioSource, 3, 0));
         
     }
-
     public void BossDestroyed()
     {
         
@@ -168,18 +171,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(FadeAudioSource.StartFade(audioSource,20, 0.25f));
 
     }
-
-    public void Restart()
-    {
-        EnemyShoot.fireStart = 6;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
@@ -190,7 +181,10 @@ public class GameManager : MonoBehaviour
         enemiesCount += enemiesToAdd;
         enemiesDestroyedText.text = "Enemies: " + enemiesCount;
     }
-
+    public void UpdateLife(int lifeToAdd)
+    {
+        lifeScore += lifeToAdd;
+    }
     private void HighScore()
     {
         if (score > PlayerPrefs.GetInt("HighScore", 0))
@@ -199,16 +193,10 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
     public void ResetScore()
     {
         PlayerPrefs.DeleteKey("HighScore");
         highScore.text = "HiScore: 0";
-    }
-
-   public void UpdateLife(int lifeToAdd)
-    {
-        lifeScore += lifeToAdd;
     }
     private void CheckLife()
     {
@@ -221,19 +209,20 @@ public class GameManager : MonoBehaviour
             lifeScoreText.text = " x " + 0;
         }
 
-        if (!player.activeInHierarchy && !gameOver)
+        if (playerControl.playerIsDestroyed && !gameOver)
         {
             StartCoroutine(RespawnPlayer());
+            
         }
     }
-
-    IEnumerator RespawnPlayer()
+    public void Restart()
     {
-        yield return new WaitForSeconds(timeToRespawnPlayer);
-        var newPos = new Vector3(0, -4, 0);
-        player.transform.position = newPos;
-        player.SetActive(true);
-        isReborned = true;
-        isFreezed = true;
+        EnemyShoot.fireStart = 6;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    
 }

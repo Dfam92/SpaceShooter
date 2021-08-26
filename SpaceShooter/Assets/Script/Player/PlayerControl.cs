@@ -14,36 +14,34 @@ public class PlayerControl : MonoBehaviour
     private AudioSource playerAudioSource;
     private Animator animPlayer;
     private BoxCollider2D boxCollider;
+    private SpriteRenderer spriteRenderer;
 
     public Rigidbody2D playerRb;
     public GameObject alienShield;
     public GameObject bulletPlayer;
     public AudioClip bulletSound;
+    public GameObject explosion;
    
-
     public static bool isMultiplying2x;
     public static bool isMultiplying4x;
     public static bool sideBullets;
-
+    public bool playerIsDestroyed;
 
     private int timeToStopPowerUp;
     private float paralyzeTime = 3;
-    private Vector3 playerPos;
-
+    
     //For mobile active the Joystick
     public Joystick joystick;
     public Joystick fireButton;
-    
-
-
+   
     // Start is called before the first frame update
     void Start()
     {
         playerAudioSource = GetComponent<AudioSource>();
         animPlayer = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        playerPos = this.transform.position;
         boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -53,14 +51,14 @@ public class PlayerControl : MonoBehaviour
         if (GameManager.isActive)
         {
             PlayerShoot();
-            Invulnerability();
+            RespawnPlayer();
         }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(GameManager.isActive)
+        if(GameManager.isActive && !playerIsDestroyed)
         {
             PlayerMovement();
             PlayerOutBounds();
@@ -146,14 +144,35 @@ public class PlayerControl : MonoBehaviour
         
     }
     public void PlayerShoot()
-    {
-        //For play in Pc active this
-        
-        Vector3 bulletPos = new Vector3(transform.position.x-0.05f, transform.position.y + 0.5f, transform.rotation.z);
-        if (Input.GetKeyDown(KeyCode.Space))
+    {if(!playerIsDestroyed)
         {
-            Instantiate(bulletPlayer, bulletPos, transform.rotation);
-            playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+            //For play in Pc active this
+
+            Vector3 bulletPos = new Vector3(transform.position.x - 0.05f, transform.position.y + 0.5f, transform.rotation.z);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(bulletPlayer, bulletPos, transform.rotation);
+                playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+
+                if (sideBullets == true)
+                {
+
+                    Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
+                    Vector3 bulletPos3 = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.rotation.z);
+
+                    Instantiate(bulletPlayer, bulletPos2, transform.rotation);
+                    Instantiate(bulletPlayer, bulletPos3, transform.rotation);
+                }
+            }
+
+
+
+            //for play Mobile active this
+            /*Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
+            {
+                Instantiate(bulletPlayer, bulletPos, transform.rotation);
+                playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+            }
 
             if (sideBullets == true)
             {
@@ -163,61 +182,61 @@ public class PlayerControl : MonoBehaviour
 
                 Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                 Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-            }
-        }
-            
-        
-
-        //for play Mobile active this
-        /*Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
-        {
-            Instantiate(bulletPlayer, bulletPos, transform.rotation);
-            playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+            }*/
         }
 
-        if (sideBullets == true)
-        {
-                
-            Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
-            Vector3 bulletPos3 = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.rotation.z);
-        
-            Instantiate(bulletPlayer, bulletPos2, transform.rotation);
-            Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-        }*/
     }
 
-    private void Invulnerability()
+    private void RespawnPlayer()
     {
-        if(gameManager.isReborned)
+        
+        if (gameManager.isReborned)
         {
+            
+            sideBullets = false;
+            isMultiplying2x = false;
+            isMultiplying4x = false;
+            spriteRenderer.enabled = true;
             animPlayer.SetBool("IsReborned", true);
-            boxCollider.enabled = false;
-            StartCoroutine(StopInvulnerability());
+            StartCoroutine("StopInvulnerability");
             //must be lower than Stop Invulnerability
             StartCoroutine(StopFreeze());
+            playerIsDestroyed = false;
         }
         else
         {
-            boxCollider.enabled = true;
+            if(!playerIsDestroyed)
+            {
+                
+                boxCollider.enabled = true;
+               
+            }
+           
         }
         
+    }
+    private void DestroyPlayer()
+    {
+        boxCollider.enabled = false;
+        spriteRenderer.enabled = false;
+        playerIsDestroyed = true;
+        transform.GetChild(1).gameObject.SetActive(true);
+        AudioClips.playerIsDestroyed = true;
+        gameManager.UpdateLife(-1);
+        animPlayer.Rebind();
+
+        if (gameManager.lifeScore < 0)
+        {
+            gameManager.GameOver();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-
         if (collision.CompareTag("Enemy") && !alienShield.activeInHierarchy || collision.CompareTag("Boss") && !alienShield.activeInHierarchy
             || collision.CompareTag("EnemyBullet") && !alienShield.activeInHierarchy)
         {
-            AudioClips.playerIsDestroyed = true;
-            gameManager.UpdateLife(-1);
-            animPlayer.Rebind();
-            this.gameObject.SetActive(false);
-            if (gameManager.lifeScore < 0)
-            {
-                gameManager.GameOver();
-            }
+            DestroyPlayer();
         }
         else if(collision.CompareTag("Shield"))
         {
@@ -255,8 +274,10 @@ public class PlayerControl : MonoBehaviour
         {
             gameManager.UpdateLife(1);
         }
+        
     }
   
+    
     IEnumerator StopPowerUp()
     {
         
@@ -283,6 +304,10 @@ public class PlayerControl : MonoBehaviour
     }
     IEnumerator StopInvulnerability()
     {
+        if(!playerIsDestroyed)
+        {
+            yield break;
+        }
         yield return new WaitForSeconds(timeToStopInvulnerabilty);
         gameManager.isReborned = false;
         animPlayer.SetBool("IsReborned", false);
@@ -293,4 +318,5 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(timeToStopFreeze);
         gameManager.isFreezed = false;
     }
+   
 }
