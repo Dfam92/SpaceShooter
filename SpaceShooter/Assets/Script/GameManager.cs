@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI highScore;
     public TextMeshProUGUI enemiesDestroyedText;
     public TextMeshProUGUI lifeScoreText;
+    public Toggle MuteButton;
     
     public List<GameObject> hordes;
     public List<GameObject> powerUps;
@@ -47,8 +48,6 @@ public class GameManager : MonoBehaviour
     public UnityEvent SpawningBoss;
     public UnityEvent DefeatedBoss;
     
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +55,10 @@ public class GameManager : MonoBehaviour
         highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
         playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
     }
-  
+    private void Awake()
+    {
+        Muted();
+    }
     private void Update()
     {
         bossCountRemainder = enemiesCount % bossRate;
@@ -217,12 +219,21 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
+        
         EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+
     }
     public void QuitGame()
     {
         Application.Quit();
     }
-    
+    private void Muted()
+    {
+        if (MuteSound.isMuted)
+        {
+            MuteButton.isOn = false;
+        }
+    }
 }

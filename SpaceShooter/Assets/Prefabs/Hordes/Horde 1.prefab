@@ -1185,6 +1185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7285884220628165507}
+  - component: {fileID: 8608556788055067663}
   m_Layer: 0
   m_Name: LeftSquad
   m_TagString: Untagged
@@ -1210,6 +1211,18 @@ Transform:
   m_Father: {fileID: 7285884220949948566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8608556788055067663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285884220628165506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7285884220664384242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7285884220949948566}
+  - component: {fileID: 8717106508467230486}
   m_Layer: 0
   m_Name: Horde 1
   m_TagString: Untagged
@@ -1440,6 +1454,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8717106508467230486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285884220949948553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7285884221005702089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7285884221099092438}
+  - component: {fileID: 5569683349920119917}
   m_Layer: 0
   m_Name: Right Squad
   m_TagString: Untagged
@@ -1866,6 +1893,18 @@ Transform:
   m_Father: {fileID: 7285884220949948566}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5569683349920119917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285884221099092425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7285884221116074736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7285884221116074737}
+  - component: {fileID: 2380659381648430209}
   m_Layer: 0
   m_Name: Right Squad
   m_TagString: Untagged
@@ -1900,6 +1940,18 @@ Transform:
   m_Father: {fileID: 7285884220949948566}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2380659381648430209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285884221116074736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7285884221377767670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,6 +3137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7285884221903392452}
+  - component: {fileID: 6311551486376548512}
   m_Layer: 0
   m_Name: LeftSquad
   m_TagString: Untagged
@@ -3110,6 +3163,18 @@ Transform:
   m_Father: {fileID: 7285884220949948566}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6311551486376548512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285884221903392455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7285884221948209728
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,11 +46,13 @@ public class PlayerControl : MonoBehaviour
 
 
     private void Update()
-     //if mobile desactive this.
+     
     {
         if (GameManager.isActive)
         {
+            //if mobile desactive this.
             PlayerShoot();
+            // Dont Disable This.
             RespawnPlayer();
         }
     }

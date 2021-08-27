@@ -205,6 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6182648737661709672}
+  - component: {fileID: 2799350925284073644}
   m_Layer: 0
   m_Name: LeftSquad
   m_TagString: Untagged
@@ -230,6 +231,18 @@ Transform:
   m_Father: {fileID: 6182648738193510412}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2799350925284073644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182648737661709675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182648737702594433
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6182648737758754806}
+  - component: {fileID: 5861985855466069268}
   m_Layer: 0
   m_Name: CentralHord
   m_TagString: Untagged
@@ -952,6 +966,18 @@ Transform:
   m_Father: {fileID: 6182648738193510412}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5861985855466069268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182648737758754801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182648738055252384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6182648738193510412}
+  - component: {fileID: 4798830556124397221}
   m_Layer: 0
   m_Name: Horde 2
   m_TagString: Untagged
@@ -1281,6 +1308,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4798830556124397221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182648738193510415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182648738216984559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,6 +2213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6182648738739518735}
+  - component: {fileID: 4313602762848505747}
   m_Layer: 0
   m_Name: RightSquad
   m_TagString: Untagged
@@ -2199,6 +2239,18 @@ Transform:
   m_Father: {fileID: 6182648738193510412}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -180.595, z: 0}
+--- !u!114 &4313602762848505747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182648738739518734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182648739194447693
 GameObject:
   m_ObjectHideFlags: 0

@@ -305,6 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7706159914648807318}
+  - component: {fileID: 5804171095578941756}
   m_Layer: 0
   m_Name: CentralHord (2)
   m_TagString: Untagged
@@ -330,6 +331,18 @@ Transform:
   m_Father: {fileID: 7706159916562745327}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5804171095578941756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159914648807319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7706159914688031236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7706159915008063587}
+  - component: {fileID: 7601649079268621419}
   m_Layer: 0
   m_Name: CentralHord (1)
   m_TagString: Untagged
@@ -1252,6 +1266,18 @@ Transform:
   m_Father: {fileID: 7706159916562745327}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7601649079268621419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159915008063588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7706159915141214506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7706159916325669689}
+  - component: {fileID: 5651252099902612541}
   m_Layer: 0
   m_Name: CentralHord
   m_TagString: Untagged
@@ -2471,6 +2498,18 @@ Transform:
   m_Father: {fileID: 7706159916562745327}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5651252099902612541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916325669690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7706159916403040953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7706159916562745327}
+  - component: {fileID: 4359894574207638169}
   m_Layer: 0
   m_Name: Horde3
   m_TagString: Untagged
@@ -2800,6 +2840,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4359894574207638169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916562745232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499b8bfafcb74445b753d5ee2cfea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7706159916575431666
 GameObject:
   m_ObjectHideFlags: 0
