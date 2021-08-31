@@ -70,8 +70,7 @@ public class GameManager : MonoBehaviour
     IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(timeToRespawnPlayer);
-        var newPos = new Vector3(0, -4, 0);
-        player.transform.position = newPos;
+        player.transform.position = playerControl.playerStartPos;
         isReborned = true;
         isFreezed = true;
     }
@@ -219,11 +218,8 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
-        
         EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
-
     }
     public void QuitGame()
     {

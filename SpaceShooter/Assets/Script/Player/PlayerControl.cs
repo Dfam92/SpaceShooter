@@ -29,6 +29,7 @@ public class PlayerControl : MonoBehaviour
 
     private int timeToStopPowerUp;
     private float paralyzeTime = 3;
+    public Vector2 playerStartPos;
     
     //For mobile active the Joystick
     public Joystick joystick;
@@ -42,13 +43,15 @@ public class PlayerControl : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerStartPos = new Vector2(0, -4);
+        this.transform.position = playerStartPos;
+       
     }
-
 
     private void Update()
      
     {
-        if (GameManager.isActive)
+        if (GameManager.isActive && !PauseMenu.isPaused)
         {
             //if mobile desactive this.
             PlayerShoot();
@@ -69,6 +72,7 @@ public class PlayerControl : MonoBehaviour
     //When Mobile, change the Inputs to Joystick.horizontal and Joystick.vertical, dont forget to instantiate the class Joystick.
     private void PlayerMovement()
     {
+        
         //For Play in PC active this
         if(!gameManager.isFreezed)
         {
@@ -119,7 +123,7 @@ public class PlayerControl : MonoBehaviour
 
 
     }
-
+    
     private void PlayerOutBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, -ScreenBounds.yPlayerBound);
