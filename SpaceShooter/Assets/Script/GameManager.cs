@@ -220,6 +220,7 @@ public class GameManager : MonoBehaviour
     {
         EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
     public void QuitGame()
     {
