@@ -81,17 +81,22 @@ public class PlayerControl : MonoBehaviour
             playerRb.AddForce(Vector2.right * speed * horizontalInput);
             playerRb.AddForce(Vector2.up * speed * verticalInput);
 
-            if (verticalInput > 0 || horizontalInput > 0 || horizontalInput < 0)
+            if (verticalInput > 0 )
             {
                 if (playerRb.mass < 100)
                 {
-                    animPlayer.SetFloat("Move", 1f);
+                    animPlayer.SetFloat("Move", 0.5f);
                 }
 
             }
-            else
+            else if (horizontalInput < 0)
             {
-                animPlayer.SetFloat("Move", -1f);
+                animPlayer.SetFloat("TurnLeft", 1f);
+            }
+            else 
+            {
+                animPlayer.SetFloat("Move", -0.5f);
+                animPlayer.SetFloat("TurnLeft", -0.5f);
             }
         }
 
