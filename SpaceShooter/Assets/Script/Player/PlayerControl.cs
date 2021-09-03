@@ -91,12 +91,19 @@ public class PlayerControl : MonoBehaviour
             }
             else if (horizontalInput < 0)
             {
-                animPlayer.SetFloat("TurnLeft", 1f);
+                animPlayer.SetBool("TurnLeft", true);
+                animPlayer.SetBool("TurnRight", false);
             }
-            else 
+            else if(horizontalInput > 0)
+            {
+                animPlayer.SetBool("TurnRight", true);
+                animPlayer.SetBool("TurnLeft", false);
+            }
+            else
             {
                 animPlayer.SetFloat("Move", -0.5f);
-                animPlayer.SetFloat("TurnLeft", -0.5f);
+                animPlayer.SetBool("TurnRight", false);
+                animPlayer.SetBool("TurnLeft", false);
             }
         }
 
@@ -110,25 +117,36 @@ public class PlayerControl : MonoBehaviour
             playerRb.AddForce(Vector2.right * speed * joystick.Horizontal);
             playerRb.AddForce(Vector2.up * speed * joystick.Vertical);
 
-            if (joystick.Vertical > 0 || joystick.Horizontal > 0 || joystick.Horizontal < 0)
+         if (joystick.Vertical > 0 )
             {
                 if (playerRb.mass < 100)
                 {
-
+                    animPlayer.SetFloat("Move", 0.5f);
                 }
-                    
+
+            }
+            else if (joystick.Horizontal < 0)
+            {
+                animPlayer.SetBool("TurnLeft", true);
+                animPlayer.SetBool("TurnRight", false);
+            }
+            else if(joystick.Horizontal > 0)
+            {
+                animPlayer.SetBool("TurnRight", true);
+                animPlayer.SetBool("TurnLeft", false);
             }
             else
             {
-                animPlayer.SetFloat("Move", -1f);
-  
+                animPlayer.SetFloat("Move", -0.5f);
+                animPlayer.SetBool("TurnRight", false);
+                animPlayer.SetBool("TurnLeft", false);
             }
         }
         */
 
 
     }
-    
+
     private void PlayerOutBounds()
     {
         Vector2 topPos = new Vector2(transform.position.x, -ScreenBounds.yPlayerBound);
