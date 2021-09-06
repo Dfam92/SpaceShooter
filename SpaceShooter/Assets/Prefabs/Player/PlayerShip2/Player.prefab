@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4513986987102332017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9852, y: 3.6898, z: 0}
-  m_LocalScale: {x: 0.5755723, y: 0.5755723, z: 0}
+  m_LocalPosition: {x: 7.9591, y: -3.2841, z: 0}
+  m_LocalScale: {x: 0.1396914, y: 0.1396914, z: 0}
   m_Children:
   - {fileID: 4373455841453152685}
   - {fileID: 9008556384338668835}
@@ -282,17 +282,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4513986987102332019}
     m_Modifications:
+    - target: {fileID: 7724442768703242832, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242832, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242832, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242832, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242832, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a33a382a89de0d645ba10298a9aa72e3, type: 3}
     - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9342244
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.056805164
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7724442768703242833, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
       propertyPath: m_LocalPosition.z
@@ -329,6 +361,10 @@ PrefabInstance:
     - target: {fileID: 7724442768703242834, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
       propertyPath: m_Name
       value: ExplosionPlayerParticle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724442768703242834, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0913cb2d24a9baf45a16bc005b552d58, type: 3}

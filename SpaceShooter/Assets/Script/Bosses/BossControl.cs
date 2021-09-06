@@ -161,12 +161,13 @@ public class BossControl : MonoBehaviour
             {
                 BossDestroyed();
             }
-
-            else if (healthBoss < 10)
+            else if (healthBoss == 10)
             {
-                spriteRenderer.color = Color.red;
+                BossLowLife();
+            }
+            else if(healthBoss < 10)
+            {
                 speed += 4;
-                timeToShotBubbles = 1;
             }
 
         }
@@ -187,11 +188,12 @@ public class BossControl : MonoBehaviour
     IEnumerator BossFinished()
     {
         yield return new WaitForSeconds(2.5f);
-        bossAnim.SetBool("isFinish", true);
+        bossAnim.SetBool("isFinished", true);
     }
 
     private void BossDestroyed()
     {
+        bossAnim.speed = 1;
         speed = 10;
         bossRb.gravityScale = 3;
         gameManager.UpdateScore(10000);
@@ -203,4 +205,22 @@ public class BossControl : MonoBehaviour
         bossAnim.SetBool("isDead", true);
         Destroy(this.gameObject, 5f);
     }
+    private void BossLowLife()
+    {
+        CancelInvoke();
+        StartCoroutine(FuriousBoss());
+    }
+    
+    IEnumerator FuriousBoss()
+    {
+        yield return new WaitForSeconds(1);
+        spriteRenderer.color = Color.red;
+        timeToShotBubbles = 1;
+        timeToShotStings = 0.5f;
+        bossAnim.speed = 2;
+        InvokeRepeating("FireSting", 1,3 );
+        InvokeRepeating("FireBubble", 1, 1);
+    
+    }
+
 }

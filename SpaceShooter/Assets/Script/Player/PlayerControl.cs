@@ -43,9 +43,12 @@ public class PlayerControl : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        playerStartPos = new Vector2(0, -4);
         this.transform.position = playerStartPos;
        
+    }
+    private void Awake()
+    {
+        playerStartPos = new Vector3(0,-4,0);
     }
 
     private void Update()
@@ -86,6 +89,8 @@ public class PlayerControl : MonoBehaviour
                 if (playerRb.mass < 100)
                 {
                     animPlayer.SetFloat("Move", 0.5f);
+                    animPlayer.SetBool("TurnRight", false);
+                    animPlayer.SetBool("TurnLeft", false);
                 }
 
             }
@@ -93,11 +98,13 @@ public class PlayerControl : MonoBehaviour
             {
                 animPlayer.SetBool("TurnLeft", true);
                 animPlayer.SetBool("TurnRight", false);
+                animPlayer.SetFloat("Move", -0.9f);
             }
             else if(horizontalInput > 0)
             {
                 animPlayer.SetBool("TurnRight", true);
                 animPlayer.SetBool("TurnLeft", false);
+                animPlayer.SetFloat("Move", -0.9f);
             }
             else
             {
@@ -177,7 +184,7 @@ public class PlayerControl : MonoBehaviour
         {
             //For play in Pc active this
 
-            Vector3 bulletPos = new Vector3(transform.position.x - 0.05f, transform.position.y + 0.5f, transform.rotation.z);
+            Vector3 bulletPos = new Vector3(transform.position.x + 0.02f , transform.position.y + 0.5f, transform.rotation.z);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Instantiate(bulletPlayer, bulletPos, transform.rotation);
@@ -187,7 +194,7 @@ public class PlayerControl : MonoBehaviour
                 {
 
                     Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
-                    Vector3 bulletPos3 = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.rotation.z);
+                    Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
 
                     Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                     Instantiate(bulletPlayer, bulletPos3, transform.rotation);
