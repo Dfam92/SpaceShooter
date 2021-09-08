@@ -1854,8 +1854,8 @@ MonoBehaviour:
   - {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnPowerUps: 1
-  bossRate: 4
+  timeToSpawnPowerUps: 20
+  bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2
   isReborned: 0
@@ -5261,6 +5261,7 @@ MonoBehaviour:
   bulletsEnabled: {fileID: 8300000, guid: 3e4105e559c58d041b7abaf81d6710a1, type: 3}
   powerUp2x: {fileID: 8300000, guid: 95e5b062bcdec0242a7295f09a489b5f, type: 3}
   powerUp4x: {fileID: 8300000, guid: 0afc6d360c62aba489be399c9fc62594, type: 3}
+  hearthPowerUp: {fileID: 8300000, guid: 5f792594f75e2e84d9bfe6b3930f81d9, type: 3}
 --- !u!4 &1570783870
 Transform:
   m_ObjectHideFlags: 0
@@ -6458,6 +6459,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8dd4493c1b0ada4381241d8d1eb4fb1, type: 3}
+--- !u!1 &1928224859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928224861}
+  - component: {fileID: 1928224860}
+  m_Layer: 0
+  m_Name: Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1928224860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928224859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270b485883d815943b68238bbb3df411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: PlayerBullet
+    prefab: {fileID: 312083915864987577, guid: 41f5478eb367a7b4e990e7ed69c36304, type: 3}
+    size: 5
+  - tag: BossSting
+    prefab: {fileID: 353014115734465473, guid: b7a91625ae9d1f44891d8d886f9c7724, type: 3}
+    size: 5
+  - tag: BossBubble
+    prefab: {fileID: 7652751382157637591, guid: a2b1fc2c2bb7f064e99d754672d7943c, type: 3}
+    size: 10
+--- !u!4 &1928224861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928224859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.59, y: 1.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1982600237
 GameObject:
   m_ObjectHideFlags: 0

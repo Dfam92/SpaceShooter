@@ -187,7 +187,8 @@ public class PlayerControl : MonoBehaviour
             Vector3 bulletPos = new Vector3(transform.position.x + 0.02f , transform.position.y + 0.5f, transform.rotation.z);
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Instantiate(bulletPlayer, bulletPos, transform.rotation);
+                //Instantiate(bulletPlayer, bulletPos, transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
                 playerAudioSource.PlayOneShot(bulletSound, 1.0f);
 
                 if (sideBullets == true)

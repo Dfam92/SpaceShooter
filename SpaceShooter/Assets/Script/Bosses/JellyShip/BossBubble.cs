@@ -20,18 +20,21 @@ public class BossBubble : MonoBehaviour
     {
         if (transform.position.y < -ScreenBounds.yEnemyBound - 1f)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.gameObject.CompareTag("AlienShield"))
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            this.gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.CompareTag("AlienShield"))
         {
             Shield.ShieldHit();
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             AudioClips.shieldWasHitted = true;
         }
 

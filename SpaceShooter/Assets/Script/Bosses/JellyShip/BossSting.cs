@@ -33,7 +33,7 @@ public class BossSting : MonoBehaviour
         if (transform.position.y < -ScreenBounds.yEnemyBound - 1f || transform.position.y > ScreenBounds.yEnemyBound + 1f
             || transform.position.x < -ScreenBounds.xEnemyBound - 1f || transform.position.x > ScreenBounds.xEnemyBound + 1f)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
 
     }
@@ -49,19 +49,17 @@ public class BossSting : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-           
-            Destroy(this.gameObject);
-            
+            this.gameObject.SetActive(false);
         }
         else if (collision.gameObject.CompareTag("AlienShield"))
         {
             Shield.ShieldHit();
             AudioClips.shieldWasHitted = true;
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
         else if(collision.gameObject.CompareTag("PlayerBullet"))
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             BossAudioClips.stingDestroyed = true;
         }
     }

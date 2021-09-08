@@ -23,7 +23,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if (transform.position.y > ScreenBounds.yEnemyBound + 1f)
         {
-            Destroy(this.gameObject);
+           this.gameObject.SetActive(false);
         }
 
     }
@@ -32,7 +32,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("BossSting"))
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
        
     }

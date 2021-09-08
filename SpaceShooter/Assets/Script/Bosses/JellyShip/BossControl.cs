@@ -109,12 +109,14 @@ public class BossControl : MonoBehaviour
 
     private void FireSting()
     {
-       Instantiate(bossSting,transform.position,transform.rotation);
+        //Instantiate(bossSting,transform.position,transform.rotation);
+        ObjectPooler.Instance.SpawnFromPool("BossSting", transform.position, transform.rotation);
     }
 
     private void FireBubble()
     {
-        Instantiate(bossBubble,transform.position,transform.rotation);
+        //Instantiate(bossBubble,transform.position,transform.rotation);
+        ObjectPooler.Instance.SpawnFromPool("BossBubble", transform.position, transform.rotation);
         BossAudioClips.bubbleFired = true;
     }
 
