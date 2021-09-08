@@ -13,6 +13,7 @@ public class AudioClips : MonoBehaviour
     public AudioClip bulletsEnabled;
     public AudioClip powerUp2x;
     public AudioClip powerUp4x;
+    public AudioClip hearthPowerUp;
     
     
     public static bool enemyIsDestroyed;
@@ -22,7 +23,7 @@ public class AudioClips : MonoBehaviour
     public static bool extraBulletsOn;
     public static bool is2xOn;
     public static bool is4xOn;
-    
+    public static bool extraLife;
     
 
     // Start is called before the first frame update
@@ -84,7 +85,15 @@ public class AudioClips : MonoBehaviour
                 is4xOn = false;
             }
         }
-       
+        else if (extraLife == true)
+        {
+            if (!audioPlayer.isPlaying)
+            {
+                audioPlayer.PlayOneShot(hearthPowerUp, 0.5f);
+                extraLife = false;
+            }
+        }
+
     }
 
 }

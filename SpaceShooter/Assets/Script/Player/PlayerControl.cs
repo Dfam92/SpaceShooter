@@ -257,6 +257,7 @@ public class PlayerControl : MonoBehaviour
         spriteRenderer.enabled = false;
         playerIsDestroyed = true;
         transform.GetChild(1).gameObject.SetActive(true);
+        transform.GetChild(2).gameObject.SetActive(false);
         AudioClips.playerIsDestroyed = true;
         gameManager.UpdateLife(-1);
         animPlayer.Rebind();
@@ -283,6 +284,8 @@ public class PlayerControl : MonoBehaviour
         {
             playerRb.mass = 100;
             BossAudioClips.playerIsEletrified = true;
+            transform.GetChild(2).gameObject.SetActive(true);
+            spriteRenderer.color = Color.gray;
             StartCoroutine(StopParalysis());
         }
         else if (collision.CompareTag("BulletCase"))
@@ -309,6 +312,7 @@ public class PlayerControl : MonoBehaviour
         else if (collision.CompareTag("ExtraLife"))
         {
             gameManager.UpdateLife(1);
+            AudioClips.extraLife = true;
         }
         
     }
@@ -336,6 +340,7 @@ public class PlayerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(paralyzeTime);
         playerRb.mass = 1;
+        spriteRenderer.color = Color.white;
 
     }
     IEnumerator StopInvulnerability()

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8679758536143643545}
   - component: {fileID: 3127327738817678895}
   - component: {fileID: 418378217626605198}
+  - component: {fileID: 709839038056696117}
   m_Layer: 0
   m_Name: 4xPoints
   m_TagString: Multiply4x
@@ -97,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598044450dcb74a41945529150bb4408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUp: {fileID: 0}
 --- !u!61 &3127327738817678895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +145,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &709839038056696117
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193480885511190799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e267a5602ee0f84f8cabadfaf5ecd09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

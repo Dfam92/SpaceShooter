@@ -1,0 +1,823 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home Single Language; OS build 19042.1165; Version 2009; 64bit' Language: 'pt' Physical Memory: 8105 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/DFAM9/Documents/GitHub/SpaceShooter/SpaceShooter
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53172
+Successfully changed project path to: C:/Users/DFAM9/Documents/GitHub/SpaceShooter/SpaceShooter
+C:/Users/DFAM9/Documents/GitHub/SpaceShooter/SpaceShooter
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 69.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.0f1 (c7b5465681fb)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/DFAM9/Documents/GitHub/SpaceShooter/SpaceShooter/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Vendor:   
+    VRAM:     4021 MB
+    Driver:   30.0.14.7196
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56352
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003073 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.621 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001391 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 48.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.176 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1891 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.8 MB.
+System memory in use after: 88.8 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2341.
+Total: 2.679600 ms (FindLiveObjects: 0.248500 ms CreateObjectMapping: 0.282400 ms MarkObjects: 2.014600 ms  DeleteObjects: 0.132900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Script/Bosses/BossBubble.cs
+  artifactKey: Guid(ca1f14273704de9459f0e3fc052f96a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Bosses/BossBubble.cs using Guid(ca1f14273704de9459f0e3fc052f96a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8feb7598698e255bfeb634cce16863e') in 0.040974 seconds
+  Import took 0.048825 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.116 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1872 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2345.
+Total: 2.492500 ms (FindLiveObjects: 0.238300 ms CreateObjectMapping: 0.151200 ms MarkObjects: 1.997200 ms  DeleteObjects: 0.104000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 115.600414 seconds.
+  path: Assets/Script/Bosses/BossSting.cs
+  artifactKey: Guid(bb098ad12475a8942839b0f4c0f0e9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Bosses/BossSting.cs using Guid(bb098ad12475a8942839b0f4c0f0e9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d7ceb87d4a76ed5a1a7c5cbc3064f1') in 0.011187 seconds
+  Import took 0.017476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022576 seconds.
+  path: Assets/Script/Bosses/BossSting.cs
+  artifactKey: Guid(bb098ad12475a8942839b0f4c0f0e9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Bosses/BossSting.cs using Guid(bb098ad12475a8942839b0f4c0f0e9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d7ceb87d4a76ed5a1a7c5cbc3064f1') in 0.007552 seconds
+  Import took 0.011715 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001055 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.066 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1872 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2349.
+Total: 2.400300 ms (FindLiveObjects: 0.296700 ms CreateObjectMapping: 0.096800 ms MarkObjects: 1.914200 ms  DeleteObjects: 0.091200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001264 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.053 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1872 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2353.
+Total: 3.001100 ms (FindLiveObjects: 0.218000 ms CreateObjectMapping: 0.085600 ms MarkObjects: 2.618900 ms  DeleteObjects: 0.076900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001666 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.166 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1872 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.5 MB.
+System memory in use after: 87.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2357.
+Total: 2.580600 ms (FindLiveObjects: 0.372700 ms CreateObjectMapping: 0.261400 ms MarkObjects: 1.823000 ms  DeleteObjects: 0.121600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 3177.738165 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x
+  artifactKey: Guid(2910addb066d1e0408a9ee90534e00fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x using Guid(2910addb066d1e0408a9ee90534e00fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa78e98ff9497b4aacbf5f7c092970e4') in 0.018977 seconds
+  Import took 0.026491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001430 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x
+  artifactKey: Guid(2910addb066d1e0408a9ee90534e00fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x using Guid(2910addb066d1e0408a9ee90534e00fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa78e98ff9497b4aacbf5f7c092970e4') in 0.005986 seconds
+  Import took 0.009626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.664338 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x
+  artifactKey: Guid(737f3181ac804ad409380bd782b691f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x using Guid(737f3181ac804ad409380bd782b691f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94a09fd4c70ea132f9e0ed228c9d39f4') in 0.013061 seconds
+  Import took 0.020101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 150.294034 seconds.
+  path: Assets/Prefabs/PowerUps/2xPoints.prefab
+  artifactKey: Guid(edcc2ffd2ee159d4f81fc2cce9ed4e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PowerUps/2xPoints.prefab using Guid(edcc2ffd2ee159d4f81fc2cce9ed4e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (2xPoints) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 332]
+
+The Animator Controller (2xPoints) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 332]
+
+ -> (artifact id: '049501ac6fb9fe6adee1f3e7548709f6') in 0.149026 seconds
+  Import took 0.154744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.840011 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink00.png
+  artifactKey: Guid(edac193bed6b6cc48b86851249d801b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink00.png using Guid(edac193bed6b6cc48b86851249d801b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12b7ef75cc366061e56e3817a8ff2995') in 0.061317 seconds
+  Import took 0.066588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink10.png
+  artifactKey: Guid(f6390a241b49dfe4c979730f9acdd086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink10.png using Guid(f6390a241b49dfe4c979730f9acdd086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8285c99697181706c4275e6d81cbc1e') in 0.054435 seconds
+  Import took 0.059946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink23.png
+  artifactKey: Guid(65cc8e7773acbd84a81085918a7e4e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink23.png using Guid(65cc8e7773acbd84a81085918a7e4e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09f1514527b8e67fa438a6d74b943be5') in 0.052867 seconds
+  Import took 0.059571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink08.png
+  artifactKey: Guid(a9d643c4d9b8efc4db5493fc8cab22a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink08.png using Guid(a9d643c4d9b8efc4db5493fc8cab22a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7abe2553d4480bfbee87799d63d068') in 0.048573 seconds
+  Import took 0.052060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink22.png
+  artifactKey: Guid(45d233d618bbf1b409a2e2b4dbe0085c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink22.png using Guid(45d233d618bbf1b409a2e2b4dbe0085c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b1f7eab94211d31ad5ee7581411b65') in 0.032596 seconds
+  Import took 0.037031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink12.png
+  artifactKey: Guid(4d02c31721ae3f443b58f4d391e64c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink12.png using Guid(4d02c31721ae3f443b58f4d391e64c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213e765564a396ca80cc9e8704f82857') in 0.029797 seconds
+  Import took 0.035259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink28.png
+  artifactKey: Guid(772c019fec5ea9f4193a689c0e6f9a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink28.png using Guid(772c019fec5ea9f4193a689c0e6f9a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b4af6551aea95e820770c982c33028c') in 0.029699 seconds
+  Import took 0.033285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink29.png
+  artifactKey: Guid(aa4dfc1b2fedca14f9f7ac3d65ada72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink29.png using Guid(aa4dfc1b2fedca14f9f7ac3d65ada72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9e323765d62d1735510b5375d4d69f') in 0.029902 seconds
+  Import took 0.033448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink02.png
+  artifactKey: Guid(35fdf30fce91a8d47994bc0d74655049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink02.png using Guid(35fdf30fce91a8d47994bc0d74655049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fee1512679104965068b580a04868e6') in 0.030674 seconds
+  Import took 0.033997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink25.png
+  artifactKey: Guid(d315f0f1c29e66143a9db42862587d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink25.png using Guid(d315f0f1c29e66143a9db42862587d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89860f27138f6a2d3dc380de84a9af5') in 0.028435 seconds
+  Import took 0.034339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink06.png
+  artifactKey: Guid(049b9d5d54a648247b6b69294bf34603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink06.png using Guid(049b9d5d54a648247b6b69294bf34603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400d63871375c82a917ebe831591d7df') in 0.032034 seconds
+  Import took 0.037476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink21.png
+  artifactKey: Guid(d019bcd50c8c84d47a2584644c77e208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink21.png using Guid(d019bcd50c8c84d47a2584644c77e208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14de9c8f365d6aaf78e2e44720b8d59') in 0.031490 seconds
+  Import took 0.036177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink03.png
+  artifactKey: Guid(0f020cae0b7c0924d93a3f30fc4e989b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink03.png using Guid(0f020cae0b7c0924d93a3f30fc4e989b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '667730612b4d4b60609590dfcc2caa42') in 0.030115 seconds
+  Import took 0.034683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink04.png
+  artifactKey: Guid(3ceecf41da0e96a4daf3d2f93f05d560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink04.png using Guid(3ceecf41da0e96a4daf3d2f93f05d560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88c1fcb65c6fd11f9006c216b9d99245') in 0.028196 seconds
+  Import took 0.031668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink05.png
+  artifactKey: Guid(8d5aaaf00882d1744ac34a9b11b59d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink05.png using Guid(8d5aaaf00882d1744ac34a9b11b59d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ffbd3216d974414bef437646f9eabd9') in 0.029975 seconds
+  Import took 0.033924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink11.png
+  artifactKey: Guid(767bedd80f3226840a94c32addcd8dcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink11.png using Guid(767bedd80f3226840a94c32addcd8dcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f963300bee7d3909ff32c59979f6a9be') in 0.030874 seconds
+  Import took 0.034208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink14.png
+  artifactKey: Guid(3bc4169a824caca40985ba484c96b3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink14.png using Guid(3bc4169a824caca40985ba484c96b3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6238d2b3701379a1eb3b5194b0e0d88b') in 0.029635 seconds
+  Import took 0.034718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink17.png
+  artifactKey: Guid(6066db4ddcc7b074b950868d975ed0e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink17.png using Guid(6066db4ddcc7b074b950868d975ed0e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8cee1e25be0cf8dffc72d3552ba4ff7') in 0.031815 seconds
+  Import took 0.035354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink30.png
+  artifactKey: Guid(c245de0260da40348be6b70c7093693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink30.png using Guid(c245de0260da40348be6b70c7093693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e3781f2f61120ce9f4f4c2ff5e01c2') in 0.027673 seconds
+  Import took 0.032468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink24.png
+  artifactKey: Guid(38bacc5d730c6fa4f8fe1f1ca55c379c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink24.png using Guid(38bacc5d730c6fa4f8fe1f1ca55c379c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24511fda30617980b03bbb319bb8e4de') in 0.029673 seconds
+  Import took 0.034459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink16.png
+  artifactKey: Guid(f0948e6c7359f2f46a7c147a7a860a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink16.png using Guid(f0948e6c7359f2f46a7c147a7a860a70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7829a2ce61cd389ef716d35cba86b02f') in 0.029030 seconds
+  Import took 0.032618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink26.png
+  artifactKey: Guid(e0640b2a116687e438fa77f0f7ab2ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink26.png using Guid(e0640b2a116687e438fa77f0f7ab2ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '072a21abcc5d5a62e82beb8097ae7a0c') in 0.030683 seconds
+  Import took 0.034521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink20.png
+  artifactKey: Guid(3a85f5d463b4ac743a6e6c235433cda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink20.png using Guid(3a85f5d463b4ac743a6e6c235433cda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '501f1a4aa7f765eef49255a2bb3ee4ce') in 0.030154 seconds
+  Import took 0.033595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink13.png
+  artifactKey: Guid(3c508d5733b06cf4785d2f9aea427ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink13.png using Guid(3c508d5733b06cf4785d2f9aea427ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc516a3a2fa944348e329075686a4a6') in 0.033140 seconds
+  Import took 0.037762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink09.png
+  artifactKey: Guid(36eceb84a94f26242a301cb1f3d22fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink09.png using Guid(36eceb84a94f26242a301cb1f3d22fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74bcde4e5daf985d6016044914a1e9c1') in 0.028894 seconds
+  Import took 0.033455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink18.png
+  artifactKey: Guid(25e806597aaa1fd45832e4034bec4413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink18.png using Guid(25e806597aaa1fd45832e4034bec4413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bd0fa49b1cd07acf30fe24fa2e58cae') in 0.030095 seconds
+  Import took 0.033474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink07.png
+  artifactKey: Guid(2e3c6ec47996f6247bb989802753030c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink07.png using Guid(2e3c6ec47996f6247bb989802753030c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '653a9296147e726553b8aff4fbf6efcd') in 0.030858 seconds
+  Import took 0.034954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink01.png
+  artifactKey: Guid(a2d4866c6ceab874cabed5799d2a1bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink01.png using Guid(a2d4866c6ceab874cabed5799d2a1bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53580cf93caea86b70e4157fdb236c7a') in 0.030851 seconds
+  Import took 0.035684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink15.png
+  artifactKey: Guid(7ae0262e4ebf4434998f882e5c238c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink15.png using Guid(7ae0262e4ebf4434998f882e5c238c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae1dee199684f28e47e0f9a468f1202') in 0.029768 seconds
+  Import took 0.034049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink19.png
+  artifactKey: Guid(f43d63c74835b7540a3bc7b434b2e9e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink19.png using Guid(f43d63c74835b7540a3bc7b434b2e9e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77453e89e93ce2be15950d0d86e4cbf7') in 0.032252 seconds
+  Import took 0.036095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink27.png
+  artifactKey: Guid(d192a5cbd8f05f0449f8ffa21af7e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink27.png using Guid(d192a5cbd8f05f0449f8ffa21af7e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab107efd79de4fe2e4f99fe8283f84c7') in 0.028547 seconds
+  Import took 0.032897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008529 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/2x/2xBlink27.png
+  artifactKey: Guid(d192a5cbd8f05f0449f8ffa21af7e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/2x/2xBlink27.png using Guid(d192a5cbd8f05f0449f8ffa21af7e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab107efd79de4fe2e4f99fe8283f84c7') in 0.023558 seconds
+  Import took 0.027431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.361282 seconds.
+  path: Assets/Prefabs/PowerUps/4xPoints.prefab
+  artifactKey: Guid(8b68ecac012f45842a59b368a7aeef74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PowerUps/4xPoints.prefab using Guid(8b68ecac012f45842a59b368a7aeef74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (4xPoints) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 332]
+
+The Animator Controller (4xPoints) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 332]
+
+ -> (artifact id: '8eeb3bcd0e9b5680bb8ac6f082bb7509') in 0.031747 seconds
+  Import took 0.035794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.593177 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink00.png
+  artifactKey: Guid(cba51ad40184d874eb5c6d28ba25b920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink00.png using Guid(cba51ad40184d874eb5c6d28ba25b920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d4466e7375ee30a49a9c35bcad75877') in 0.029129 seconds
+  Import took 0.033746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink06.png
+  artifactKey: Guid(cfc58edabb654f14db8ff48b15c8a600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink06.png using Guid(cfc58edabb654f14db8ff48b15c8a600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c354dbd3cdcd3f4597b11444bce17b') in 0.030509 seconds
+  Import took 0.035548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink09.png
+  artifactKey: Guid(2daf3810fc2069c499ba5cd78d706c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink09.png using Guid(2daf3810fc2069c499ba5cd78d706c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec4b442b221a92e5f7e033c6e9f7fd5') in 0.031839 seconds
+  Import took 0.037971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink10.png
+  artifactKey: Guid(34a7d5884b4b6d749a5ef70589a2ca44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink10.png using Guid(34a7d5884b4b6d749a5ef70589a2ca44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5da4fb324e44051eee24a96219a8a42') in 0.034464 seconds
+  Import took 0.040082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink05.png
+  artifactKey: Guid(2c5aa137ded7ac343b58cd9ba3c8578f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink05.png using Guid(2c5aa137ded7ac343b58cd9ba3c8578f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a43dc3a66c791a2427cc6e1454d73851') in 0.030674 seconds
+  Import took 0.035398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink25.png
+  artifactKey: Guid(83063317eaa22204b8caa5d5c43713f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink25.png using Guid(83063317eaa22204b8caa5d5c43713f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe839302e3c1f70f5d4223beeb436fc8') in 0.031940 seconds
+  Import took 0.036055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink23.png
+  artifactKey: Guid(97ef68751a5ece6458f2cb429b1e6d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink23.png using Guid(97ef68751a5ece6458f2cb429b1e6d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0667ebe2f1b4dd73a423574755c56533') in 0.029818 seconds
+  Import took 0.035570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink26.png
+  artifactKey: Guid(3f712e039e49da8428c3c9407030d7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink26.png using Guid(3f712e039e49da8428c3c9407030d7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5523dc65e697c91f8546dd8ceba754e9') in 0.030754 seconds
+  Import took 0.037420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink03.png
+  artifactKey: Guid(4e6c4979e9c272447b2b30d3dbecc914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink03.png using Guid(4e6c4979e9c272447b2b30d3dbecc914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329d6c574d84852afa6ecd786c7ae2db') in 0.030188 seconds
+  Import took 0.034381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink12.png
+  artifactKey: Guid(9dfeb5afe97ea7a4d8804c55bd141bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink12.png using Guid(9dfeb5afe97ea7a4d8804c55bd141bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b734e6e029f921a898e13795382b5b58') in 0.031788 seconds
+  Import took 0.035231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink21.png
+  artifactKey: Guid(b2209e5c19b4ff448a00104d2c34c2e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink21.png using Guid(b2209e5c19b4ff448a00104d2c34c2e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc52d6d2bc1389374666b9c86488b71') in 0.031068 seconds
+  Import took 0.036551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink27.png
+  artifactKey: Guid(694ffc9eb38af72468350b5195d6a0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink27.png using Guid(694ffc9eb38af72468350b5195d6a0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b8000bf5964d51d0a9c6468b2e0d69') in 0.032324 seconds
+  Import took 0.037593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink29.png
+  artifactKey: Guid(321138d729a444b4c8f0575b8f96c844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink29.png using Guid(321138d729a444b4c8f0575b8f96c844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c07bfc0565bb3b43c7b18a7cbe3df57') in 0.028545 seconds
+  Import took 0.033375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink11.png
+  artifactKey: Guid(2111301399e13ed42a0be9497dacf98e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink11.png using Guid(2111301399e13ed42a0be9497dacf98e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2785b70618ee194e05b930f73d1b7f02') in 0.031924 seconds
+  Import took 0.039363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink24.png
+  artifactKey: Guid(c7fbf97da2d6fd642896953df06a2de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink24.png using Guid(c7fbf97da2d6fd642896953df06a2de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf7f54f87896361bb3ae41799b12476b') in 0.030515 seconds
+  Import took 0.034608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink13.png
+  artifactKey: Guid(658fc861f1f5c8949b878ed558689f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink13.png using Guid(658fc861f1f5c8949b878ed558689f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f9cfa84defaef885614d638da892514') in 0.029974 seconds
+  Import took 0.034326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink15.png
+  artifactKey: Guid(59a1dc2a721b85145acb750f497f0feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink15.png using Guid(59a1dc2a721b85145acb750f497f0feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adab49f04c65da841e33ac0313cf3d30') in 0.055366 seconds
+  Import took 0.062426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink22.png
+  artifactKey: Guid(b5a40e5d7ab2f53438986ff5f6d3fe47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink22.png using Guid(b5a40e5d7ab2f53438986ff5f6d3fe47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ce514c94478954ec6d39be56d9a0c3') in 0.050075 seconds
+  Import took 0.056551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink16.png
+  artifactKey: Guid(3019adfa721127a41b595421934a13e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink16.png using Guid(3019adfa721127a41b595421934a13e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a9c7c46d2d1c0b24643511e3f6b4ad9') in 0.051921 seconds
+  Import took 0.056406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink01.png
+  artifactKey: Guid(cc4fc1e3f9435cb40923f33c341972d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink01.png using Guid(cc4fc1e3f9435cb40923f33c341972d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d3bb0229b0d3f6f47e9964113072fba') in 0.027289 seconds
+  Import took 0.033078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink14.png
+  artifactKey: Guid(45a10e755b0fdf34bb79e5a31a531e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink14.png using Guid(45a10e755b0fdf34bb79e5a31a531e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f9e1065895018c65eb99cfe5ee7648') in 0.031625 seconds
+  Import took 0.036643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink20.png
+  artifactKey: Guid(e1170151bf4bc8f4cb4ec078be2b0e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink20.png using Guid(e1170151bf4bc8f4cb4ec078be2b0e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc324880994bb32e68cda1e598eae4f0') in 0.028955 seconds
+  Import took 0.032714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink02.png
+  artifactKey: Guid(cc0331478462633489cb5fc321041b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink02.png using Guid(cc0331478462633489cb5fc321041b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '373949820dcef3c1eb9f99cca336a5f2') in 0.030160 seconds
+  Import took 0.034172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink18.png
+  artifactKey: Guid(581f8dfeb840c2c4a9a1bcddabe1311c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink18.png using Guid(581f8dfeb840c2c4a9a1bcddabe1311c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3029eb5e64825c8a298919fd19be573c') in 0.029469 seconds
+  Import took 0.034461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink04.png
+  artifactKey: Guid(42310573ad1bcdc498961133af91efd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink04.png using Guid(42310573ad1bcdc498961133af91efd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d17c9823cd1b086fff476723018d1e') in 0.026047 seconds
+  Import took 0.030562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink08.png
+  artifactKey: Guid(7905e3bdc3376744e80ea1c725ac1bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink08.png using Guid(7905e3bdc3376744e80ea1c725ac1bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1342ec7d80bcd14c3911ab63ba90a070') in 0.030518 seconds
+  Import took 0.034788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink07.png
+  artifactKey: Guid(5aa36bca0e2e04944b4a415a83fc241f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink07.png using Guid(5aa36bca0e2e04944b4a415a83fc241f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c04402a15ee7aa9db1da1b5b1d0f002') in 0.034371 seconds
+  Import took 0.037872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink28.png
+  artifactKey: Guid(fc287eddb78a3944c96eb844040eb767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink28.png using Guid(fc287eddb78a3944c96eb844040eb767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27cebadfe47420ffdb85aaaeadce75ee') in 0.031781 seconds
+  Import took 0.036433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink17.png
+  artifactKey: Guid(3eb11a8b0b729ae4cadae2ea28e985c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink17.png using Guid(3eb11a8b0b729ae4cadae2ea28e985c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a367658eac89a00c627ccce64d568cb') in 0.032520 seconds
+  Import took 0.037279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Assets/PowerUps/PointMultiply/4x/4xBlink19.png
+  artifactKey: Guid(0ce15e68693640048a1f49de4d942a09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/PowerUps/PointMultiply/4x/4xBlink19.png using Guid(0ce15e68693640048a1f49de4d942a09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7907241d94c710bde1351a018bc90999') in 0.033177 seconds
+  Import took 0.037627 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001284 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.146 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1872 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2370.
+Total: 2.624800 ms (FindLiveObjects: 0.294300 ms CreateObjectMapping: 0.279600 ms MarkObjects: 1.880800 ms  DeleteObjects: 0.168600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

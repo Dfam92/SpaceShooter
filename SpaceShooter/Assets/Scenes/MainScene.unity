@@ -1854,8 +1854,8 @@ MonoBehaviour:
   - {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnPowerUps: 20
-  bossRate: 50
+  timeToSpawnPowerUps: 1
+  bossRate: 4
   timeToRespawnPlayer: 1.5
   lifeScore: 2
   isReborned: 0
