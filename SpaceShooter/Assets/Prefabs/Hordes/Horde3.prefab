@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7706159914572021573}
   - component: {fileID: 7706159914572021574}
   - component: {fileID: 7706159914572021575}
-  - component: {fileID: 7706159914572021576}
   - component: {fileID: 7706159914572021577}
   - component: {fileID: 7706159914572021578}
   - component: {fileID: 7706159914572021579}
+  - component: {fileID: 7899465367080081272}
   m_Layer: 0
   m_Name: Enemy2 (2)
   m_TagString: Enemy
@@ -155,20 +155,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159914572021576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159914572021581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159914572021577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +282,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7899465367080081272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159914572021581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159914648807319
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,10 +356,10 @@ GameObject:
   - component: {fileID: 7706159914688031260}
   - component: {fileID: 7706159914688031261}
   - component: {fileID: 7706159914688031262}
-  - component: {fileID: 7706159914688031263}
   - component: {fileID: 7706159914688031232}
   - component: {fileID: 7706159914688031233}
   - component: {fileID: 7706159914688031234}
+  - component: {fileID: 7794699666117086154}
   m_Layer: 0
   m_Name: Enemy2 (1)
   m_TagString: Enemy
@@ -498,20 +498,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159914688031263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159914688031236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159914688031232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +625,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7794699666117086154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159914688031236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159914916781853
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,10 +652,10 @@ GameObject:
   - component: {fileID: 7706159914916781846}
   - component: {fileID: 7706159914916781847}
   - component: {fileID: 7706159914916781848}
-  - component: {fileID: 7706159914916781849}
   - component: {fileID: 7706159914916781850}
   - component: {fileID: 7706159914916781851}
   - component: {fileID: 7706159914916781852}
+  - component: {fileID: 8246977845100096262}
   m_Layer: 0
   m_Name: Enemy2 (3)
   m_TagString: Enemy
@@ -794,20 +794,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159914916781849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159914916781853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159914916781850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +921,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8246977845100096262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159914916781853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159914947520238
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,10 +948,10 @@ GameObject:
   - component: {fileID: 7706159914947520230}
   - component: {fileID: 7706159914947520231}
   - component: {fileID: 7706159914947520232}
-  - component: {fileID: 7706159914947520233}
   - component: {fileID: 7706159914947520234}
   - component: {fileID: 7706159914947520235}
   - component: {fileID: 7706159914947520236}
+  - component: {fileID: 3199530971125383689}
   m_Layer: 0
   m_Name: Enemy2 (4)
   m_TagString: Enemy
@@ -1090,20 +1090,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159914947520233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159914947520238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159914947520234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1217,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3199530971125383689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159914947520238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159915008063588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,10 +1291,10 @@ GameObject:
   - component: {fileID: 7706159915141214498}
   - component: {fileID: 7706159915141214499}
   - component: {fileID: 7706159915141214500}
-  - component: {fileID: 7706159915141214501}
   - component: {fileID: 7706159915141214502}
   - component: {fileID: 7706159915141214503}
   - component: {fileID: 7706159915141214504}
+  - component: {fileID: 5801168094332049946}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -1433,20 +1433,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159915141214501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159915141214506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159915141214502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1560,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5801168094332049946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159915141214506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159915157745143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,10 +1587,10 @@ GameObject:
   - component: {fileID: 7706159915157745103}
   - component: {fileID: 7706159915157745136}
   - component: {fileID: 7706159915157745137}
-  - component: {fileID: 7706159915157745138}
   - component: {fileID: 7706159915157745139}
   - component: {fileID: 7706159915157745140}
   - component: {fileID: 7706159915157745141}
+  - component: {fileID: 2514408345697137521}
   m_Layer: 0
   m_Name: Enemy2 (3)
   m_TagString: Enemy
@@ -1729,20 +1729,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159915157745138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159915157745143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159915157745139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,6 +1856,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2514408345697137521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159915157745143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159915261715008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,10 +1883,10 @@ GameObject:
   - component: {fileID: 7706159915261715032}
   - component: {fileID: 7706159915261715033}
   - component: {fileID: 7706159915261715034}
-  - component: {fileID: 7706159915261715035}
   - component: {fileID: 7706159915261715036}
   - component: {fileID: 7706159915261715037}
   - component: {fileID: 7706159915261715038}
+  - component: {fileID: 1170875578801515573}
   m_Layer: 0
   m_Name: Enemy2 (2)
   m_TagString: Enemy
@@ -2025,20 +2025,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159915261715035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159915261715008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159915261715036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2166,6 +2152,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1170875578801515573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159915261715008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159915916793390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,10 +2179,10 @@ GameObject:
   - component: {fileID: 7706159915916793382}
   - component: {fileID: 7706159915916793383}
   - component: {fileID: 7706159915916793384}
-  - component: {fileID: 7706159915916793385}
   - component: {fileID: 7706159915916793386}
   - component: {fileID: 7706159915916793387}
   - component: {fileID: 7706159915916793388}
+  - component: {fileID: 9141642364254141121}
   m_Layer: 0
   m_Name: Enemy2 (3)
   m_TagString: Enemy
@@ -2321,20 +2321,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159915916793385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159915916793390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159915916793386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2462,6 +2448,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9141642364254141121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159915916793390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159916325669690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,10 +2523,10 @@ GameObject:
   - component: {fileID: 7706159916403040946}
   - component: {fileID: 7706159916403040947}
   - component: {fileID: 7706159916403040948}
-  - component: {fileID: 7706159916403040949}
   - component: {fileID: 7706159916403040950}
   - component: {fileID: 7706159916403040951}
   - component: {fileID: 7706159916403040952}
+  - component: {fileID: 2237591454863871765}
   m_Layer: 0
   m_Name: Enemy2 (2)
   m_TagString: Enemy
@@ -2665,20 +2665,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159916403040949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159916403040953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159916403040950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,6 +2792,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2237591454863871765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916403040953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159916562745232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,10 +2865,10 @@ GameObject:
   - component: {fileID: 7706159916575431627}
   - component: {fileID: 7706159916575431628}
   - component: {fileID: 7706159916575431629}
-  - component: {fileID: 7706159916575431630}
   - component: {fileID: 7706159916575431631}
   - component: {fileID: 7706159916575431664}
   - component: {fileID: 7706159916575431665}
+  - component: {fileID: 7865134377203351575}
   m_Layer: 0
   m_Name: Enemy2 (1)
   m_TagString: Enemy
@@ -3007,20 +3007,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159916575431630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159916575431666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159916575431631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3148,6 +3134,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7865134377203351575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916575431666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159916611223362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,10 +3161,10 @@ GameObject:
   - component: {fileID: 7706159916611223386}
   - component: {fileID: 7706159916611223387}
   - component: {fileID: 7706159916611223388}
-  - component: {fileID: 7706159916611223389}
   - component: {fileID: 7706159916611223390}
   - component: {fileID: 7706159916611223391}
   - component: {fileID: 7706159916611223360}
+  - component: {fileID: 5416121392015640483}
   m_Layer: 0
   m_Name: Enemy2 (1)
   m_TagString: Enemy
@@ -3303,20 +3303,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159916611223389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159916611223362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159916611223390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,6 +3430,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5416121392015640483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916611223362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159916652318997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,10 +3457,10 @@ GameObject:
   - component: {fileID: 7706159916652319086}
   - component: {fileID: 7706159916652319087}
   - component: {fileID: 7706159916652318992}
-  - component: {fileID: 7706159916652318993}
   - component: {fileID: 7706159916652318994}
   - component: {fileID: 7706159916652318995}
   - component: {fileID: 7706159916652318996}
+  - component: {fileID: 8170424439184665626}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -3599,20 +3599,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159916652318993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159916652318997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159916652318994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3740,6 +3726,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8170424439184665626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916652318997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10
 --- !u!1 &7706159916673813378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3753,10 +3753,10 @@ GameObject:
   - component: {fileID: 7706159916673813402}
   - component: {fileID: 7706159916673813403}
   - component: {fileID: 7706159916673813404}
-  - component: {fileID: 7706159916673813405}
   - component: {fileID: 7706159916673813406}
   - component: {fileID: 7706159916673813407}
   - component: {fileID: 7706159916673813376}
+  - component: {fileID: 1073921634827280840}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -3895,20 +3895,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.851129, y: 3.9951525}
   m_EdgeRadius: 0
---- !u!114 &7706159916673813405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706159916673813378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36547f0e8a7149409a73825a5b108b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
-  fireRate: 10
 --- !u!114 &7706159916673813406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4036,3 +4022,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1073921634827280840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706159916673813378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 0}
+  fireRate: 10

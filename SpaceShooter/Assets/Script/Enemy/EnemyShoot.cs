@@ -20,11 +20,12 @@ public class EnemyShoot : MonoBehaviour
         StopEnemyFire();
     }
 
-    private void EnemyFire()
+    public virtual void EnemyFire()
     {
         if(GameManager.isActive == true)
         {
-            Instantiate(enemyBullet, transform.position, transform.rotation);
+            //Instantiate(enemyBullet, transform.position, transform.rotation);
+            ObjectPooler.Instance.SpawnFromPool("EnemyBullet1", transform.position, Quaternion.identity);
         }
     }
 

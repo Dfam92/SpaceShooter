@@ -6498,6 +6498,12 @@ MonoBehaviour:
   - tag: BossBubble
     prefab: {fileID: 7652751382157637591, guid: a2b1fc2c2bb7f064e99d754672d7943c, type: 3}
     size: 10
+  - tag: EnemyBullet1
+    prefab: {fileID: 2818573628848448286, guid: 9bd7cab2f62408b4b85d325d7b667713, type: 3}
+    size: 30
+  - tag: EnemyBullet2
+    prefab: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
+    size: 30
 --- !u!4 &1928224861
 Transform:
   m_ObjectHideFlags: 0
