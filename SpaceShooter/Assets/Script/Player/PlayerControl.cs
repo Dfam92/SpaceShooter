@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     private GameManager gameManager;
     private AudioSource playerAudioSource;
     private Animator animPlayer;
-    private BoxCollider2D boxCollider;
+    private CircleCollider2D circleCollider;
     private SpriteRenderer spriteRenderer;
 
     public Rigidbody2D playerRb;
@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
         playerAudioSource = GetComponent<AudioSource>();
         animPlayer = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         this.transform.position = playerStartPos;
        
@@ -245,7 +245,7 @@ public class PlayerControl : MonoBehaviour
             if(!playerIsDestroyed)
             {
                 
-                boxCollider.enabled = true;
+                circleCollider.enabled = true;
                
             }
            
@@ -254,7 +254,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void DestroyPlayer()
     {
-        boxCollider.enabled = false;
+        circleCollider.enabled = false;
         spriteRenderer.enabled = false;
         playerIsDestroyed = true;
         transform.GetChild(1).gameObject.SetActive(true);

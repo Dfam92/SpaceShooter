@@ -19,6 +19,7 @@ TagManager:
   - Boss
   - BossSting
   - ExtraLife
+  - PowerUpCase
   layers:
   - Default
   - TransparentFX

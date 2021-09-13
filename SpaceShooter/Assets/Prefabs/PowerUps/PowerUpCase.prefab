@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1725787198961493733
+--- !u!1 &6353997283848876405
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1725787198961493731}
-  - component: {fileID: 1725787198961493730}
-  - component: {fileID: 806178250682088968}
-  - component: {fileID: 8539022134267872546}
-  - component: {fileID: 2108552278327449035}
-  - component: {fileID: -698047437081947683}
+  - component: {fileID: 6353997283848876410}
+  - component: {fileID: 6353997283848876409}
+  - component: {fileID: 6353997283848876408}
+  - component: {fileID: 6353997283848876407}
+  - component: {fileID: 6353997283848876406}
+  - component: {fileID: 6353997283848876411}
+  - component: {fileID: 6353997283848876412}
   m_Layer: 0
-  m_Name: ShieldIcon
-  m_TagString: Shield
+  m_Name: PowerUpCase
+  m_TagString: PowerUpCase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1725787198961493731
+--- !u!4 &6353997283848876410
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725787198961493733}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16604947, y: 0.16604947, z: 0.16604947}
+  m_GameObject: {fileID: 6353997283848876405}
+  m_LocalRotation: {x: -0.024122348, y: -0.0028727066, z: 0.48891687, w: 0.8719921}
+  m_LocalPosition: {x: -1.33, y: 4.39, z: 0}
+  m_LocalScale: {x: 0.568, y: 0.568, z: 0.568}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1725787198961493730
+  m_LocalEulerAnglesHint: {x: -2.25, y: -1.64, z: 58.59}
+--- !u!212 &6353997283848876409
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725787198961493733}
+  m_GameObject: {fileID: 6353997283848876405}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,76 +75,80 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: e0bec9ac344049848aae2885ef39b919, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 52f3a8418446cd84594fb829025987ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &806178250682088968
-BoxCollider2D:
+--- !u!58 &6353997283848876408
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725787198961493733}
+  m_GameObject: {fileID: 6353997283848876405}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0060195923, y: 1.0472023}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.022632346, y: -0.05149516}
   serializedVersion: 2
-  m_Size: {x: 5.4571304, y: 4.78022}
-  m_EdgeRadius: 0
---- !u!50 &8539022134267872546
+  m_Radius: 0.71347064
+--- !u!50 &6353997283848876407
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725787198961493733}
+  m_GameObject: {fileID: 6353997283848876405}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 2
+  m_LinearDrag: 1
+  m_AngularDrag: 5
   m_GravityScale: 0.05
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
---- !u!95 &2108552278327449035
+  m_Constraints: 0
+--- !u!114 &6353997283848876406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353997283848876405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c17d790f062a394cac4102830e41cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedRotate: 10
+  speedMove: 0.03
+--- !u!95 &6353997283848876411
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725787198961493733}
+  m_GameObject: {fileID: 6353997283848876405}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 42a3d21161a09804a978133e06e5a8db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 599da34140d526b47af14cd8c0e2df06, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -152,16 +157,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-698047437081947683
+--- !u!114 &6353997283848876412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725787198961493733}
+  m_GameObject: {fileID: 6353997283848876405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598044450dcb74a41945529150bb4408, type: 3}
+  m_Script: {fileID: 11500000, guid: b836d2237a43c64478a2f9acb51375f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
+  powerUps:
+  - {fileID: 1725787198961493733, guid: f84fd8da4fb4a3b44852d97bdc5043e0, type: 3}
+  - {fileID: 6407953165878910082, guid: 6dc51240f5d67bd4b82a0acae534cff0, type: 3}
+  - {fileID: 3193480885511190799, guid: 8b68ecac012f45842a59b368a7aeef74, type: 3}
+  - {fileID: 2783848469977985122, guid: edcc2ffd2ee159d4f81fc2cce9ed4e09, type: 3}

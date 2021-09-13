@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6407953165878910081}
   - component: {fileID: 6407953165878910080}
   - component: {fileID: 6407953165878910083}
-  - component: {fileID: -413955089362419479}
   - component: {fileID: -8434760983103715664}
   - component: {fileID: -2309366553413986766}
+  - component: {fileID: 2419006496836411045}
   m_Layer: 0
   m_Name: BulletCases00
   m_TagString: BulletCase
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6407953165878910082}
   m_LocalRotation: {x: -0, y: -0, z: 0.123384, w: 0.99235904}
-  m_LocalPosition: {x: -4.4894, y: 3.6214, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.123201005, y: 0.123201005, z: 0.123201005}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,19 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-413955089362419479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6407953165878910082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598044450dcb74a41945529150bb4408, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUp: {fileID: 6407953165878910082}
 --- !u!50 &-8434760983103715664
 Rigidbody2D:
   serializedVersion: 4
@@ -165,3 +152,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.5028863, y: 4.967211}
   m_EdgeRadius: 0
+--- !u!114 &2419006496836411045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407953165878910082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598044450dcb74a41945529150bb4408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}

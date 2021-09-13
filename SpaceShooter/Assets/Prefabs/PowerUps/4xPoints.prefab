@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8271859792716263625}
   - component: {fileID: 6984523614757630635}
-  - component: {fileID: 8679758536143643545}
   - component: {fileID: 3127327738817678895}
   - component: {fileID: 418378217626605198}
   - component: {fileID: 709839038056696117}
+  - component: {fileID: -6827416747680715809}
   m_Layer: 0
   m_Name: 4xPoints
   m_TagString: Multiply4x
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3193480885511190799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.302, y: -0.491, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1586484, y: 0.1586484, z: 0.1586484}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8679758536143643545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3193480885511190799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598044450dcb74a41945529150bb4408, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &3127327738817678895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +152,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6827416747680715809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193480885511190799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598044450dcb74a41945529150bb4408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}

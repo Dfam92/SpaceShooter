@@ -1846,15 +1846,11 @@ MonoBehaviour:
   - {fileID: 6317628001102795793, guid: 540453f6037c437439b80f5d57660158, type: 3}
   - {fileID: 8329465543650471199, guid: c91b51517cc619640866bf1c4a179cac, type: 3}
   - {fileID: 4186847041465671125, guid: 8d22f0eadbed9344b86ddc79fb6e3f93, type: 3}
-  powerUps:
-  - {fileID: 1725787198961493733, guid: f84fd8da4fb4a3b44852d97bdc5043e0, type: 3}
-  - {fileID: 6407953165878910082, guid: 6dc51240f5d67bd4b82a0acae534cff0, type: 3}
-  - {fileID: 2783848469977985122, guid: edcc2ffd2ee159d4f81fc2cce9ed4e09, type: 3}
-  - {fileID: 3193480885511190799, guid: 8b68ecac012f45842a59b368a7aeef74, type: 3}
-  - {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
+  extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
+  powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnPowerUps: 20
+  timeToSpawnCasePowerUps: 20
   bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2

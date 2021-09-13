@@ -21,14 +21,15 @@ public class GameManager : MonoBehaviour
     public Toggle MuteButton;
     
     public List<GameObject> hordes;
-    public List<GameObject> powerUps;
     public GameObject boss;
+    public GameObject extraLife;
+    public GameObject powerUpCase;
     
     private AudioSource audioSource;
     private PlayerControl playerControl;
     
     [SerializeField]private float timeToSpawnHordes;
-    [SerializeField]private float timeToSpawnPowerUps;
+    [SerializeField]private float timeToSpawnCasePowerUps;
     [SerializeField]private int bossRate;
     [SerializeField] private float timeToRespawnPlayer;
 
@@ -88,9 +89,8 @@ public class GameManager : MonoBehaviour
     {
         while (isActive)
         {
-            yield return new WaitForSeconds(timeToSpawnPowerUps);
-            int index = Random.Range(0, powerUps.Count);
-            Instantiate(powerUps[index]);
+            yield return new WaitForSeconds(timeToSpawnCasePowerUps);
+            Instantiate(powerUpCase);
         }
        
     }
@@ -101,8 +101,8 @@ public class GameManager : MonoBehaviour
     }
     private void ReSpawnRatePowerUps()
     {
-        int index = Random.Range(0, powerUps.Count);
-        Instantiate(powerUps[index]);
+        
+        Instantiate(powerUpCase);
     }
     public void StartGame(int difficulty)
     {
@@ -166,9 +166,9 @@ public class GameManager : MonoBehaviour
     }
     public void BossDestroyed()
     {
-        
+        Instantiate(extraLife);
         InvokeRepeating("ReSpawnHordes", 5, timeToSpawnHordes);
-        InvokeRepeating("ReSpawnRatePowerUps", 1, timeToSpawnPowerUps);
+        InvokeRepeating("ReSpawnRatePowerUps", 1, timeToSpawnCasePowerUps);
         StartCoroutine(FadeAudioSource.StartFade(audioSource,20, 0.25f));
 
     }
