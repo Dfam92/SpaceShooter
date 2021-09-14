@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SpawnRatePowerUps()
     {
+       
         while (isActive)
         {
             yield return new WaitForSeconds(timeToSpawnCasePowerUps);
@@ -101,7 +102,6 @@ public class GameManager : MonoBehaviour
     }
     private void ReSpawnRatePowerUps()
     {
-        
         Instantiate(powerUpCase);
     }
     public void StartGame(int difficulty)
