@@ -6,14 +6,6 @@ public class EnemyBullet : MonoBehaviour
 {
     public Rigidbody2D enemyBulletRb;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-      
-       
-    }
-
     private void Update()
     {
         bulletOutBounds();

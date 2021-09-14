@@ -26,12 +26,7 @@ public class EnemyControl : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         
     }
-    // Update is called once per frame
-
-    private void Update()
-    {
-       
-    }
+    
     void FixedUpdate()
     {
         if (GameManager.isActive == true)

@@ -5,8 +5,10 @@ using UnityEngine;
 public class CaseDestroyed : MonoBehaviour
 {
     public List<GameObject> powerUps;
+    public GameObject explodeCase;
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider;
+    [SerializeField] private float timeToSpawnPowerUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,17 @@ public class CaseDestroyed : MonoBehaviour
     {
         if(collision.CompareTag("PlayerBullet"))
         {
-            int index = Random.Range(0, powerUps.Count);
-            Instantiate(powerUps[index],this.transform.position,Quaternion.identity);
+            Instantiate(explodeCase, this.transform.position, Quaternion.identity);
+            StartCoroutine(SpawnTime());
             spriteRenderer.enabled = false;
             circleCollider.enabled = false;
             Destroy(this.gameObject, 3);
         }
+    }
+    IEnumerator SpawnTime()
+    {
+        yield return new WaitForSeconds(timeToSpawnPowerUp);
+        int index = Random.Range(0, powerUps.Count);
+        Instantiate(powerUps[index], this.transform.position, Quaternion.identity);
     }
 }
