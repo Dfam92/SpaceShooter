@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject enemyBullet;
     public static float fireStart = 6;
     [SerializeField] private float fireRate = 10;
 

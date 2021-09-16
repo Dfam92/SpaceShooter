@@ -57,7 +57,7 @@ public class PlayerControl : MonoBehaviour
         if (GameManager.isActive && !PauseMenu.isPaused)
         {
             //if mobile desactive this.
-            PlayerShoot();
+            //PlayerShoot();
             // Dont Disable This.
             RespawnPlayer();
         }
@@ -77,7 +77,7 @@ public class PlayerControl : MonoBehaviour
     {
         
         //For Play in PC active this
-        if(!gameManager.isFreezed)
+        /*if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -112,12 +112,12 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }
+        }*/
 
 
         // For play Mobile
 
-        /*if(!gameManager.isFreezed)
+        if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -129,6 +129,8 @@ public class PlayerControl : MonoBehaviour
                 if (playerRb.mass < 100)
                 {
                     animPlayer.SetFloat("Move", 0.5f);
+                    animPlayer.SetBool("TurnRight", false);
+                    animPlayer.SetBool("TurnLeft", false);
                 }
 
             }
@@ -136,11 +138,13 @@ public class PlayerControl : MonoBehaviour
             {
                 animPlayer.SetBool("TurnLeft", true);
                 animPlayer.SetBool("TurnRight", false);
+                animPlayer.SetFloat("Move", -0.9f);
             }
             else if(joystick.Horizontal > 0)
             {
                 animPlayer.SetBool("TurnRight", true);
                 animPlayer.SetBool("TurnLeft", false);
+                animPlayer.SetFloat("Move", -0.9f);
             }
             else
             {
@@ -149,7 +153,7 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnLeft", false);
             }
         }
-        */
+        
 
 
     }
@@ -184,7 +188,7 @@ public class PlayerControl : MonoBehaviour
         {
             //For play in Pc active this
 
-            Vector3 bulletPos = new Vector3(transform.position.x + 0.02f , transform.position.y + 0.5f, transform.rotation.z);
+            /*Vector3 bulletPos = new Vector3(transform.position.x + 0.02f , transform.position.y + 0.5f, transform.rotation.z);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //Instantiate(bulletPlayer, bulletPos, transform.rotation);
@@ -200,14 +204,15 @@ public class PlayerControl : MonoBehaviour
                     Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                     Instantiate(bulletPlayer, bulletPos3, transform.rotation);
                 }
-            }
+            }*/
 
 
 
             //for play Mobile active this
-            /*Vector3 bulletPos = new Vector3(transform.position.x -0.05f, transform.position.y + 0.5f,transform.rotation.z);
+            Vector3 bulletPos = new Vector3(transform.position.x + 0.02f, transform.position.y + 0.5f, transform.rotation.z);
             {
-                Instantiate(bulletPlayer, bulletPos, transform.rotation);
+                //Instantiate(bulletPlayer, bulletPos, transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
                 playerAudioSource.PlayOneShot(bulletSound, 1.0f);
             }
 
@@ -219,7 +224,7 @@ public class PlayerControl : MonoBehaviour
 
                 Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                 Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-            }*/
+            }
         }
 
     }

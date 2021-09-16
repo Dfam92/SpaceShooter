@@ -6,7 +6,6 @@ public class EnemyControl : MonoBehaviour
 {
     public AudioClip firsHit;
     public Rigidbody2D enemyRb;
-    public GameObject titleScreen;
     public GameObject explosion;
 
     private GameManager gameManager;
