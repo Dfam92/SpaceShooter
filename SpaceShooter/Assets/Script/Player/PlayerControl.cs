@@ -204,8 +204,10 @@ public class PlayerControl : MonoBehaviour
                     Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
                     Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
 
-                    Instantiate(bulletPlayer, bulletPos2, transform.rotation);
-                    Instantiate(bulletPlayer, bulletPos3, transform.rotation);
+                    //Instantiate(bulletPlayer, bulletPos2, transform.rotation);
+                    //Instantiate(bulletPlayer, bulletPos3, transform.rotation);
+                    ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
+                    ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
                 }
             }*/
 
@@ -224,10 +226,12 @@ public class PlayerControl : MonoBehaviour
             {
 
                 Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
-                Vector3 bulletPos3 = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.rotation.z);
+                Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
 
-                Instantiate(bulletPlayer, bulletPos2, transform.rotation);
-                Instantiate(bulletPlayer, bulletPos3, transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
+                //Instantiate(bulletPlayer, bulletPos2, transform.rotation);
+                //Instantiate(bulletPlayer, bulletPos3, transform.rotation);
             }
         }
 
@@ -255,10 +259,7 @@ public class PlayerControl : MonoBehaviour
         {
             if(!playerIsDestroyed)
             {
-                
                 circleCollider.enabled = true;
-                
-
             }
            
         }
@@ -276,8 +277,6 @@ public class PlayerControl : MonoBehaviour
         gameManager.UpdateLife(-1);
         animPlayer.Rebind();
         
-
-
         if (gameManager.lifeScore < 0)
         {
             gameManager.GameOver();

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4818437649621668677}
   - component: {fileID: 4818437649621668676}
   - component: {fileID: 4818437649621668678}
-  - component: {fileID: -7028537883002495806}
   - component: {fileID: 2669600175790920641}
   - component: {fileID: -3038289759742600788}
+  - component: {fileID: 6112048922861251500}
   m_Layer: 0
   m_Name: PB1
   m_TagString: PlayerBullet
@@ -105,19 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-7028537883002495806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818437649621668731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2860ef4a9b8928478c90e5e7ef40efd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletRb: {fileID: -3038289759742600788}
 --- !u!61 &2669600175790920641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,3 +152,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &6112048922861251500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818437649621668731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79ed9932892b1b4f93959e5a45f9b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

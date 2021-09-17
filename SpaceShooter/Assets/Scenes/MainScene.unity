@@ -1850,7 +1850,7 @@ MonoBehaviour:
   extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnCasePowerUps: 5
+  timeToSpawnCasePowerUps: 20
   bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2
@@ -6552,6 +6552,9 @@ MonoBehaviour:
   - tag: EnemyBullet2
     prefab: {fileID: 3062212719417717022, guid: 9398c2fb7733d2a4390c2642e28dae7c, type: 3}
     size: 30
+  - tag: SideBullet
+    prefab: {fileID: 6696222393760321079, guid: 77b26e96e63f9df4abd96e99f6ca8dda, type: 3}
+    size: 20
 --- !u!4 &1928224861
 Transform:
   m_ObjectHideFlags: 0

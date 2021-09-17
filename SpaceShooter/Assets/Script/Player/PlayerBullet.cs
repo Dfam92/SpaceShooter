@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    public Rigidbody2D bulletRb;
+    private Rigidbody2D bulletRb;
     private PlayerControl playerControl;
 
     private void Start()
     {
-     
-      playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
-   
-
+        bulletRb = GetComponent<Rigidbody2D>();
+        playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
     }
     private void Update()
     {
-        bulletOutBounds();
+        BulletOutBounds();
     }
     void FixedUpdate()
     {
-        bulletMovement();
+        BulletMovement();
     }
 
-    private void bulletMovement()
+    private void BulletMovement()
     {
         bulletRb.AddForce(Vector2.up, ForceMode2D.Impulse);
         transform.rotation = Quaternion.identity;
     }
-    private void bulletOutBounds()
+    public virtual void BulletOutBounds()
     {
             if (transform.position.y > ScreenBounds.yEnemyBound + 1f)
             {
@@ -41,7 +39,7 @@ public class PlayerBullet : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("BossSting") || collision.gameObject.CompareTag("PowerUpCase"))
         {
