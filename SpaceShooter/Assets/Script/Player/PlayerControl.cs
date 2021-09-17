@@ -27,6 +27,7 @@ public class PlayerControl : MonoBehaviour
     public static bool sideBullets;
     public bool playerIsDestroyed;
 
+    public int bulletCount;
     private int timeToStopPowerUp;
     private float paralyzeTime = 3;
     public Vector2 playerStartPos;
@@ -54,6 +55,7 @@ public class PlayerControl : MonoBehaviour
     private void Update()
      
     {
+        Debug.Log(bulletCount);
         if (GameManager.isActive && !PauseMenu.isPaused)
         {
             //if mobile desactive this.
@@ -184,7 +186,7 @@ public class PlayerControl : MonoBehaviour
         
     }
     public void PlayerShoot()
-    {if(!playerIsDestroyed)
+    {if(!playerIsDestroyed && bulletCount > -1 && bulletCount < 4)
         {
             //For play in Pc active this
 
@@ -194,6 +196,7 @@ public class PlayerControl : MonoBehaviour
                 //Instantiate(bulletPlayer, bulletPos, transform.rotation);
                 ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
                 playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+                bulletCount += 1;
 
                 if (sideBullets == true)
                 {
@@ -214,6 +217,7 @@ public class PlayerControl : MonoBehaviour
                 //Instantiate(bulletPlayer, bulletPos, transform.rotation);
                 ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
                 playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+                bulletCount += 1;
             }
 
             if (sideBullets == true)
@@ -244,6 +248,8 @@ public class PlayerControl : MonoBehaviour
             //must be lower than Stop Invulnerability
             StartCoroutine(StopFreeze());
             playerIsDestroyed = false;
+           
+
         }
         else
         {
@@ -251,7 +257,8 @@ public class PlayerControl : MonoBehaviour
             {
                 
                 circleCollider.enabled = true;
-               
+                
+
             }
            
         }
@@ -259,6 +266,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void DestroyPlayer()
     {
+        
         circleCollider.enabled = false;
         spriteRenderer.enabled = false;
         playerIsDestroyed = true;
@@ -267,6 +275,8 @@ public class PlayerControl : MonoBehaviour
         AudioClips.playerIsDestroyed = true;
         gameManager.UpdateLife(-1);
         animPlayer.Rebind();
+        
+
 
         if (gameManager.lifeScore < 0)
         {
@@ -280,6 +290,7 @@ public class PlayerControl : MonoBehaviour
             || collision.CompareTag("EnemyBullet") && !alienShield.activeInHierarchy)
         {
             DestroyPlayer();
+            bulletCount = 0;
         }
         else if(collision.CompareTag("Shield"))
         {

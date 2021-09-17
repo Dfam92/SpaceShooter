@@ -167,7 +167,7 @@ public class BossControl : MonoBehaviour
             {
                 BossLowLife();
             }
-            else if(healthBoss < 10)
+            else if(healthBoss < 10 && healthBoss != 0)
             {
                 speed += 4;
             }
@@ -215,7 +215,7 @@ public class BossControl : MonoBehaviour
     
     IEnumerator FuriousBoss()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         spriteRenderer.color = Color.red;
         timeToShotBubbles = 1;
         timeToShotStings = 0.5f;

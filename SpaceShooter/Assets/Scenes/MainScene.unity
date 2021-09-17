@@ -1850,7 +1850,7 @@ MonoBehaviour:
   extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnCasePowerUps: 20
+  timeToSpawnCasePowerUps: 5
   bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2
@@ -5740,6 +5740,7 @@ MonoBehaviour:
   bulletSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   explosion: {fileID: 216794154}
   playerIsDestroyed: 0
+  bulletCount: 0
   playerStartPos: {x: 0, y: 0}
   joystick: {fileID: 243847606}
   fireButton: {fileID: 0}
@@ -6046,11 +6047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7728449420531555662, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 60.130005
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 7728449420531555662, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 181.03
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 7728449420531555662, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6102,11 +6103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7728449422361337524, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 174.63
+      value: 158.18
       objectReference: {fileID: 0}
     - target: {fileID: 7728449422361337524, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 174.63
+      value: 158.18
       objectReference: {fileID: 0}
     - target: {fileID: 7728449422361337524, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_AnchoredPosition.x
