@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float timeToStopInvulnerabilty;
     [SerializeField] private float timeToStopFreeze;
+    [SerializeField] private int bulletCapacity;
 
     private GameManager gameManager;
     private AudioSource playerAudioSource;
@@ -21,15 +22,19 @@ public class PlayerControl : MonoBehaviour
     public GameObject bulletPlayer;
     public AudioClip bulletSound;
     public GameObject explosion;
-   
+    public GameObject diagonalBullet;
+    public GameObject diagonalBullet2;
+
     public static bool isMultiplying2x;
     public static bool isMultiplying4x;
-    public static bool sideBullets;
+    public static bool onSideBullets;
+    public static bool onDiagonalBullets;
     public bool playerIsDestroyed;
 
     public int bulletCount;
     private int timeToStopPowerUp;
     private float paralyzeTime = 3;
+    
     public Vector2 playerStartPos;
     
     //For mobile active the Joystick
@@ -187,7 +192,7 @@ public class PlayerControl : MonoBehaviour
         
     }
     public void PlayerShoot()
-    {if(!playerIsDestroyed && bulletCount > -1 && bulletCount < 4)
+    {if(!playerIsDestroyed && bulletCount > -1 && bulletCount < bulletCapacity)
         {
             //For play in Pc active this
 
@@ -223,7 +228,7 @@ public class PlayerControl : MonoBehaviour
                 bulletCount += 1;
             }
 
-            if (sideBullets == true)
+            if (onSideBullets == true)
             {
 
                 Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
@@ -233,6 +238,15 @@ public class PlayerControl : MonoBehaviour
                 ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
                 //Instantiate(bulletPlayer, bulletPos2, transform.rotation);
                 //Instantiate(bulletPlayer, bulletPos3, transform.rotation);
+            }
+
+            if(onDiagonalBullets == true)
+            {
+                Vector2 bulletPos2 = new Vector2(transform.position.x , transform.position.y+0.4f);
+                Vector2 bulletPos3 = new Vector2(transform.position.x , transform.position.y+0.4f);
+               
+                ObjectPooler.Instance.SpawnFromPool("DiagonalBullets", bulletPos2, diagonalBullet2.transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("DiagonalBullets2", bulletPos3, diagonalBullet.transform.rotation);
             }
         }
 
@@ -244,7 +258,7 @@ public class PlayerControl : MonoBehaviour
         if (gameManager.isReborned)
         {
             
-            sideBullets = false;
+            onSideBullets = false;
             isMultiplying2x = false;
             isMultiplying4x = false;
             spriteRenderer.enabled = true;
@@ -312,13 +326,20 @@ public class PlayerControl : MonoBehaviour
             spriteRenderer.color = Color.gray;
             StartCoroutine(StopParalysis());
         }
-        else if (collision.CompareTag("BulletCase"))
+       /* else if (collision.CompareTag("BulletCase"))
         {
-            sideBullets = true;
+            onSideBullets = true;
             timeToStopPowerUp = 15;
             AudioClips.extraBulletsOn = true;
             StartCoroutine(StopPowerUp());
         }
+        else if (collision.CompareTag("BulletCase"))
+        {
+            onDiagonalBullets = true;
+            timeToStopPowerUp = 15;
+            AudioClips.extraBulletsOn = true;
+            StartCoroutine(StopPowerUp());
+        }*/
         else if(collision.CompareTag("Multiply2x"))
         {
             isMultiplying2x = true;
@@ -338,17 +359,32 @@ public class PlayerControl : MonoBehaviour
             gameManager.UpdateLife(1);
             AudioClips.extraLife = true;
         }
-        
+        else if (collision.CompareTag("BulletCase"))
+        {
+            bulletCapacity += 1;
+            AudioClips.extraBulletsOn = true;
+
+        }
+        /*else if (collision.CompareTag("SpeedUp"))
+        {
+            speed += 0.5f;
+            AudioClips.extraBulletsOn = true;
+
+        }*/
+
     }
   
-    
     IEnumerator StopPowerUp()
     {
         
         yield return new WaitForSeconds(timeToStopPowerUp);
-        if( sideBullets == true)
+        if( onSideBullets == true)
         {
-            sideBullets = false;
+            onSideBullets = false;
+        }
+        else if(onDiagonalBullets == true)
+        {
+            onDiagonalBullets = false;
         }
         else if(isMultiplying2x == true)
         {

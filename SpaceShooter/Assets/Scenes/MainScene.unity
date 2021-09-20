@@ -1850,7 +1850,7 @@ MonoBehaviour:
   extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnCasePowerUps: 20
+  timeToSpawnCasePowerUps: 1
   bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2
@@ -2315,8 +2315,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: bulletCapacity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: diagonalBullet
+      value: 
+      objectReference: {fileID: 3011452533369088064, guid: 65fa1647a03f82148ba74aca4859ab47, type: 3}
+    - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: diagonalBullet2
+      value: 
+      objectReference: {fileID: 7649538010917669841, guid: e56c77ad972817c4bb600a7951f3ccc4, type: 3}
+    - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: timeToStopInvulnerabilty
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513986987102332023, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
@@ -5742,11 +5758,14 @@ MonoBehaviour:
   speed: 20
   timeToStopInvulnerabilty: 3
   timeToStopFreeze: 1
+  bulletCapacity: 0
   playerRb: {fileID: 1767198475}
   alienShield: {fileID: 1368265669}
   bulletPlayer: {fileID: 4818437649621668731, guid: 112474bd7332f2e4d99e25b67510d0c1, type: 3}
   bulletSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   explosion: {fileID: 216794154}
+  diagonalBullet: {fileID: 0}
+  diagonalBullet2: {fileID: 0}
   playerIsDestroyed: 0
   bulletCount: 0
   playerStartPos: {x: 0, y: 0}
@@ -6563,6 +6582,12 @@ MonoBehaviour:
   - tag: SideBullet
     prefab: {fileID: 6696222393760321079, guid: 77b26e96e63f9df4abd96e99f6ca8dda, type: 3}
     size: 20
+  - tag: DiagonalBullets
+    prefab: {fileID: 3011452533369088064, guid: 65fa1647a03f82148ba74aca4859ab47, type: 3}
+    size: 10
+  - tag: DiagonalBullets2
+    prefab: {fileID: 7649538010917669841, guid: e56c77ad972817c4bb600a7951f3ccc4, type: 3}
+    size: 10
 --- !u!4 &1928224861
 Transform:
   m_ObjectHideFlags: 0

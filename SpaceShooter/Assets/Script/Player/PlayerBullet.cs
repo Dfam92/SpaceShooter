@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    private Rigidbody2D bulletRb;
+    protected Rigidbody2D bulletRb;
     private PlayerControl playerControl;
 
     private void Start()
@@ -21,10 +21,9 @@ public class PlayerBullet : MonoBehaviour
         BulletMovement();
     }
 
-    private void BulletMovement()
+    public virtual void BulletMovement()
     {
         bulletRb.AddForce(Vector2.up, ForceMode2D.Impulse);
-        transform.rotation = Quaternion.identity;
     }
     public virtual void BulletOutBounds()
     {

@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerControl.isMultiplying2x = false;
         PlayerControl.isMultiplying4x = false;
-        PlayerControl.sideBullets = false;
+        PlayerControl.onSideBullets = false;
         gameOver = true;
         gameOverScreen.SetActive(true);
         isActive = false;
