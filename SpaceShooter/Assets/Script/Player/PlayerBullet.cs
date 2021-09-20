@@ -28,14 +28,15 @@ public class PlayerBullet : MonoBehaviour
     }
     public virtual void BulletOutBounds()
     {
-            if (transform.position.y > ScreenBounds.yEnemyBound + 1f)
+            if (transform.position.y > ScreenBounds.yEnemyBound + 0.5f)
             {
                 this.gameObject.SetActive(false);
-                if (playerControl.bulletCount > 0 && playerControl.playerIsDestroyed == false)
+                if (playerControl.bulletCount > -1 && !playerControl.playerIsDestroyed)
                 {
                     playerControl.bulletCount -= 1;
                 }
             }
+            
 
     }
 
@@ -43,7 +44,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("BossSting") || collision.gameObject.CompareTag("PowerUpCase"))
         {
-            if (playerControl.bulletCount > 0 && playerControl.playerIsDestroyed == false)
+            if (playerControl.bulletCount > -1 && playerControl.playerIsDestroyed == false)
             {
                 playerControl.bulletCount -= 1;
             }

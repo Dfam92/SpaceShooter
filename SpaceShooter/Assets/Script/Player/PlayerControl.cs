@@ -55,13 +55,14 @@ public class PlayerControl : MonoBehaviour
     private void Update()
      
     {
-        Debug.Log(bulletCount);
+        
         if (GameManager.isActive && !PauseMenu.isPaused)
         {
             //if mobile desactive this.
             //PlayerShoot();
             // Dont Disable This.
             RespawnPlayer();
+            FixDoubleCollisionBullet();
         }
     }
 
@@ -264,6 +265,13 @@ public class PlayerControl : MonoBehaviour
            
         }
         
+    }
+    private void FixDoubleCollisionBullet()
+    {
+        if(bulletCount < 0)
+        {
+            bulletCount = 0;
+        }
     }
     private void DestroyPlayer()
     {

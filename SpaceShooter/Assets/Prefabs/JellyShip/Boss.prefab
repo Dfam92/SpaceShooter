@@ -169,7 +169,8 @@ MonoBehaviour:
   bossSting: {fileID: 353014115734465473, guid: b7a91625ae9d1f44891d8d886f9c7724, type: 3}
   bossBubble: {fileID: 7652751382157637591, guid: a2b1fc2c2bb7f064e99d754672d7943c, type: 3}
   speed: 30
-  timeToTurn: 5
+  timeToTurn: 3
+  xTurnPos: 2
   turnAngle: 7
   timeToShotStings: 5
   timeToShotBubbles: 2

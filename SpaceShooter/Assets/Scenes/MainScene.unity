@@ -2310,6 +2310,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 243847606}
+    - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: timeToStopInvulnerabilty
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
 --- !u!1 &597995457 stripped

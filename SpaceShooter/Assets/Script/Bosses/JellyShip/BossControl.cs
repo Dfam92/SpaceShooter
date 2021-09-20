@@ -15,6 +15,7 @@ public class BossControl : MonoBehaviour
     
     [SerializeField] private float speed;
     [SerializeField] private float timeToTurn;
+    [SerializeField] private float xTurnPos;
     [SerializeField] private float turnAngle;
     [SerializeField] private float timeToShotStings;
     [SerializeField] private float timeToShotBubbles;
@@ -46,6 +47,7 @@ public class BossControl : MonoBehaviour
    
     private void Update()
     {
+       
        if(GameManager.gameOver == true)
         {
             bossAudioSource.Stop();
@@ -64,19 +66,20 @@ public class BossControl : MonoBehaviour
 
     private void BossMovimentation()
     {
+        xTurnPos = Random.Range(6, 30);
         if(isMoving == true)
 
         {
             bossRb.AddRelativeForce(Vector2.up*speed);
         }
 
-        if(transform.position.x > ScreenBounds.xEnemyBound / 4 && !bossDestroyed)
+        if(transform.position.x > ScreenBounds.xEnemyBound / xTurnPos && !bossDestroyed)
 
         {
             StartCoroutine(TurnRight());
             isTurning = true;
         }
-        else if (transform.position.x > -ScreenBounds.xEnemyBound / 2 && !bossDestroyed)
+        else if (transform.position.x < -ScreenBounds.xEnemyBound / xTurnPos && !bossDestroyed)
 
         {
             StartCoroutine(TurnLeft());
