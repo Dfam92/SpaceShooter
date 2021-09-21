@@ -85,7 +85,7 @@ public class PlayerControl : MonoBehaviour
     {
         
         //For Play in PC active this
-        /*if(!gameManager.isFreezed)
+        if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -120,12 +120,12 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }*/
+        }
 
 
         // For play Mobile
 
-        if(!gameManager.isFreezed)
+        /*if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -160,7 +160,7 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }
+        }*/
         
 
 
@@ -326,20 +326,20 @@ public class PlayerControl : MonoBehaviour
             spriteRenderer.color = Color.gray;
             StartCoroutine(StopParalysis());
         }
-       /* else if (collision.CompareTag("BulletCase"))
+        else if (collision.CompareTag("SideBullets"))
         {
             onSideBullets = true;
             timeToStopPowerUp = 15;
             AudioClips.extraBulletsOn = true;
             StartCoroutine(StopPowerUp());
         }
-        else if (collision.CompareTag("BulletCase"))
+        else if (collision.CompareTag("DiagonalBullets"))
         {
             onDiagonalBullets = true;
             timeToStopPowerUp = 15;
             AudioClips.extraBulletsOn = true;
             StartCoroutine(StopPowerUp());
-        }*/
+        }
         else if(collision.CompareTag("Multiply2x"))
         {
             isMultiplying2x = true;
@@ -365,12 +365,12 @@ public class PlayerControl : MonoBehaviour
             AudioClips.extraBulletsOn = true;
 
         }
-        /*else if (collision.CompareTag("SpeedUp"))
+        else if (collision.CompareTag("SpeedUp"))
         {
             speed += 0.5f;
             AudioClips.extraBulletsOn = true;
 
-        }*/
+        }
 
     }
   

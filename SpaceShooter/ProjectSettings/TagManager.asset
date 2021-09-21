@@ -20,6 +20,9 @@ TagManager:
   - BossSting
   - ExtraLife
   - PowerUpCase
+  - SpeedUp
+  - DiagonalBullets
+  - SideBullets
   layers:
   - Default
   - TransparentFX

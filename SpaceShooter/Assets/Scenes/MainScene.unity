@@ -1850,7 +1850,7 @@ MonoBehaviour:
   extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnCasePowerUps: 1
+  timeToSpawnCasePowerUps: 20
   bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2
@@ -2316,7 +2316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: bulletCapacity
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: diagonalBullet
