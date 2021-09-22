@@ -9,27 +9,31 @@ public class CaseDestroyed : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider;
     [SerializeField] private float timeToSpawnPowerUp;
+
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         circleCollider = GetComponent<CircleCollider2D>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (transform.position.y < -ScreenBounds.yPlayerBound - 2f)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("PlayerBullet"))
         {
+            StartCoroutine(Desactive());
             Instantiate(explodeCase, this.transform.position, Quaternion.identity);
             StartCoroutine(SpawnTime());
             spriteRenderer.enabled = false;
             circleCollider.enabled = false;
-            Destroy(this.gameObject, 3);
+            
         }
     }
     IEnumerator SpawnTime()
@@ -37,5 +41,14 @@ public class CaseDestroyed : MonoBehaviour
         yield return new WaitForSeconds(timeToSpawnPowerUp);
         int index = Random.Range(0, powerUps.Count);
         Instantiate(powerUps[index], this.transform.position, Quaternion.identity);
+    }
+
+    IEnumerator Desactive()
+    {
+        yield return new WaitForSeconds(3);
+        spriteRenderer.enabled = true;
+        circleCollider.enabled = true;
+        this.gameObject.SetActive(false);
+
     }
 }

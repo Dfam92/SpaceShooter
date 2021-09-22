@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 6353997283848876406}
   - component: {fileID: 6353997283848876411}
   - component: {fileID: 6353997283848876412}
-  - component: {fileID: 6061595186684239572}
   m_Layer: 0
-  m_Name: PowerUpCase
+  m_Name: NormalCase
   m_TagString: PowerUpCase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6353997283848876405}
   m_LocalRotation: {x: -0.024122348, y: -0.0028727066, z: 0.48891687, w: 0.8719921}
-  m_LocalPosition: {x: -1.33, y: 4.39, z: 0}
+  m_LocalPosition: {x: 5.7782893, y: 5.25, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -176,15 +175,3 @@ MonoBehaviour:
   - {fileID: 2783848469977985122, guid: edcc2ffd2ee159d4f81fc2cce9ed4e09, type: 3}
   explodeCase: {fileID: 176357950347827058, guid: c1a3269950b35964e8148cd5e2dbe805, type: 3}
   timeToSpawnPowerUp: 0.1
---- !u!114 &6061595186684239572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353997283848876405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dcb7f9844ed52b40bd095da5d88e7f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

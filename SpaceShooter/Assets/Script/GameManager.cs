@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
         BossDefeated();
         CheckLife();
     }
-
     IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(timeToRespawnPlayer);
@@ -89,33 +88,13 @@ public class GameManager : MonoBehaviour
             
         }
     }
-    /*IEnumerator SpawnRatePowerUps()
-    {
-       
-        while (isActive)
-        {
-            yield return new WaitForSeconds(timeToSpawnDangerCasePowerUps);
-            Instantiate(dangerPowerUpCase);
-
-            yield return new WaitForSeconds(timeToSpawnNormalCasePowerUps);
-            Instantiate(normalPowerUpCase);
-
-            yield return new WaitForSeconds(timeToSpawnEpicCasePowerUps);
-            Instantiate(epicPowerUpCase);
-
-            
-        }
-       
-    }*/
-
+    
     private void SpawnPowerUps()
     {
         InvokeRepeating("SpawnNormalPowerUps", timeToSpawnNormalCasePowerUps, timeToSpawnNormalCasePowerUps);
         InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
         InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
     }
-
-
     private void ReSpawnHordes()
     {
         int index = Random.Range(0, hordes.Count);
@@ -123,15 +102,21 @@ public class GameManager : MonoBehaviour
     }
     private void SpawnNormalPowerUps()
     {
-        Instantiate(normalPowerUpCase);
+        PositionGenerator();
+        //Instantiate(normalPowerUpCase);
+        ObjectPooler.Instance.SpawnFromPool("NormalCase", normalPowerUpCase.transform.position, normalPowerUpCase.transform.rotation);
     }
     private void SpawnEpicPowerUps()
     {
-        Instantiate(epicPowerUpCase);
+        PositionGenerator();
+        //Instantiate(epicPowerUpCase);
+        ObjectPooler.Instance.SpawnFromPool("EpicCase", epicPowerUpCase.transform.position, epicPowerUpCase.transform.rotation);
     }
     private void SpawnDangerPowerUps()
     {
-        Instantiate(dangerPowerUpCase);
+        PositionGenerator();
+        //Instantiate(dangerPowerUpCase);
+        ObjectPooler.Instance.SpawnFromPool("DangerousCase", dangerPowerUpCase.transform.position, dangerPowerUpCase.transform.rotation);
     }
     public void StartGame(int difficulty)
     {
@@ -264,5 +249,13 @@ public class GameManager : MonoBehaviour
         {
             MuteButton.isOn = false;
         }
+    }
+    private void PositionGenerator()
+    {
+        var randomPos = new Vector2(Random.Range(-ScreenBounds.xPlayerBound + 0.5f, ScreenBounds.xPlayerBound - 0.5f), ScreenBounds.yPlayerBound + 0.75f);
+        epicPowerUpCase.transform.position = randomPos;
+        dangerPowerUpCase.transform.position = randomPos;
+        normalPowerUpCase.transform.position = randomPos;
+
     }
 }

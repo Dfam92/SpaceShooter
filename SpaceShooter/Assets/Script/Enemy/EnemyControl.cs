@@ -6,7 +6,6 @@ public class EnemyControl : MonoBehaviour
 {
     public AudioClip firsHit;
     public Rigidbody2D enemyRb;
-    public GameObject explosion;
 
     private GameManager gameManager;
     private AudioSource audioSource;
@@ -38,8 +37,6 @@ public class EnemyControl : MonoBehaviour
     {
         enemyRb.AddRelativeForce(Vector2.down*speed);
     }
-
- 
     private void OnTriggerEnter2D(Collider2D collision)
     { 
         if(collision.CompareTag("PlayerBullet") )
@@ -112,7 +109,8 @@ public class EnemyControl : MonoBehaviour
     {
         MultiplyPoints();
         AudioClips.enemyIsDestroyed = true;
-        Instantiate(explosion, transform.position, transform.rotation);
+        //Instantiate(explosion, transform.position, transform.rotation);
+        ObjectPooler.Instance.SpawnFromPool("EnemyExploded", transform.position, transform.rotation);
         Destroy(this.gameObject);
         UpdateGameManagerCalls();
     }

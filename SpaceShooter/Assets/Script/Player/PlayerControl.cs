@@ -199,30 +199,6 @@ public class PlayerControl : MonoBehaviour
             /*Vector3 bulletPos = new Vector3(transform.position.x + 0.02f , transform.position.y + 0.5f, transform.rotation.z);
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //Instantiate(bulletPlayer, bulletPos, transform.rotation);
-                ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
-                playerAudioSource.PlayOneShot(bulletSound, 1.0f);
-                bulletCount += 1;
-
-                if (sideBullets == true)
-                {
-
-                    Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
-                    Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
-
-                    //Instantiate(bulletPlayer, bulletPos2, transform.rotation);
-                    //Instantiate(bulletPlayer, bulletPos3, transform.rotation);
-                    ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
-                    ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
-                }
-            }*/
-
-
-
-            //for play Mobile active this
-            Vector3 bulletPos = new Vector3(transform.position.x + 0.02f, transform.position.y + 0.5f, transform.rotation.z);
-            {
-                //Instantiate(bulletPlayer, bulletPos, transform.rotation);
                 ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
                 playerAudioSource.PlayOneShot(bulletSound, 1.0f);
                 bulletCount += 1;
@@ -230,20 +206,47 @@ public class PlayerControl : MonoBehaviour
 
             if (onSideBullets == true)
             {
-
                 Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
                 Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
 
                 ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
                 ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
-                //Instantiate(bulletPlayer, bulletPos2, transform.rotation);
-                //Instantiate(bulletPlayer, bulletPos3, transform.rotation);
             }
 
             if(onDiagonalBullets == true)
             {
                 Vector2 bulletPos2 = new Vector2(transform.position.x , transform.position.y+0.4f);
                 Vector2 bulletPos3 = new Vector2(transform.position.x , transform.position.y+0.4f);
+               
+                ObjectPooler.Instance.SpawnFromPool("DiagonalBullets", bulletPos2, diagonalBullet2.transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("DiagonalBullets2", bulletPos3, diagonalBullet.transform.rotation);
+            }
+                
+                }
+            }*/
+
+            //for play Mobile active this
+            Vector3 bulletPos = new Vector3(transform.position.x + 0.02f, transform.position.y + 0.5f, transform.rotation.z);
+
+            {
+                ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
+                playerAudioSource.PlayOneShot(bulletSound, 1.0f);
+                bulletCount += 1;
+            }
+
+            if (onSideBullets == true)
+            {
+                Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
+                Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
+
+                ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
+                ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
+            }
+
+            if(onDiagonalBullets == true)
+            {
+                Vector2 bulletPos2 = new Vector2(transform.position.x , transform.position.y);
+                Vector2 bulletPos3 = new Vector2(transform.position.x , transform.position.y);
                
                 ObjectPooler.Instance.SpawnFromPool("DiagonalBullets", bulletPos2, diagonalBullet2.transform.rotation);
                 ObjectPooler.Instance.SpawnFromPool("DiagonalBullets2", bulletPos3, diagonalBullet.transform.rotation);
@@ -383,15 +386,18 @@ public class PlayerControl : MonoBehaviour
         {
             onSideBullets = false;
         }
-        else if(onDiagonalBullets == true)
+        
+        if(onDiagonalBullets == true)
         {
             onDiagonalBullets = false;
         }
-        else if(isMultiplying2x == true)
+        
+        if(isMultiplying2x == true)
         {
             isMultiplying2x = false;
         }
-        else if (isMultiplying4x == true)
+        
+        if (isMultiplying4x == true)
         {
             isMultiplying4x = false;
         }

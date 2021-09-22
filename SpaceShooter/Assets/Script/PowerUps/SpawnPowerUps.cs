@@ -8,9 +8,10 @@ public class SpawnPowerUps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -ScreenBounds.yPlayerBound-1f)
+        //PowerUpOutOfBounds
+        if (transform.position.y < -ScreenBounds.yPlayerBound-2f)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
         
     }
@@ -19,8 +20,7 @@ public class SpawnPowerUps : MonoBehaviour
     {
         if(collision.CompareTag("Player") || collision.CompareTag("AlienShield"))
         {
-            
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
         
     }

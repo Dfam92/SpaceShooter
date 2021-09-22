@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 3471590035285683345}
   - component: {fileID: 3471590035285683346}
   - component: {fileID: 3471590035285683347}
-  - component: {fileID: -7470802806275525605}
   m_Layer: 0
   m_Name: EpicCase
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3471590035285683340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0377, y: 4.1643, z: 0}
+  m_LocalPosition: {x: 5.7782893, y: 5.25, z: 0}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -177,15 +176,3 @@ MonoBehaviour:
   - {fileID: 1725787198961493733, guid: f84fd8da4fb4a3b44852d97bdc5043e0, type: 3}
   explodeCase: {fileID: 176357950347827058, guid: c1a3269950b35964e8148cd5e2dbe805, type: 3}
   timeToSpawnPowerUp: 0.1
---- !u!114 &-7470802806275525605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3471590035285683340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dcb7f9844ed52b40bd095da5d88e7f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

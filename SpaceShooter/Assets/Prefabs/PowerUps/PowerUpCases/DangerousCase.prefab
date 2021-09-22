@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3994457368796332603}
   - component: {fileID: 3994457368796332602}
   - component: {fileID: 3994457368796332601}
-  - component: {fileID: 3994457368796332576}
   - component: {fileID: 3994457368796332583}
   - component: {fileID: 3994457368796332582}
   - component: {fileID: 3994457368796332581}
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3994457368796332600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.7782893, y: 5.25, z: 0}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,18 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3994457368796332576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3994457368796332600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dcb7f9844ed52b40bd095da5d88e7f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &3994457368796332583
 CircleCollider2D:
   m_ObjectHideFlags: 0

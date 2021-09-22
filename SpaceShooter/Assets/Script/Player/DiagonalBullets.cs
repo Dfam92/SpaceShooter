@@ -16,6 +16,7 @@ public class DiagonalBullets : MonoBehaviour
     private void Update()
     {
         BulletOutBounds();
+        
     }
     private void FixedUpdate()
     {
