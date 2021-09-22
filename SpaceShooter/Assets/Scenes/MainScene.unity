@@ -1848,9 +1848,13 @@ MonoBehaviour:
   - {fileID: 4186847041465671125, guid: 8d22f0eadbed9344b86ddc79fb6e3f93, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
-  powerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
+  normalPowerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
+  epicPowerUpCase: {fileID: 3471590035285683340, guid: c9e084e96227f1749bffdc51b6b9d82e, type: 3}
+  dangerPowerUpCase: {fileID: 3994457368796332600, guid: 9009ea86e29747245999224e18de4ab9, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnCasePowerUps: 20
+  timeToSpawnNormalCasePowerUps: 10
+  timeToSpawnEpicCasePowerUps: 20
+  timeToSpawnDangerCasePowerUps: 5
   bossRate: 50
   timeToRespawnPlayer: 1.5
   lifeScore: 2
@@ -2246,9 +2250,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2253526781810441178, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4373455841453152687, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513986987102332016, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332017, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: m_Name
@@ -2316,7 +2328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: bulletCapacity
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: diagonalBullet
@@ -2333,6 +2345,22 @@ PrefabInstance:
     - target: {fileID: 4513986987102332023, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263134819287541461, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263134819287541461, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274392694772639869, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274392694772639869, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: lengthInSec
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}

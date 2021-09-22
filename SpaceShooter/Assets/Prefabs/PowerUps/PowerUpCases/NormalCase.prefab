@@ -103,7 +103,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.9521093
+  m_Radius: 0.6204637
 --- !u!50 &6353997283848876407
 Rigidbody2D:
   serializedVersion: 4
@@ -171,13 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUps:
-  - {fileID: 1725787198961493733, guid: f84fd8da4fb4a3b44852d97bdc5043e0, type: 3}
   - {fileID: 6407953165878910082, guid: 6dc51240f5d67bd4b82a0acae534cff0, type: 3}
-  - {fileID: 3193480885511190799, guid: 8b68ecac012f45842a59b368a7aeef74, type: 3}
-  - {fileID: 2783848469977985122, guid: edcc2ffd2ee159d4f81fc2cce9ed4e09, type: 3}
   - {fileID: 1836209564694829209, guid: eb702cbe3bd9d744ea2eef5e7ece4c62, type: 3}
-  - {fileID: 1057324297517957873, guid: a79e33072ef86cb499a08e217b649a00, type: 3}
-  - {fileID: 5406370147135550841, guid: ff2ee8bffd6de6a4482cc11733b36f8f, type: 3}
+  - {fileID: 2783848469977985122, guid: edcc2ffd2ee159d4f81fc2cce9ed4e09, type: 3}
   explodeCase: {fileID: 176357950347827058, guid: c1a3269950b35964e8148cd5e2dbe805, type: 3}
   timeToSpawnPowerUp: 0.1
 --- !u!114 &6061595186684239572

@@ -41,7 +41,8 @@ public class PlayerBullet : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("BossSting") || collision.gameObject.CompareTag("PowerUpCase"))
+        if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss") ||
+            collision.gameObject.CompareTag("BossSting") || collision.gameObject.CompareTag("PowerUpCase") || collision.gameObject.CompareTag("Explosion"))
         {
             if (playerControl.bulletCount > -1 && playerControl.playerIsDestroyed == false)
             {

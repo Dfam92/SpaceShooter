@@ -42,7 +42,7 @@ public class EnemyControl : MonoBehaviour
  
     private void OnTriggerEnter2D(Collider2D collision)
     { 
-        if(collision.CompareTag("PlayerBullet"))
+        if(collision.CompareTag("PlayerBullet") )
         {
             TakeHit();
             
@@ -50,18 +50,17 @@ public class EnemyControl : MonoBehaviour
             {
                 audioSource.PlayOneShot(firsHit, 0.5f);
                 spriteRenderer.color = Color.red;
-                speed += 3;
+                speed += 2;
             }
             
             if(enemyHealth < 1)
             {
-                MultiplyPoints();
-                AudioClips.enemyIsDestroyed = true;
-                Instantiate(explosion, transform.position, transform.rotation);
-                Destroy(this.gameObject);
-                UpdateGameManagerCalls();
-               
+                DestroyEnemy();
             }
+        }
+        else if(collision.CompareTag("Explosion"))
+        {
+            DestroyEnemy();
         }
         else if (collision.CompareTag("AlienShield"))
         {
@@ -108,5 +107,13 @@ public class EnemyControl : MonoBehaviour
 
         
         gameManager.UpdateEnemies(enemyCount);
+    }
+    private void DestroyEnemy()
+    {
+        MultiplyPoints();
+        AudioClips.enemyIsDestroyed = true;
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(this.gameObject);
+        UpdateGameManagerCalls();
     }
 }

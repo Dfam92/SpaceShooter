@@ -295,6 +295,7 @@ public class PlayerControl : MonoBehaviour
         playerIsDestroyed = true;
         transform.GetChild(1).gameObject.SetActive(true);
         transform.GetChild(2).gameObject.SetActive(false);
+        transform.GetChild(3).gameObject.SetActive(true);
         AudioClips.playerIsDestroyed = true;
         gameManager.UpdateLife(-1);
         animPlayer.Rebind();
@@ -308,7 +309,7 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") && !alienShield.activeInHierarchy || collision.CompareTag("Boss") && !alienShield.activeInHierarchy
-            || collision.CompareTag("EnemyBullet") && !alienShield.activeInHierarchy)
+            || collision.CompareTag("EnemyBullet") && !alienShield.activeInHierarchy || collision.CompareTag("Explosion") && !alienShield.activeInHierarchy)
         {
             DestroyPlayer();
             bulletCount = 0;

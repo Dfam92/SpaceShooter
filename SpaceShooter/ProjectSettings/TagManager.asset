@@ -23,6 +23,7 @@ TagManager:
   - SpeedUp
   - DiagonalBullets
   - SideBullets
+  - Explosion
   layers:
   - Default
   - TransparentFX

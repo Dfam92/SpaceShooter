@@ -46,4 +46,11 @@ public class Shield : MonoBehaviour
             spriteRenderer.color = defaultColor;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Explosion"))
+        {
+            ShieldHit();
+        }
+    }
 }

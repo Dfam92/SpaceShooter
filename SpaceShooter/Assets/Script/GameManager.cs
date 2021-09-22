@@ -23,13 +23,17 @@ public class GameManager : MonoBehaviour
     public List<GameObject> hordes;
     public GameObject boss;
     public GameObject extraLife;
-    public GameObject powerUpCase;
-    
+    public GameObject normalPowerUpCase;
+    public GameObject epicPowerUpCase;
+    public GameObject dangerPowerUpCase;
+
     private AudioSource audioSource;
     private PlayerControl playerControl;
     
     [SerializeField]private float timeToSpawnHordes;
-    [SerializeField]private float timeToSpawnCasePowerUps;
+    [SerializeField]private float timeToSpawnNormalCasePowerUps;
+    [SerializeField] private float timeToSpawnEpicCasePowerUps;
+    [SerializeField] private float timeToSpawnDangerCasePowerUps;
     [SerializeField]private int bossRate;
     [SerializeField] private float timeToRespawnPlayer;
 
@@ -85,24 +89,49 @@ public class GameManager : MonoBehaviour
             
         }
     }
-    IEnumerator SpawnRatePowerUps()
+    /*IEnumerator SpawnRatePowerUps()
     {
        
         while (isActive)
         {
-            yield return new WaitForSeconds(timeToSpawnCasePowerUps);
-            Instantiate(powerUpCase);
+            yield return new WaitForSeconds(timeToSpawnDangerCasePowerUps);
+            Instantiate(dangerPowerUpCase);
+
+            yield return new WaitForSeconds(timeToSpawnNormalCasePowerUps);
+            Instantiate(normalPowerUpCase);
+
+            yield return new WaitForSeconds(timeToSpawnEpicCasePowerUps);
+            Instantiate(epicPowerUpCase);
+
+            
         }
        
+    }*/
+
+    private void SpawnPowerUps()
+    {
+        InvokeRepeating("SpawnNormalPowerUps", timeToSpawnNormalCasePowerUps, timeToSpawnNormalCasePowerUps);
+        InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
+        InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
     }
+
+
     private void ReSpawnHordes()
     {
         int index = Random.Range(0, hordes.Count);
         Instantiate(hordes[index]);
     }
-    private void ReSpawnRatePowerUps()
+    private void SpawnNormalPowerUps()
     {
-        Instantiate(powerUpCase);
+        Instantiate(normalPowerUpCase);
+    }
+    private void SpawnEpicPowerUps()
+    {
+        Instantiate(epicPowerUpCase);
+    }
+    private void SpawnDangerPowerUps()
+    {
+        Instantiate(dangerPowerUpCase);
     }
     public void StartGame(int difficulty)
     {
@@ -115,7 +144,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(FadeAudioSource.StartFade(audioSource, 10, 0.25f));
         audioSource.Play();
         StartCoroutine(SpawnHordes());
-        StartCoroutine(SpawnRatePowerUps());
+        SpawnPowerUps();
         
         //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 
         scoreAndButtons.SetActive(true);
@@ -168,7 +197,10 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(extraLife);
         InvokeRepeating("ReSpawnHordes", 5, timeToSpawnHordes);
-        InvokeRepeating("ReSpawnRatePowerUps", 1, timeToSpawnCasePowerUps);
+        InvokeRepeating("SpawnNormalPowerUps", 1, timeToSpawnNormalCasePowerUps);
+        InvokeRepeating("SpawnEpicPowerUps", 2, timeToSpawnEpicCasePowerUps);
+        InvokeRepeating("SpawnDangerPowerUps", 5, timeToSpawnDangerCasePowerUps);
+
         StartCoroutine(FadeAudioSource.StartFade(audioSource,20, 0.25f));
 
     }

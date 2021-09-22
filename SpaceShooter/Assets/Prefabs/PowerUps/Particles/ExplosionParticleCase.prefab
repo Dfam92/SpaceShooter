@@ -3851,8 +3851,8 @@ ParticleSystem:
   TriggerModule:
     enabled: 0
     serializedVersion: 2
-    inside: 1
-    outside: 0
+    inside: 0
+    outside: 1
     enter: 0
     exit: 0
     colliderQueryMode: 0

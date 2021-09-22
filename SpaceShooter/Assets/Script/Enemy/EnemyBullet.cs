@@ -39,5 +39,9 @@ public class EnemyBullet : MonoBehaviour
             this.gameObject.SetActive(false);
             AudioClips.shieldWasHitted = true;
         }
+        else if(collision.gameObject.CompareTag("Explosion"))
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }
