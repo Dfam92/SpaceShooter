@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotateCase : MonoBehaviour
 {
+    private GameManager gameManager;
     private Rigidbody2D caseRb;
     private bool inCorner;
     [SerializeField] private float speedRotate;
@@ -12,6 +13,7 @@ public class RotateCase : MonoBehaviour
     void Start()
     {
         caseRb = GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class RotateCase : MonoBehaviour
             {
                 var playerFuturPos = new Vector3(ScreenBounds.xPlayerBound, transform.position.y, transform.position.z);
                 caseRb.AddTorque(speedRotate);
-                transform.position = Vector2.MoveTowards(transform.position, playerFuturPos, speedMove);
+                transform.position = Vector2.MoveTowards(transform.position, playerFuturPos, speedMove*gameManager.speedIncrease);
                 if (transform.position == playerFuturPos)
                 {
                     inCorner = true;

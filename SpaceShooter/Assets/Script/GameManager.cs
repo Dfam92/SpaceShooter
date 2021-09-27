@@ -21,11 +21,14 @@ public class GameManager : MonoBehaviour
     public Toggle MuteButton;
     
     public List<GameObject> hordes;
+    public List<GameObject> hordes2;
+    public List<GameObject> hordes3;
     public GameObject boss;
     public GameObject extraLife;
     public GameObject normalPowerUpCase;
     public GameObject epicPowerUpCase;
     public GameObject dangerPowerUpCase;
+   
 
     private AudioSource audioSource;
     private PlayerControl playerControl;
@@ -39,6 +42,9 @@ public class GameManager : MonoBehaviour
 
     private int score;
     private int enemiesCount;
+    private int bossCount;
+    public float speedIncrease = 1;
+    public float shootRateDecrease;
     public int lifeScore = 2;
     private float bossCountRemainder;
 
@@ -59,6 +65,7 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
         playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
+       
     }
     private void Awake()
     {
@@ -70,6 +77,7 @@ public class GameManager : MonoBehaviour
         SpawnBoss();
         BossDefeated();
         CheckLife();
+        ChangeColorScore();
     }
     IEnumerator RespawnPlayer()
     {
@@ -78,16 +86,7 @@ public class GameManager : MonoBehaviour
         isReborned = true;
         isFreezed = true;
     }
-    IEnumerator SpawnHordes()
-    {
-        while (isActive)
-        {
-            yield return new WaitForSeconds(timeToSpawnHordes);
-            int index = Random.Range(0, hordes.Count);
-            Instantiate(hordes[index]);
-            
-        }
-    }
+    
     
     private void SpawnPowerUps()
     {
@@ -95,10 +94,23 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
         InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
     }
-    private void ReSpawnHordes()
+    private void SpawnHordes()
     {
-        int index = Random.Range(0, hordes.Count);
-        Instantiate(hordes[index]);
+        if (bossCount == 0)
+        {
+            int index = Random.Range(0, hordes.Count);
+            Instantiate(hordes[index]);
+        }
+        else if (bossCount == 1)
+        {
+            int index = Random.Range(0, hordes2.Count);
+            Instantiate(hordes2[index]);
+        }
+        else
+        {
+            int index = Random.Range(0, hordes3.Count);
+            Instantiate(hordes3[index]);
+        }
     }
     private void SpawnNormalPowerUps()
     {
@@ -108,15 +120,23 @@ public class GameManager : MonoBehaviour
     }
     private void SpawnEpicPowerUps()
     {
-        PositionGenerator();
-        //Instantiate(epicPowerUpCase);
-        ObjectPooler.Instance.SpawnFromPool("EpicCase", epicPowerUpCase.transform.position, epicPowerUpCase.transform.rotation);
+        if(bossCount > 0)
+        {
+            PositionGenerator();
+            //Instantiate(epicPowerUpCase);
+            ObjectPooler.Instance.SpawnFromPool("EpicCase", epicPowerUpCase.transform.position, epicPowerUpCase.transform.rotation);
+        }
+       
     }
     private void SpawnDangerPowerUps()
     {
-        PositionGenerator();
-        //Instantiate(dangerPowerUpCase);
-        ObjectPooler.Instance.SpawnFromPool("DangerousCase", dangerPowerUpCase.transform.position, dangerPowerUpCase.transform.rotation);
+        if(bossCount > 1)
+        {
+            PositionGenerator();
+            //Instantiate(dangerPowerUpCase);
+            ObjectPooler.Instance.SpawnFromPool("DangerousCase", dangerPowerUpCase.transform.position, dangerPowerUpCase.transform.rotation);
+        }
+       
     }
     public void StartGame(int difficulty)
     {
@@ -124,11 +144,12 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         timeToSpawnHordes /= difficulty;
         EnemyShoot.fireStart /= difficulty;
+        EnemyShoot.fireRate /= difficulty;
         levelSelect = difficulty;
         titleScreen.SetActive(false);
         StartCoroutine(FadeAudioSource.StartFade(audioSource, 10, 0.25f));
         audioSource.Play();
-        StartCoroutine(SpawnHordes());
+        InvokeRepeating("SpawnHordes", 2, timeToSpawnHordes);
         SpawnPowerUps();
         
         //when Mobile add the buttons firebutton and joystick in prefabs into the canvas 
@@ -136,8 +157,8 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        PlayerControl.isMultiplying2x = false;
-        PlayerControl.isMultiplying4x = false;
+        playerControl.isMultiplying2x = false;
+        playerControl.isMultiplying4x = false;
         PlayerControl.onSideBullets = false;
         gameOver = true;
         gameOverScreen.SetActive(true);
@@ -165,6 +186,10 @@ public class GameManager : MonoBehaviour
             bossDefeated = false;
             bossOn = false;
             enemiesCount += 1;
+            bossCount += 1;
+            speedIncrease += 0.1f;
+            shootRateDecrease += 0.25f;
+            EnemyShoot.fireRate -= shootRateDecrease;
         }
         
     }
@@ -181,7 +206,7 @@ public class GameManager : MonoBehaviour
     public void BossDestroyed()
     {
         Instantiate(extraLife);
-        InvokeRepeating("ReSpawnHordes", 5, timeToSpawnHordes);
+        InvokeRepeating("SpawnHordes", 5, timeToSpawnHordes);
         InvokeRepeating("SpawnNormalPowerUps", 1, timeToSpawnNormalCasePowerUps);
         InvokeRepeating("SpawnEpicPowerUps", 2, timeToSpawnEpicCasePowerUps);
         InvokeRepeating("SpawnDangerPowerUps", 5, timeToSpawnDangerCasePowerUps);
@@ -235,9 +260,9 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
+        EnemyShoot.fireRate = 30;
         EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
     }
     public void QuitGame()
     {
@@ -248,6 +273,21 @@ public class GameManager : MonoBehaviour
         if (MuteSound.isMuted)
         {
             MuteButton.isOn = false;
+        }
+    }
+    private void ChangeColorScore()
+    {
+        if(playerControl.isMultiplying2x)
+        {
+            scoreText.color = Color.red;
+        }
+        else if(playerControl.isMultiplying4x)
+        {
+            scoreText.color = Color.magenta;
+        }
+        else
+        {
+            scoreText.color = Color.yellow;
         }
     }
     private void PositionGenerator()

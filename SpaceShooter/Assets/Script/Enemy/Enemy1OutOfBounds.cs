@@ -6,7 +6,7 @@ public class Enemy1OutOfBounds : MonoBehaviour
 {
     private void LateUpdate()
     {
-       OutOfBounds();
+       StartCoroutine(EnemyLimitBounds());
     }
 
     void OutOfBounds()
@@ -16,7 +16,7 @@ public class Enemy1OutOfBounds : MonoBehaviour
         Vector2 leftPos = new Vector2(-ScreenBounds.xEnemyBound, transform.position.y);
         Vector2 botPos = new Vector2(transform.position.x, -ScreenBounds.yEnemyBound);
 
-        if (transform.position.y < -ScreenBounds.yEnemyBound-0.5f)
+        if (transform.position.y < -ScreenBounds.yEnemyBound-2f)
         {
             gameObject.transform.position = topPos;
         }
@@ -29,10 +29,15 @@ public class Enemy1OutOfBounds : MonoBehaviour
             gameObject.transform.position = leftPos;
         }
         //telepot top from bot
-        /*else if (transform.position.y > ScreenBounds.yEnemyBound + 0.5f)
+        else if (transform.position.y > ScreenBounds.yEnemyBound + 2f)
         {
             gameObject.transform.position = botPos;
-        }*/
+        }
+    }
+    IEnumerator EnemyLimitBounds()
+    {
+        yield return new WaitForSeconds(2);
+        OutOfBounds();
     }
 
 }

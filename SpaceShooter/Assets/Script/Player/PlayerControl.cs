@@ -25,13 +25,17 @@ public class PlayerControl : MonoBehaviour
     public GameObject diagonalBullet;
     public GameObject diagonalBullet2;
 
-    public static bool isMultiplying2x;
-    public static bool isMultiplying4x;
+    public  bool isMultiplying2x;
+    public  bool isMultiplying4x;
+    private int timeToStopPowerUp4x;
     public static bool onSideBullets;
+    private int timeToStopPowerUpS;
     public static bool onDiagonalBullets;
+    private int timeToStopPowerUpD;
     public bool playerIsDestroyed;
 
     public int bulletCount;
+    public int maxBulletCapacity;
     private int timeToStopPowerUp;
     private float paralyzeTime = 3;
     
@@ -40,7 +44,8 @@ public class PlayerControl : MonoBehaviour
     //For mobile active the Joystick
     public Joystick joystick;
     public Joystick fireButton;
-   
+    private int timeToStopPowerUp2x;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,9 +63,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     private void Update()
-     
     {
-        
         if (GameManager.isActive && !PauseMenu.isPaused)
         {
             //if mobile desactive this.
@@ -333,30 +336,32 @@ public class PlayerControl : MonoBehaviour
         else if (collision.CompareTag("SideBullets"))
         {
             onSideBullets = true;
-            timeToStopPowerUp = 15;
+            timeToStopPowerUpS += 15;
             AudioClips.extraBulletsOn = true;
-            StartCoroutine(StopPowerUp());
+            StartCoroutine(StopPowerUpSBullets());
         }
         else if (collision.CompareTag("DiagonalBullets"))
         {
             onDiagonalBullets = true;
-            timeToStopPowerUp = 15;
+            timeToStopPowerUpD += 15;
             AudioClips.extraBulletsOn = true;
-            StartCoroutine(StopPowerUp());
+            StartCoroutine(StopPowerUpDBullets());
         }
         else if(collision.CompareTag("Multiply2x"))
         {
+            isMultiplying4x = false;
             isMultiplying2x = true;
-            timeToStopPowerUp = 15;
+            timeToStopPowerUp2x += 15;
             AudioClips.is2xOn = true;
-            StartCoroutine(StopPowerUp());
+            StartCoroutine(StopPowerUp2x());
         }
         else if (collision.CompareTag("Multiply4x"))
         {
+            isMultiplying2x = false;
             isMultiplying4x = true;
-            timeToStopPowerUp = 10;
+            timeToStopPowerUp4x += 15;
             AudioClips.is4xOn = true;
-            StartCoroutine(StopPowerUp());
+            StartCoroutine(StopPowerUp4x());
         }
         else if (collision.CompareTag("ExtraLife"))
         {
@@ -365,9 +370,11 @@ public class PlayerControl : MonoBehaviour
         }
         else if (collision.CompareTag("BulletCase"))
         {
-            bulletCapacity += 1;
-            AudioClips.extraBulletsOn = true;
-
+            if (bulletCapacity < maxBulletCapacity)
+            {
+                bulletCapacity += 1;
+                AudioClips.extraBulletsOn = true;
+            }
         }
         else if (collision.CompareTag("SpeedUp"))
         {
@@ -378,30 +385,43 @@ public class PlayerControl : MonoBehaviour
 
     }
   
-    IEnumerator StopPowerUp()
+    IEnumerator StopPowerUpSBullets()
     {
-        
-        yield return new WaitForSeconds(timeToStopPowerUp);
-        if( onSideBullets == true)
+        yield return new WaitForSeconds(timeToStopPowerUpS);
+        if (onSideBullets == true)
         {
             onSideBullets = false;
+            timeToStopPowerUpS = 0;
         }
-        
-        if(onDiagonalBullets == true)
+    }
+    IEnumerator StopPowerUpDBullets()
+    {
+
+        yield return new WaitForSeconds(timeToStopPowerUpD);
+        if (onDiagonalBullets == true)
         {
             onDiagonalBullets = false;
+            timeToStopPowerUpD = 0;
         }
+    }
+    IEnumerator StopPowerUp2x()
+    {
+        yield return new WaitForSeconds(timeToStopPowerUp2x);
         
-        if(isMultiplying2x == true)
+        if (isMultiplying2x == true)
         {
             isMultiplying2x = false;
+            timeToStopPowerUp2x = 0;
         }
-        
+    }
+    IEnumerator StopPowerUp4x()
+    {
+        yield return new WaitForSeconds(timeToStopPowerUp4x);
         if (isMultiplying4x == true)
         {
             isMultiplying4x = false;
+            timeToStopPowerUp4x = 0;
         }
-
     }
     IEnumerator StopParalysis()
     {

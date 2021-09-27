@@ -8,6 +8,7 @@ public class EnemyControl : MonoBehaviour
     public Rigidbody2D enemyRb;
 
     private GameManager gameManager;
+    private PlayerControl player;
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
 
@@ -20,6 +21,7 @@ public class EnemyControl : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        player = GameObject.Find("Player").GetComponent<PlayerControl>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         
@@ -35,7 +37,7 @@ public class EnemyControl : MonoBehaviour
     }
     public void EnemyMovement()
     {
-        enemyRb.AddRelativeForce(Vector2.down*speed);
+        enemyRb.AddRelativeForce(Vector2.down*speed*gameManager.speedIncrease);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     { 
@@ -76,11 +78,11 @@ public class EnemyControl : MonoBehaviour
     }
     private void MultiplyPoints()
     {
-        if(PlayerControl.isMultiplying2x == true)
+        if(player.isMultiplying2x == true)
         {
             enemyPoint *= 2;
         }
-        else if(PlayerControl.isMultiplying4x == true)
+        else if(player.isMultiplying4x == true)
         {
             enemyPoint *= 4;
         }
