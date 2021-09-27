@@ -26,7 +26,7 @@ public class CaseDestroyed : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("PlayerBullet"))
+        if(collision.CompareTag("PlayerBullet") || collision.CompareTag("Player"))
         {
             StartCoroutine(Desactive());
             Instantiate(explodeCase, this.transform.position, Quaternion.identity);

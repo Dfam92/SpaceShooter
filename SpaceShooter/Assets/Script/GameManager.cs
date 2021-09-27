@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject epicPowerUpCase;
     public GameObject dangerPowerUpCase;
    
+   
 
     private AudioSource audioSource;
     private PlayerControl playerControl;
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         highScore.text = "HiScore: " + PlayerPrefs.GetInt("HighScore",0).ToString();
         playerControl = GameObject.Find("Player").GetComponent<PlayerControl>();
-       
+        
     }
     private void Awake()
     {
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
         BossDefeated();
         CheckLife();
         ChangeColorScore();
+        
     }
     IEnumerator RespawnPlayer()
     {
@@ -290,6 +292,7 @@ public class GameManager : MonoBehaviour
             scoreText.color = Color.yellow;
         }
     }
+   
     private void PositionGenerator()
     {
         var randomPos = new Vector2(Random.Range(-ScreenBounds.xPlayerBound + 0.5f, ScreenBounds.xPlayerBound - 0.5f), ScreenBounds.yPlayerBound + 0.75f);

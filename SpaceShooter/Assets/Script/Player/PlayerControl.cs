@@ -36,7 +36,6 @@ public class PlayerControl : MonoBehaviour
 
     public int bulletCount;
     public int maxBulletCapacity;
-    private int timeToStopPowerUp;
     private float paralyzeTime = 3;
     
     public Vector2 playerStartPos;
@@ -88,7 +87,7 @@ public class PlayerControl : MonoBehaviour
     {
         
         //For Play in PC active this
-        if(!gameManager.isFreezed)
+        /*if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -123,12 +122,12 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }
+        }*/
 
 
         // For play Mobile
 
-        /*if(!gameManager.isFreezed)
+        if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -163,7 +162,7 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }*/
+        }
         
 
 
@@ -195,36 +194,36 @@ public class PlayerControl : MonoBehaviour
         
     }
     public void PlayerShoot()
-    {if(!playerIsDestroyed && bulletCount > -1 && bulletCount < bulletCapacity)
+    {if (!playerIsDestroyed && bulletCount > -1 && bulletCount < bulletCapacity)
         {
             //For play in Pc active this
+            
+            /*Vector3 bulletPos = new Vector3(transform.position.x + 0.02f, transform.position.y  + 0.5f, transform.rotation.z);
+            
 
-            /*Vector3 bulletPos = new Vector3(transform.position.x + 0.02f , transform.position.y + 0.5f, transform.rotation.z);
             if (Input.GetKeyDown(KeyCode.Space))
             {
+               
                 ObjectPooler.Instance.SpawnFromPool("PlayerBullet", bulletPos, transform.rotation);
                 playerAudioSource.PlayOneShot(bulletSound, 1.0f);
                 bulletCount += 1;
-            }
 
-            if (onSideBullets == true)
-            {
-                Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
-                Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
+                if (onSideBullets == true)
+                {
+                    Vector3 bulletPos2 = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.rotation.z);
+                    Vector3 bulletPos3 = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.rotation.z);
 
-                ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
-                ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
-            }
+                    ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos2, transform.rotation);
+                    ObjectPooler.Instance.SpawnFromPool("SideBullet", bulletPos3, transform.rotation);
+                }
 
-            if(onDiagonalBullets == true)
-            {
-                Vector2 bulletPos2 = new Vector2(transform.position.x , transform.position.y+0.4f);
-                Vector2 bulletPos3 = new Vector2(transform.position.x , transform.position.y+0.4f);
-               
-                ObjectPooler.Instance.SpawnFromPool("DiagonalBullets", bulletPos2, diagonalBullet2.transform.rotation);
-                ObjectPooler.Instance.SpawnFromPool("DiagonalBullets2", bulletPos3, diagonalBullet.transform.rotation);
-            }
-                
+                if (onDiagonalBullets == true)
+                {
+                    Vector2 bulletPos2 = new Vector2(transform.position.x, transform.position.y );
+                    Vector2 bulletPos3 = new Vector2(transform.position.x, transform.position.y );
+
+                    ObjectPooler.Instance.SpawnFromPool("DiagonalBullets", bulletPos2, diagonalBullet2.transform.rotation);
+                    ObjectPooler.Instance.SpawnFromPool("DiagonalBullets2", bulletPos3, diagonalBullet.transform.rotation);
                 }
             }*/
 
@@ -254,8 +253,8 @@ public class PlayerControl : MonoBehaviour
                 ObjectPooler.Instance.SpawnFromPool("DiagonalBullets", bulletPos2, diagonalBullet2.transform.rotation);
                 ObjectPooler.Instance.SpawnFromPool("DiagonalBullets2", bulletPos3, diagonalBullet.transform.rotation);
             }
-        }
 
+        }
     }
 
     private void RespawnPlayer()
@@ -362,6 +361,7 @@ public class PlayerControl : MonoBehaviour
             timeToStopPowerUp4x += 15;
             AudioClips.is4xOn = true;
             StartCoroutine(StopPowerUp4x());
+                
         }
         else if (collision.CompareTag("ExtraLife"))
         {
@@ -407,7 +407,6 @@ public class PlayerControl : MonoBehaviour
     IEnumerator StopPowerUp2x()
     {
         yield return new WaitForSeconds(timeToStopPowerUp2x);
-        
         if (isMultiplying2x == true)
         {
             isMultiplying2x = false;
