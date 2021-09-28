@@ -6,12 +6,14 @@ public class BossSting : MonoBehaviour
 {
     public Rigidbody2D stingRb;
     private PlayerControl player;
+    private GameManager gameManager;
     
     [SerializeField]private float speed;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<PlayerControl>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     private void Update()
     {
@@ -22,7 +24,7 @@ public class BossSting : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!GameManager.gameOver)
+        if(!gameManager.gameOver)
         {
             StingDirection();
         }

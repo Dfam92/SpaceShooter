@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackGroundRoll : MonoBehaviour
 {
     private Rigidbody2D backRb;
-    [SerializeField] private float rollSpeed;
+    public float rollSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +17,8 @@ public class BackGroundRoll : MonoBehaviour
     void FixedUpdate()
     {if(GameManager.isActive)
         {
-            backRb.AddForce(Vector2.down * rollSpeed);
+           backRb.AddForce(Vector2.down * rollSpeed);
         }
-       
     }
 
     public void StopBackGround()

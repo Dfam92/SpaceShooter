@@ -14,6 +14,7 @@ public class AudioClips : MonoBehaviour
     public AudioClip powerUp2x;
     public AudioClip powerUp4x;
     public AudioClip hearthPowerUp;
+    public AudioClip ExplosionCase;
     
     
     public static bool enemyIsDestroyed;
@@ -24,7 +25,7 @@ public class AudioClips : MonoBehaviour
     public static bool is2xOn;
     public static bool is4xOn;
     public static bool extraLife;
-    
+    public static bool isExploded;
 
     // Start is called before the first frame update
     void Start()
@@ -91,6 +92,14 @@ public class AudioClips : MonoBehaviour
             {
                 audioPlayer.PlayOneShot(hearthPowerUp, 0.5f);
                 extraLife = false;
+            }
+        }
+        else if (isExploded == true)
+        {
+            if (!audioPlayer.isPlaying)
+            {
+                audioPlayer.PlayOneShot(ExplosionCase, 0.5f);
+                isExploded = false;
             }
         }
 

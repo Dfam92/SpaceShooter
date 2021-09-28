@@ -33,7 +33,7 @@ public class CaseDestroyed : MonoBehaviour
             StartCoroutine(SpawnTime());
             spriteRenderer.enabled = false;
             circleCollider.enabled = false;
-            
+            AudioClips.isExploded = true;
         }
     }
     IEnumerator SpawnTime()

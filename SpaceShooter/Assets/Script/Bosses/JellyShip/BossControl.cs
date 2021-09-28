@@ -48,7 +48,7 @@ public class BossControl : MonoBehaviour
     private void Update()
     {
        
-       if(GameManager.gameOver == true)
+       if(gameManager.gameOver)
         {
             bossAudioSource.Stop();
             CancelInvoke();
@@ -57,7 +57,11 @@ public class BossControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        BossMovimentation();
+        if (gameManager.gameOver)
+        {
+            BossMovimentation();
+        }
+            
     }
     private void LateUpdate()
     {

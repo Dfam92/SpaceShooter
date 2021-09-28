@@ -29,8 +29,6 @@ public class GameManager : MonoBehaviour
     public GameObject epicPowerUpCase;
     public GameObject dangerPowerUpCase;
    
-   
-
     private AudioSource audioSource;
     private PlayerControl playerControl;
     
@@ -53,7 +51,7 @@ public class GameManager : MonoBehaviour
     public bool isFreezed;
     public bool bossDefeated;
     public bool bossOn = false;
-    public static bool gameOver;
+    public bool gameOver;
     public static bool isActive;
     public int levelSelect;
 
@@ -92,9 +90,11 @@ public class GameManager : MonoBehaviour
     
     private void SpawnPowerUps()
     {
-        InvokeRepeating("SpawnNormalPowerUps", timeToSpawnNormalCasePowerUps, timeToSpawnNormalCasePowerUps);
-        InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
-        InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
+            InvokeRepeating("SpawnNormalPowerUps", timeToSpawnNormalCasePowerUps, timeToSpawnNormalCasePowerUps);
+            InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
+            InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
+        
+        
     }
     private void SpawnHordes()
     {
@@ -161,14 +161,26 @@ public class GameManager : MonoBehaviour
     {
         playerControl.isMultiplying2x = false;
         playerControl.isMultiplying4x = false;
-        PlayerControl.onSideBullets = false;
+        playerControl.onSideBullets = false;
         gameOver = true;
         gameOverScreen.SetActive(true);
         isActive = false;
         audioSource.Stop();
         HighScore();
         pauseButton.SetActive(false);
+        CancelInvoke();
 
+    }
+    public void GameOverRestart()
+    {
+        playerControl.isMultiplying2x = false;
+        playerControl.isMultiplying4x = false;
+        playerControl.onSideBullets = false;
+        gameOver = true;
+        isActive = false;
+        audioSource.Stop();
+        pauseButton.SetActive(false);
+        CancelInvoke();
     }
     public void SpawnBoss()
     {
@@ -254,7 +266,7 @@ public class GameManager : MonoBehaviour
             lifeScoreText.text = " x " + 0;
         }
 
-        if (playerControl.playerIsDestroyed && !gameOver)
+        if (playerControl.playerIsDestroyed )
         {
             StartCoroutine(RespawnPlayer());
             
@@ -262,6 +274,9 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
+        PauseMenu.isPaused = false;
+        AudioListener.pause = false;
+        Time.timeScale = 1f;
         EnemyShoot.fireRate = 30;
         EnemyShoot.fireStart = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

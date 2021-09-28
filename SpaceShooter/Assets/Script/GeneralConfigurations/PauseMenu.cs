@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        if(!GameManager.gameOver)
+
         {
             pauseButton.SetActive(false);
             Time.timeScale = 0f;

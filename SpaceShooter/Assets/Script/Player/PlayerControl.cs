@@ -28,9 +28,9 @@ public class PlayerControl : MonoBehaviour
     public  bool isMultiplying2x;
     public  bool isMultiplying4x;
     private int timeToStopPowerUp4x;
-    public static bool onSideBullets;
+    public  bool onSideBullets;
     private int timeToStopPowerUpS;
-    public static bool onDiagonalBullets;
+    public  bool onDiagonalBullets;
     private int timeToStopPowerUpD;
     public bool playerIsDestroyed;
 
@@ -138,6 +138,7 @@ public class PlayerControl : MonoBehaviour
             {
                 if (playerRb.mass < 100)
                 {
+                    
                     animPlayer.SetFloat("Move", 0.5f);
                     animPlayer.SetBool("TurnRight", false);
                     animPlayer.SetBool("TurnLeft", false);
