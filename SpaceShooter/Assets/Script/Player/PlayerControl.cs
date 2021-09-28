@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
+
+
 
 
 
@@ -24,6 +27,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject explosion;
     public GameObject diagonalBullet;
     public GameObject diagonalBullet2;
+    public GameObject rewardAdsButton;
 
     public  bool isMultiplying2x;
     public  bool isMultiplying4x;
@@ -33,7 +37,8 @@ public class PlayerControl : MonoBehaviour
     public  bool onDiagonalBullets;
     private int timeToStopPowerUpD;
     public bool playerIsDestroyed;
-
+    private bool extraLifeChance;
+    
     public int bulletCount;
     public int maxBulletCapacity;
     private float paralyzeTime = 3;
@@ -305,11 +310,16 @@ public class PlayerControl : MonoBehaviour
         AudioClips.playerIsDestroyed = true;
         gameManager.UpdateLife(-1);
         animPlayer.Rebind();
-        
-        if (gameManager.lifeScore < 0)
+        if(gameManager.lifeScore < 0)
         {
-            gameManager.GameOver();
+            Time.timeScale = 0;
+            extraLifeChance = true;
         }
+        if (gameManager.lifeScore < 0 && extraLifeChance == true)
+        {
+            rewardAdsButton.SetActive(true);
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

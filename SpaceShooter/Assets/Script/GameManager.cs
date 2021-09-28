@@ -90,11 +90,9 @@ public class GameManager : MonoBehaviour
     
     private void SpawnPowerUps()
     {
-            InvokeRepeating("SpawnNormalPowerUps", timeToSpawnNormalCasePowerUps, timeToSpawnNormalCasePowerUps);
-            InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
-            InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
-        
-        
+        InvokeRepeating("SpawnNormalPowerUps", timeToSpawnNormalCasePowerUps, timeToSpawnNormalCasePowerUps);
+        InvokeRepeating("SpawnEpicPowerUps", timeToSpawnEpicCasePowerUps, timeToSpawnEpicCasePowerUps);
+        InvokeRepeating("SpawnDangerPowerUps", timeToSpawnDangerCasePowerUps, timeToSpawnDangerCasePowerUps);
     }
     private void SpawnHordes()
     {
@@ -255,7 +253,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteKey("HighScore");
         highScore.text = "HiScore: 0";
     }
-    private void CheckLife()
+    public void CheckLife()
     {
         if (lifeScore > -1)
         {
