@@ -31,7 +31,7 @@ public class BossControl : MonoBehaviour
     private AudioSource bossAudioSource;
    
     private bool bossDestroyed;
-
+    private bool bossOn;
 
     // Start is called before the first frame update
     void Start()
@@ -43,12 +43,16 @@ public class BossControl : MonoBehaviour
         InvokeRepeating("FireBubble", 2, timeToShotBubbles);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         StartCoroutine(FadeAudioSource.StartFade(bossAudioSource, 10, 0.25f));
+        StartCoroutine(BossLimitBounds());
     }
    
     private void Update()
     {
-       
-       if(gameManager.gameOver)
+        if(bossOn)
+        {
+            OutOfBounds();
+        }
+        if (gameManager.gameOver)
         {
             bossAudioSource.Stop();
             CancelInvoke();
@@ -57,15 +61,11 @@ public class BossControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (gameManager.gameOver)
+        if (!gameManager.gameOver)
         {
             BossMovimentation();
         }
             
-    }
-    private void LateUpdate()
-    {
-        StartCoroutine(BossLimitBounds());
     }
 
     private void BossMovimentation()
@@ -191,7 +191,7 @@ public class BossControl : MonoBehaviour
     IEnumerator BossLimitBounds()
     {
         yield return new WaitForSeconds(5);
-        OutOfBounds();
+        bossOn = true;
     }
 
     IEnumerator BossFinished()
@@ -202,6 +202,7 @@ public class BossControl : MonoBehaviour
 
     private void BossDestroyed()
     {
+        bossOn = false;
         bossAnim.speed = 1;
         speed = 10;
         bossRb.gravityScale = 3;

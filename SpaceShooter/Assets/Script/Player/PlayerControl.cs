@@ -37,7 +37,7 @@ public class PlayerControl : MonoBehaviour
     public  bool onDiagonalBullets;
     private int timeToStopPowerUpD;
     public bool playerIsDestroyed;
-    private bool extraLifeChance;
+    private bool extraLifeChance = true;
     
     public int bulletCount;
     public int maxBulletCapacity;
@@ -310,18 +310,20 @@ public class PlayerControl : MonoBehaviour
         AudioClips.playerIsDestroyed = true;
         gameManager.UpdateLife(-1);
         animPlayer.Rebind();
-        if(gameManager.lifeScore < 0)
-        {
-            Time.timeScale = 0;
-            extraLifeChance = true;
-        }
+
         if (gameManager.lifeScore < 0 && extraLifeChance == true)
         {
+            Time.timeScale = 0;
             rewardAdsButton.SetActive(true);
+            extraLifeChance = false;
+        }
+        else if (extraLifeChance == false && gameManager.lifeScore < 0)
+        {
+             gameManager.GameOver();
         }
         
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") && !alienShield.activeInHierarchy || collision.CompareTag("Boss") && !alienShield.activeInHierarchy

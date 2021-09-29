@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject pauseButton;
     public GameObject player;
+    public GameObject adsScreen;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScore;
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        
         bossCountRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
@@ -162,6 +164,7 @@ public class GameManager : MonoBehaviour
         playerControl.onSideBullets = false;
         gameOver = true;
         gameOverScreen.SetActive(true);
+        adsScreen.SetActive(false);
         isActive = false;
         audioSource.Stop();
         HighScore();
