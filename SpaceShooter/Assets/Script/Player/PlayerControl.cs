@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject diagonalBullet;
     public GameObject diagonalBullet2;
     public GameObject rewardAdsButton;
+    public GameObject pauseButton;
 
     public  bool isMultiplying2x;
     public  bool isMultiplying4x;
@@ -268,7 +269,7 @@ public class PlayerControl : MonoBehaviour
         
         if (gameManager.isReborned)
         {
-            
+            onDiagonalBullets = false;
             onSideBullets = false;
             isMultiplying2x = false;
             isMultiplying4x = false;
@@ -313,6 +314,7 @@ public class PlayerControl : MonoBehaviour
 
         if (gameManager.lifeScore < 0 && extraLifeChance == true)
         {
+            pauseButton.SetActive(false);
             Time.timeScale = 0;
             rewardAdsButton.SetActive(true);
             extraLifeChance = false;
