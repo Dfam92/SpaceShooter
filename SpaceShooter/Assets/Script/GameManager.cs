@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        
         bossCountRemainder = enemiesCount % bossRate;
         SpawnBoss();
         BossDefeated();
@@ -262,8 +261,10 @@ public class GameManager : MonoBehaviour
         {
             lifeScoreText.text = " x " + lifeScore;
         }
-        else
+        
+        if (lifeScore < 0)
         {
+            lifeScore = 0;
             lifeScoreText.text = " x " + 0;
         }
 

@@ -1833,38 +1833,32 @@ MonoBehaviour:
   hordes:
   - {fileID: 3746073222866979334, guid: 09922da076c27774197d86ff6a345416, type: 3}
   - {fileID: 5798546405552525864, guid: 9caa33b8a08021c459fa7ef1ec76f445, type: 3}
-  - {fileID: 3916166671256017511, guid: 8f57b5132315a6340bc2e2c5419f2842, type: 3}
+  - {fileID: 4356849183864928595, guid: 2f921292244b2d74e80d3be6c94a7109, type: 3}
   - {fileID: 3976662792809374207, guid: 658c8a205b587d1409dbc2f0583fd92b, type: 3}
   - {fileID: 8329465543650471199, guid: c91b51517cc619640866bf1c4a179cac, type: 3}
   - {fileID: 6842542587362659458, guid: 1124ad995a4bff143a37b43003672817, type: 3}
   hordes2:
   - {fileID: 7285884220949948553, guid: 8d36bb92d6142374ab369e42a2012dd6, type: 3}
   - {fileID: 6182648738193510415, guid: a21a26035166c0e4286f4bad3ffa096a, type: 3}
-  - {fileID: 7706159916562745232, guid: dbece62123490ef43b025fe38ec17f5b, type: 3}
+  - {fileID: 3916166671256017511, guid: 8f57b5132315a6340bc2e2c5419f2842, type: 3}
   - {fileID: 6317628001102795793, guid: 540453f6037c437439b80f5d57660158, type: 3}
   - {fileID: 8329465543650471199, guid: c91b51517cc619640866bf1c4a179cac, type: 3}
   - {fileID: 4186847041465671125, guid: 8d22f0eadbed9344b86ddc79fb6e3f93, type: 3}
   hordes3:
   - {fileID: 7285884220949948553, guid: 8d36bb92d6142374ab369e42a2012dd6, type: 3}
   - {fileID: 6182648738193510415, guid: a21a26035166c0e4286f4bad3ffa096a, type: 3}
-  - {fileID: 5798546405552525864, guid: 9caa33b8a08021c459fa7ef1ec76f445, type: 3}
-  - {fileID: 6842542587362659458, guid: 1124ad995a4bff143a37b43003672817, type: 3}
-  - {fileID: 3916166671256017511, guid: 8f57b5132315a6340bc2e2c5419f2842, type: 3}
-  - {fileID: 3746073222866979334, guid: 09922da076c27774197d86ff6a345416, type: 3}
-  - {fileID: 4665870457964249790, guid: 01e40b40c6403a54680e0f18094d5c62, type: 3}
-  - {fileID: 3976662792809374207, guid: 658c8a205b587d1409dbc2f0583fd92b, type: 3}
   - {fileID: 7706159916562745232, guid: dbece62123490ef43b025fe38ec17f5b, type: 3}
-  - {fileID: 6317628001102795793, guid: 540453f6037c437439b80f5d57660158, type: 3}
-  - {fileID: 8329465543650471199, guid: c91b51517cc619640866bf1c4a179cac, type: 3}
+  - {fileID: 4665870457964249790, guid: 01e40b40c6403a54680e0f18094d5c62, type: 3}
   - {fileID: 4186847041465671125, guid: 8d22f0eadbed9344b86ddc79fb6e3f93, type: 3}
+  - {fileID: 5960757781761856833, guid: 74eb199e3383a324f8ec57e2284236f3, type: 3}
   boss: {fileID: 7593335367666389880, guid: ae8cb6a7ff8ed4c458ff3435a9408d1d, type: 3}
   extraLife: {fileID: 7535986461999606431, guid: ab7bfa566006dca4abd4f3561c1ea932, type: 3}
   normalPowerUpCase: {fileID: 6353997283848876405, guid: f3e3bcd6c0e0f6642bb518c9d987bcd2, type: 3}
   epicPowerUpCase: {fileID: 3471590035285683340, guid: c9e084e96227f1749bffdc51b6b9d82e, type: 3}
   dangerPowerUpCase: {fileID: 3994457368796332600, guid: 9009ea86e29747245999224e18de4ab9, type: 3}
   timeToSpawnHordes: 30
-  timeToSpawnNormalCasePowerUps: 15
-  timeToSpawnEpicCasePowerUps: 20
+  timeToSpawnNormalCasePowerUps: 12
+  timeToSpawnEpicCasePowerUps: 15
   timeToSpawnDangerCasePowerUps: 10
   bossRate: 50
   timeToRespawnPlayer: 1.5
@@ -2276,6 +2270,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: speed
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 243847606}
@@ -2314,6 +2312,10 @@ PrefabInstance:
     - target: {fileID: 4513986987102332022, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: timeToStopInvulnerabilty
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513986987102332023, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
+      propertyPath: m_LinearDrag
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4513986987102332023, guid: aac1a3dd3633757498241fc5c24f1381, type: 3}
       propertyPath: m_Constraints
@@ -4876,7 +4878,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.52
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6813,7 +6815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7728449420531555662, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 74
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 7728449420531555662, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6869,11 +6871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7728449422361337524, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 158.18
+      value: 128.11
       objectReference: {fileID: 0}
     - target: {fileID: 7728449422361337524, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 158.18
+      value: 128.11
       objectReference: {fileID: 0}
     - target: {fileID: 7728449422361337524, guid: 6ff051c55bf5ef7429fcef14fd8fe2f5, type: 3}
       propertyPath: m_AnchoredPosition.x

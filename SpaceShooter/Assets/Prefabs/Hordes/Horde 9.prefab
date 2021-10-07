@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166670610123728}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166670610123740
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671096446788}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671096446784
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671260632635}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671260632583
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671333166232}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671333166308
@@ -1430,7 +1430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671363053164}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671363053160
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671400215217}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671400215229
@@ -2014,7 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671520659434}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671520659446
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671745401568}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671745401580
@@ -2598,7 +2598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 3916166671780215568}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &3916166671780215580

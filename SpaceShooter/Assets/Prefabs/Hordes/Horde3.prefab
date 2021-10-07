@@ -169,9 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159914572021574}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159914572021578
@@ -294,8 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159914648807319
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,9 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159914688031261}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159914688031233
@@ -637,8 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159914916781853
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,9 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159914916781847}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159914916781851
@@ -933,8 +923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159914947520238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,9 +1092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159914947520231}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159914947520235
@@ -1229,8 +1215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159915008063588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,9 +1431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159915141214499}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159915141214503
@@ -1572,8 +1554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159915157745143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,9 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159915157745136}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159915157745140
@@ -1868,8 +1846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159915261715008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,9 +2015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159915261715033}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159915261715037
@@ -2164,8 +2138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159915916793390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,9 +2307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159915916793383}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159915916793387
@@ -2460,8 +2430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159916325669690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,9 +2647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159916403040947}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159916403040951
@@ -2804,8 +2770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159916562745232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,9 +2985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159916575431628}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159916575431664
@@ -3146,8 +3108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159916611223362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,9 +3277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159916611223387}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159916611223391
@@ -3442,8 +3400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159916652318997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,9 +3569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159916652319087}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159916652318995
@@ -3738,8 +3692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10
 --- !u!1 &7706159916673813378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3909,9 +3861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firsHit: {fileID: 8300000, guid: 1d4f5a9ea5b385e4caa20a19b25673b7, type: 3}
   enemyRb: {fileID: 7706159916673813403}
-  titleScreen: {fileID: 0}
-  explosion: {fileID: 6939519994928526840, guid: 6181c9c354a590741a2ca4aa3bba78b8, type: 3}
-  speed: 2
+  speed: 1.5
   enemyHealth: 2
   enemyPoint: 200
 --- !u!114 &7706159916673813407
@@ -4034,5 +3984,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce39aa08e2e4f64b9637f3359eea13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  fireRate: 10

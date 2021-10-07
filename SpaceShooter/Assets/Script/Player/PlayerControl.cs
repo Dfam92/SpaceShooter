@@ -93,7 +93,7 @@ public class PlayerControl : MonoBehaviour
     {
         
         //For Play in PC active this
-        /*if(!gameManager.isFreezed)
+        if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -128,12 +128,12 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }*/
+        }
 
 
         // For play Mobile
 
-        if(!gameManager.isFreezed)
+        /*if(!gameManager.isFreezed)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -169,7 +169,7 @@ public class PlayerControl : MonoBehaviour
                 animPlayer.SetBool("TurnRight", false);
                 animPlayer.SetBool("TurnLeft", false);
             }
-        }
+        }*/
         
 
 
@@ -365,7 +365,7 @@ public class PlayerControl : MonoBehaviour
         {
             isMultiplying4x = false;
             isMultiplying2x = true;
-            timeToStopPowerUp2x += 15;
+            timeToStopPowerUp2x += 10;
             AudioClips.is2xOn = true;
             StartCoroutine(StopPowerUp2x());
         }
@@ -373,7 +373,7 @@ public class PlayerControl : MonoBehaviour
         {
             isMultiplying2x = false;
             isMultiplying4x = true;
-            timeToStopPowerUp4x += 15;
+            timeToStopPowerUp4x += 10;
             AudioClips.is4xOn = true;
             StartCoroutine(StopPowerUp4x());
                 
@@ -393,7 +393,7 @@ public class PlayerControl : MonoBehaviour
         }
         else if (collision.CompareTag("SpeedUp"))
         {
-            speed += 0.5f;
+            speed += 1f;
             AudioClips.extraBulletsOn = true;
 
         }
