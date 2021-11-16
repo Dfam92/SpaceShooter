@@ -1,4 +1,4 @@
-# SpaceShooter
+ <h1 align = center> #SpaceShooter </h1>
 
 <img src = "Recurso Gráfico.png" width = "100%" >
 
